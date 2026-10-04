@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St John Ambulans Malaysia (SJAM) - Kawasan Kelantan Utara Kota Bharu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sjamRed: '#DC2626',
+                        sjamDarkRed: '#B91C1C',
+                        sjamBlue: '#1E3A8A',
+                        sjamDarkBlue: '#1E293B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Professional Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom smooth transitions and gallery styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+    background: linear-gradient(
+        135deg,
+        rgba(30,58,138,0.55) 0%,
+        rgba(220,38,38,0.45) 100%
+    );
+}
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sjamRed selection:text-white">
+
+<!-- Top Bar / Announcement -->
+    <div class="bg-sjamBlue text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot mr-1.5 text-sjamRed"></i> Kota Bharu, Kelantan</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-ambulance mr-1.5 text-sjamRed"></i> Perkhidmatan Sewa Ambulans & Khidmat Komuniti</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+60199327091" class="hover:text-red-300 transition"><i class="fa-solid fa-phone mr-1"></i> +6019-932 7091</a>
+                <a href="https://wa.me/60199327091" target="_blank" class="hover:text-green-300 transition"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Hotline</a>
+            </div>
+        </div>
+    </div>
+
+<!-- Main Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand / Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <img
+src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
+    alt="SJAM Logo"
+    class="w-10 h-10 object-contain">
+
+<div>
+                    <span class="block font-bold text-base sm:text-lg text-sjamBlue tracking-tight">
+    سن ة جون امبولن س مليسيا
+</p>
+Kawasan Kelantan Utara Kota Bharu
+</span>
+           </div>
+            </a>
+
+<!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
+                <a href="#home" class="hover:text-sjamRed transition">Utama</a>
+                <a href="#tentang" class="hover:text-sjamRed transition">Tentang Kami</a>
+<a href="#sejarah" class="hover:text-sjamRed transition">Sejarah</a>
+                <a href="#perkhidmatan" class="hover:text-sjamRed transition">Perkhidmatan</a>
+                <a href="#kelebihan" class="hover:text-sjamRed transition">Mengapa SJAM</a>
+                <a href="#galeri" class="hover:text-sjamRed transition">Galeri</a>
+                <a href="#hubungi" class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">Hubungi Kami</a>
+            </nav>
+
+<!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+<!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Utama</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Tentang Kami</a>
+            <a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Perkhidmatan</a>
+            <a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Mengapa SJAM</a>
+            <a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Galeri</a>
+            <div class="pt-2">
+                <a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">Hubungi Kami</a>
+            </div>
+        </div>
+    </header>
+
+<!-- HERO SECTION -->
+    <section id="home" class="relative bg-sjamDarkBlue text-white overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
+        <!-- Background Banner Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/d/1D4NVI8ziCSNblvjjSjQoGVdDvhNxdcrZ"
+alt="Ambulans SJAM"
+class="w-full h-full object-cover object-center opacity-60">
+
+<div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20 text-red-300">
+                    <i class="fa-solid fa-shield-heart"></i> Badan Berkanun Bukan Keuntungan
+                </div>
+                <h1 class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-2 leading-tight">
+                    ST JOHN AMBULANS MALAYSIA
+                </h1>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-200 mb-6">
+                    Kawasan Kelantan Utara Kota Bharu
+                </h2>
+                <p class="text-lg text-slate-200 mb-8 max-w-2xl font-light leading-relaxed">
+    Berbakti Kepada Komuniti Melalui Perkhidmatan Sewa Ambulans, Tugas Awam dan Latihan Keselamatan yang profesional.
+</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tentang" class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        Kenali Kami <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#perkhidmatan" class="bg-white/10 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                        Perkhidmatan Kami
+                    </a>
+                    <a href="tel:+60199327091" class="bg-slate-900/60 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
+    <i class="fa-solid fa-phone"></i>
+    Hubungi Kami
+</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- TENTANG KAMI -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Column with Suggested Image info -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                        <img src="https://drive.google.com/thumbnail?id=1um7cVYf4pCBde8KliMrgSZvvJAb7Iv1X&sz=w1200"
+alt="Pasukan SJAM Kelantan Utara"
+class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+
+<!-- Text Content Column -->
+                <div>
+                    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-info-circle mr-1"></i> Mengenai Organisasi</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">Siapakah Kami?</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+    St John Ambulans Malaysia Kawasan Kelantan Utara, Kota Bharu merupakan sebuah organisasi bukan kerajaan (Non-Profit Organisation) yang diperbadankan di bawah Undang-Undang Malaysia, Akta 74 iaitu Akta Perbadanan St. John Ambulans Malaysia 1972. Organisasi ini menjalankan tugas sukarelawan membantu orang awam dan masyarakat setempat dalam hal berkaitan kecemasan dan bukan kecemasan bagi memastikan keselamatan serta nyawa mereka sentiasa terpelihara.
+</p>
+
+<div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-sjamRed flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 text-base">Organisasi Kebajikan Berdaftar</h3>
+                                <p class="text-slate-600 text-sm">Beroperasi secara telus membantu masyarakat tanpa mengira latar belakang.</p>
+                            </div>
+                        </div>
+
+<div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 text-sjamBlue flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 text-base">Sukarelawan Terlatih</h3>
+                                <p class="text-slate-600 text-sm">Barisan anggota dan paramedik yang memiliki sijil latihan pertolongan cemas bertauliah.</p>
+                            </div>
+                        </div>
+
+<div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 text-base">Pendidikan Keselamatan Kesihatan</h3>
+                                <p class="text-slate-600 text-sm">Menyediakan program latihan CPR, AED, dan First Aid untuk sekolah, agensi, dan komuniti.</p>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Gambar Aktiviti SJAM -->
+<div class="mt-6 rounded-xl overflow-hidden shadow-lg border border-slate-200">
+    <img src="https://drive.google.com/thumbnail?id=1UTbWEEud8AOD77Paz9dgrAyGmSYf32mM&sz=w1200"
+    alt="Pasukan SJAM Kawasan Kelantan Utara"
+    class="w-full h-auto object-cover">
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PERKHIDMATAN KAMI -->
+    <section id="perkhidmatan" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-briefcase-medical mr-1"></i> Tawaran Perkhidmatan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Perkhidmatan Kami Untuk Anda</h2>
+                <p class="text-slate-600 text-base">Kami menyediakan perkhidmatan kesihatan sokongan berasaskan komuniti yang profesional di sekitar Kota Bharu dan jajahan Kelantan Utara.</p>
+            </div>
+
+<!-- 4 Professional Cards -->
+            <div class="grid grid-cols-1 gap-6">
+
+<!-- Card 5: Ambulans Kecemasan & Khidmat Komuniti Percuma -->
+<div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+    <div>
+        <div class="w-14 h-14 bg-red-50 text-sjamRed rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sjamRed group-hover:text-white transition duration-300">
+            <i class="fa-solid fa-truck-medical"></i>
+        </div>
+
+<h3 class="text-xl font-bold text-slate-900 mb-3">
+            Ambulans Kecemasan & Khidmat Komuniti Percuma
+        </h3>
+
+<ul class="space-y-2 text-slate-600 text-sm mb-6">
+            <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+                Perkhidmatan ambulans kecemasan
+            </li>
+            <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+                Khidmat komuniti secara percuma
+            </li>
+            <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+                Bantuan kemanusiaan kepada masyarakat
+            </li>
+        </ul>
+    </div>
+
+<div id="komuniti-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
+    <img
+        src="https://drive.google.com/thumbnail?id=1Uu_51qLOf2pM3Urmx92TWmBzE8wWBkoO&sz=w1200"
+        alt="Aktiviti SJAM — gambar 1"
+        class="komuniti-slide w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1F-0SDFgSMscKthMew-BmsZ8tsigOb9kc&sz=w1200"
+        alt="Aktiviti SJAM — gambar 2"
+        class="komuniti-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1yrb9sPVPJYj09jTErC-L6o7QDybavTBA&sz=w1200"
+        alt="Aktiviti SJAM — gambar 3"
+        class="komuniti-slide hidden w-full h-64 object-contain">
+
+<button type="button" data-komuniti-prev
+        aria-label="Gambar sebelumnya"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+<button type="button" data-komuniti-next
+        aria-label="Gambar seterusnya"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+</div>
+
+<!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-red-50 text-sjamRed rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sjamRed group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-ambulance"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Perkhidmatan Ambulans</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Ambulans bukan kecemasan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Pengangkutan pesakit harian</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Rujukan hospital terpilih</li>
+                        </ul>
+
+<!-- Slideshow Perkhidmatan Ambulans -->
+<div id="ambulans-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
+    <img
+        src="https://drive.google.com/thumbnail?id=1mKU0WsZdro2vAPfPo8da-zC32gsKz37e&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 1"
+        class="ambulans-slide w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1-fwDHZuefNGsSD-_fsHyIPAFG7vbYRmQ&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 2"
+        class="ambulans-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1jOVus9YDJPODCOmDChz7_KiK_aY5DgQu&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 3"
+        class="ambulans-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1nXELMdAfDdx5qHUzCzXolPTrV0RHBugk&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 4"
+        class="ambulans-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1ykyCLYO3UlfV3U7UpcujxAfpkeB28cCo&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 5"
+        class="ambulans-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1P1v6ZTejFOQhf4GEzmIdPKygYKukvAbV&sz=w1200"
+        alt="Perkhidmatan Ambulans SJAM — gambar 6"
+        class="ambulans-slide hidden w-full h-64 object-contain">
+
+<button type="button" data-ambulans-prev
+        aria-label="Gambar sebelumnya"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+<button type="button" data-ambulans-next
+        aria-label="Gambar seterusnya"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+</div>
+
+</div>
+
+<!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 text-sjamBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sjamBlue group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Hospital Transfer</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Rumah ke hospital</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Hospital ke rumah pesakit</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Pemindahan pesakit selamat</li>
+                        </ul>
+
+<!-- Slideshow Hospital Transfer -->
+<div id="hospital-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
+    <img
+        src="https://drive.google.com/thumbnail?id=11nOqjVi4r0s_tyVvtlYSOjyKyCeLYfb7&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 1"
+        class="hospital-slide w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1kBKJczi6W5-tW3kzIRbcn83vNrh0O1qh&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 2"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1gIhYfcWIZuY0dyquek2-wiMNuWloAVf2&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 3"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=16rAkXPTdrPFc45p_X4dcuq89jBxWUU_U&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 4"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=14a1oYiOCn3J1VXzb2wz25vo1yrww2rLJ&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 5"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=18nuaRKYrqQouUkjLkka8_qvQifv1UwqC&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 6"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1OayHod_PTn_DtKOHRlgnxN70wL2QJefc&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 7"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1lUjD2i-ieitSdWYy5jWsCp0_v3lwQnTw&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 8"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1xeEMQaGbVrT3VcLyopNVA-L4YO_T2EB3&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 9"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1hgn6P62qlReGJwY_v3Nug6fUEypgrzLm&sz=w1200"
+        alt="Hospital Transfer SJAM — gambar 10"
+        class="hospital-slide hidden w-full h-64 object-contain">
+
+<button type="button" data-hospital-prev
+        aria-label="Gambar sebelumnya"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+<button type="button" data-hospital-next
+        aria-label="Gambar seterusnya"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+</div>
+
+</div>
+
+<!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Medical Standby</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Program & majlis komuniti</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Acara sukan & keramaian</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Aktiviti rasmi organisasi</li>
+                        </ul>
+                    </div>
+                    <!-- Slideshow Medical Standby -->
+<div id="medical-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
+    <img
+        src="https://drive.google.com/thumbnail?id=1lI7OqlgVhMySzaVc6U5LYeY37AypA1G3&sz=w1200"
+        alt="Medical Standby SJAM — gambar 1"
+        class="medical-slide w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1HduHo_B6RF989Ilrk2WH3Bv-2TDxAw91&sz=w1200"
+        alt="Medical Standby SJAM — gambar 2"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1GBdyyJ3Jcj9pPsZriuuInIrWVkjmFytS&sz=w1200"
+        alt="Medical Standby SJAM — gambar 3"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1nlGw2VmFT5pZnrmD9MXn9gL2khKdM2b-&sz=w1200"
+        alt="Medical Standby SJAM — gambar 4"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1lYwNu-WlhptX7_1Hku_0h_jpg1jDlCEg&sz=w1200"
+        alt="Medical Standby SJAM — gambar 5"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1luIgzZT3nI-h-yBHd8NH7th5StTkS8vW&sz=w1200"
+        alt="Medical Standby SJAM — gambar 6"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1M7Zumj8HnfNRo5hPDwIpOQyZlCq3Nir-&sz=w1200"
+        alt="Medical Standby SJAM — gambar 7"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1s1SaQRgrOKgWbBWa6bTkz22eVKzTK7dV&sz=w1200"
+        alt="Medical Standby SJAM — gambar 8"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1kX--8IJA9ZS4Tk8WTdQcKMDPX_2gHvLW&sz=w1200"
+        alt="Medical Standby SJAM — gambar 9"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1NKhxolwPMVnzHGYoT9qv-OJyjLqFK7aV&sz=w1200"
+        alt="Medical Standby SJAM — gambar 10"
+        class="medical-slide hidden w-full h-64 object-contain">
+
+<button type="button" data-medical-prev
+        aria-label="Gambar sebelumnya"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+<button type="button" data-medical-next
+        aria-label="Gambar seterusnya"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+                </div>
+
+<!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-book-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Latihan Keselamatan</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 text-xs"></i> Basic Life Support (BLS)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 text-xs"></i> Kursus CPR & AED</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 text-xs"></i> First Aid at Workplace</li>
+                        </ul>
+                    </div>
+                    <!-- Slideshow Latihan Keselamatan -->
+<div id="latihan-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
+    <img
+        src="https://drive.google.com/thumbnail?id=1_HPrb71spBvVwsPyK5tSxZnLS7-LV9Ki&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 1"
+        class="latihan-slide w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1MnOD4wr2ivckLG-E7Q2x1twuQhqs19Kx&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 2"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1tsmRqcAG0-NiW8lhblQw-kEsk4V5mMeZ&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 3"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1x2JklNS-E9-bvAsI_qsZMhMz9Jm3VpUi&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 4"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1VG299OI_Wp-wYl7nQFkVJR0ARPftwCGO&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 5"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=12f-uLkPG_WIyt7d5KxxizpoKqaEoHRmG&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 6"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=16S8RSJTm7cm_C-8XhvZIRzMwBDnXmaEp&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 7"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1nwZLMkHu3L_8DtP7eTwptJVW28rYEHjB&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 8"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1PcIiCZ0fNbfFeiQPPXu7XAplrYTU6rS4&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 9"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=18ORIuubHl0rcWAmwLXFZaWCYLJaDcOxN&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 10"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1Erw---r9ObwF0da9iWtX87wt7gGUOxUr&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 11"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1jEN_DuGC7_GZSKsfxQ469sPH5gDCiZhX&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 12"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1kOCJEEFNTcu8gB4yZmHnEQj5bgzUXLVe&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 13"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1LsA-E-dX7rkppkDBM7NeCGW7xkVrZElu&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 14"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=10ZTZv_P4i9-kSWVNaKIYueAouv2BcW6B&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 15"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1klvH5SyoyHM-kf04ElQsaaDXHIVVuKVf&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 16"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1HyRlcEjPCDECEXJJ4JYRH3Mg03cqXGVZ&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 17"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<img
+        src="https://drive.google.com/thumbnail?id=1C2bKDnCl4SjpeK-NQGIK5fBvA41ATxSC&sz=w1200"
+        alt="Latihan Keselamatan SJAM — gambar 18"
+        class="latihan-slide hidden w-full h-64 object-contain">
+
+<button type="button" data-latihan-prev
+        aria-label="Gambar sebelumnya"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+<button type="button" data-latihan-next
+        aria-label="Gambar seterusnya"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+ </div>
+</div>
+    </div>
+    </section>
+
+<!-- KENAPA PILIH SJAM -->
+    <section id="kelebihan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-sjamDarkBlue rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-2xl">
+                <!-- Background decoration glow -->
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-sjamRed/20 rounded-full blur-3xl pointer-events-none"></div>
+
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-red-400 font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-award mr-1"></i> Kepercayaan Masyarakat</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">Kenapa Pilih SJAM Kelantan Utara?</h2>
+                        <p class="text-slate-300 text-base mb-8 leading-relaxed">
+                            Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.
+                        </p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+                                <span class="font-medium text-sm">Pasukan terlatih & bertauliah</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+                                <span class="font-medium text-sm">Fokus keselamatan pesakit</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+                                <span class="font-medium text-sm">Sokongan komuniti prihatin</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+                                <span class="font-medium text-sm">Berteraskan kebajikan murni</span>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Highlight Box / Stats -->
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl text-center">
+                        <div class="text-5xl font-black text-red-400 mb-2">100%</div>
+                        <div class="text-lg font-semibold mb-4">Dedikasi Untuk Kemanusiaan</div>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            "Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti."
+                        </p>
+                        <div class="inline-block bg-sjamRed text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow">
+                            Sentiasa Bersedia Membantu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- GALERI -->
+    <section id="galeri" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-images mr-1"></i> Dokumentasi Aktiviti</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Galeri Aktiviti & Perkhidmatan</h2>
+                <p class="text-slate-600 text-base">Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.</p>
+            </div>
+
+<!-- Carousel Wrapper -->
+            <div class="relative max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <!-- Slide 1 -->
+                <div class="carousel-item active transition-all duration-500">
+                    <img src="https://drive.google.com/thumbnail?id=18hIzNEbTh4w1MUUtPfLhpAzyDGpeWara&sz=w1600"
+alt="Operasi Ambulans SJAM"
+class="w-full h-[350px] sm:h-[450px] object-contain bg-slate-900">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <span class="bg-sjamRed text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Ambulans</span>
+                        <h3 class="text-xl font-bold mt-2">Kenderaan Ambulans Siapsiaga</h3>
+                        <p class="text-slate-200 text-sm">Unit ambulans sentiasa diselenggara untuk khidmat pemindahan pesakit yang selamat.</p>
+                    </div>
+                </div>
+
+<!-- Slide 2 -->
+                <div class="carousel-item transition-all duration-500">
+                    <img src="https://drive.google.com/thumbnail?id=1V3eM7KunouT5fypdLUcekDPeDbUztLJF&sz=w1600"
+" alt="Pasukan SJAM" class="w-full h-[350px] sm:h-[450px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <span class="bg-sjamBlue text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Pasukan</span>
+                        <h3 class="text-xl font-bold mt-2">Barisan Sukarelawan Berdedikasi</h3>
+                        <p class="text-slate-200 text-sm">Anggota paramedik dan sukarelawan terlatih siap berbakti kepada masyarakat.</p>
+                    </div>
+                </div>
+
+<!-- Slide 3 -->
+                <div class="carousel-item transition-all duration-500">
+                    <img 
+
+src="https://drive.google.com/thumbnail?id=1xKvHr6J-3wsOr7NbCFKsEfT1ed3sDhjm&sz=w1600"
+
+alt="Aktiviti Latihan" class="w-full h-[350px] sm:h-[450px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <span class="bg-amber-600 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Latihan</span>
+                        <h3 class="text-xl font-bold mt-2">Kursus & Latihan Pertolongan Cemas</h3>
+                        <p class="text-slate-200 text-sm">Program latihan berkala untuk memperkasa kemahiran asas menyelamat nyawa.</p>
+                    </div>
+                </div>
+
+<!-- Slide 4 -->
+                <div class="carousel-item transition-all duration-500">
+                    <img src="https://drive.google.com/thumbnail?id=1LwxVSs-iHAd89XHhkd-nLhn1y9INznRU&sz=w1600"
+ alt="Program Komuniti" class="w-full h-[350px] sm:h-[450px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <span class="bg-emerald-600 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Komuniti</span>
+                        <h3 class="text-xl font-bold mt-2">Program Bakti Sosial & Kesihatan</h3>
+                        <p class="text-slate-200 text-sm">Sumbangan khidmat kesihatan bersama masyarakat setempat di Kota Bharu.</p>
+                    </div>
+                </div>
+
+<!-- Controls -->
+                <button onclick="prevSlide()" aria-label="Slaid Sebelumnya" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="nextSlide()" aria-label="Slaid Seterusnya" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- HUBUNGI KAMI -->
+    <section id="hubungi" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-phone-volume mr-1"></i> Saluran Komunikasi</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Hubungi Kami</h2>
+                <p class="text-slate-600 text-base">Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.</p>
+            </div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Info Box 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-red-100 text-sjamRed rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Telefon Pejabat</h3>
+                    <p class="text-slate-600 text-sm mb-4">Waktu pejabat rasmi</p>
+                    <a href="tel:+6011-53649991" class="text-sjamRed font-bold text-lg hover:underline">+6011-53649991</a>
+                </div>
+
+<!-- Info Box 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">WhatsApp Hotline</h3>
+                    <p class="text-slate-600 text-sm mb-4">Pertanyaan & Khidmat Waris</p>
+                    <a href="https://wa.me/60199327091" target="_blank" class="text-green-600 font-bold text-lg hover:underline">+6019-932 7091</a>
+                </div>
+
+<!-- Info Box 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-sjamBlue rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">E-mel Rasmi</h3>
+                    <p class="text-slate-600 text-sm mb-4">Urusan rasmi & surat menyurat</p>
+                    <a href="mailto:dinor6974@yahoo.com.my" class="text-sjamBlue font-bold text-sm sm:text-base hover:underline">dinor6974@yahoo.com.my</a>
+                </div>
+            </div>
+
+<!-- Google Maps & Action Button -->
+            <div class="bg-slate-100 rounded-3xl p-6 sm:p-8 border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">ST JOHN AMBULANS MALAYSIA</h3>
+                        <h4 class="text-lg font-semibold text-sjamRed mb-4">Kawasan Kelantan Utara Kota Bharu</h4>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Pusat operasi kami terletak di strategik bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://maps.app.goo.gl/nuEe5dvdtUWTSsnt6" target="_blank" class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+                                <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+                            </a>
+                            <a href="https://wa.me/60199327091" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
+                            </a>
+                        </div>
+                    </div>
+
+<!-- Embedded Map Placeholder Container -->
+                    <div class="rounded-2xl overflow-hidden shadow-inner border border-slate-300 h-72 bg-slate-200">
+
+<iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.245705975808!2d102.24397437561937!3d6.097572427965064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6b11ac912b591%3A0x897b6347ad96406b!2sSt.john%20Ambulans%20Malaysia%20Kawasan%20Kelantan%20Utara%20(Kota%20Bharu)!5e0!3m2!1sms!2smy!4v1790243229051!5m2!1sms!2smy"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer class="bg-sjamDarkBlue text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-700">
+                <div class="flex items-center gap-3">
+                    <img
+src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
+alt="SJAM Logo"
+class="w-10 h-10 object-contain">
+                    <div>
+                        <span class="block font-bold text-sm tracking-wide">ST JOHN AMBULANS MALAYSIA</span>
+                        <span class="block text-xs text-slate-400">Kawasan Kelantan Utara Kota Bharu</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-slate-300">
+                    <a href="#home" class="hover:text-red-400 transition">Utama</a>
+                    <a href="#tentang" class="hover:text-red-400 transition">Tentang Kami</a>
+                    <a href="#perkhidmatan" class="hover:text-red-400 transition">Perkhidmatan</a>
+                    <a href="#galeri" class="hover:text-red-400 transition">Galeri</a>
+                    <a href="#hubungi" class="hover:text-red-400 transition">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <p>© 2026 St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara Kota Bharu. Hak Cipta Terpelihara.</p>
+                <div class="flex flex-col items-center sm:items-end gap-2">
+    <p>Website Rasmi Maklumat Awam & Komuniti</p>
+
+<p class="flex items-center gap-2 text-slate-300">
+        <i class="fa-solid fa-eye" aria-hidden="true"></i>
+        <span>Pelawat unik:</span>
+        <span id="visitor-count" class="font-semibold text-white">—</span>
+    </p>
+</div>
+            </div>
+        </div>
+    </footer>
+
+<!-- JavaScript for Mobile Menu & Carousel Slider -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Gallery Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+       </script>
+
+<!-- JavaScript slideshow Card 5 -->
+    <script>
+    (() => {
+        const slider = document.getElementById('komuniti-slider');
+        if (!slider) return;
+
+        const gambar = slider.querySelectorAll('.komuniti-slide');
+        let indeks = 0;
+        let timer;
+
+        function paparGambar(nombor) {
+            indeks = (nombor + gambar.length) % gambar.length;
+            gambar.forEach((img, i) => {
+                img.classList.toggle('hidden', i !== indeks);
+            });
+        }
+
+        function mulaTimer() {
+            clearInterval(timer);
+            timer = setInterval(() => paparGambar(indeks + 1), 5000);
+        }
+
+        slider.querySelector('[data-komuniti-prev]').addEventListener('click', () => {
+            paparGambar(indeks - 1);
+            mulaTimer();
+        });
+
+        slider.querySelector('[data-komuniti-next]').addEventListener('click', () => {
+            paparGambar(indeks + 1);
+            mulaTimer();
+        });
+
+        mulaTimer();
+    })();
+    </script>
+<!-- JavaScript slideshow Card 1 -->
+<script>
+(() => {
+    const slider = document.getElementById('ambulans-slider');
+    if (!slider) return;
+
+    const gambar = slider.querySelectorAll('.ambulans-slide');
+    let indeks = 0;
+    let timer;
+
+    function paparGambar(nombor) {
+        indeks = (nombor + gambar.length) % gambar.length;
+        gambar.forEach((img, i) => {
+            img.classList.toggle('hidden', i !== indeks);
+        });
+    }
+
+    function mulaTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => paparGambar(indeks + 1), 5000);
+    }
+
+    slider.querySelector('[data-ambulans-prev]').addEventListener('click', () => {
+        paparGambar(indeks - 1);
+        mulaTimer();
+    });
+
+    slider.querySelector('[data-ambulans-next]').addEventListener('click', () => {
+        paparGambar(indeks + 1);
+        mulaTimer();
+    });
+
+    mulaTimer();
+})();
+</script>
+<!-- JavaScript slideshow Card 2 -->
+<script>
+(() => {
+    const slider = document.getElementById('hospital-slider');
+    if (!slider) return;
+
+    const gambar = slider.querySelectorAll('.hospital-slide');
+    let indeks = 0;
+    let timer;
+
+    function paparGambar(nombor) {
+        indeks = (nombor + gambar.length) % gambar.length;
+        gambar.forEach((img, i) => {
+            img.classList.toggle('hidden', i !== indeks);
+        });
+    }
+
+    function mulaTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => paparGambar(indeks + 1), 5000);
+    }
+
+    slider.querySelector('[data-hospital-prev]').addEventListener('click', () => {
+        paparGambar(indeks - 1);
+        mulaTimer();
+    });
+
+    slider.querySelector('[data-hospital-next]').addEventListener('click', () => {
+        paparGambar(indeks + 1);
+        mulaTimer();
+    });
+
+    mulaTimer();
+})();
+</script>
+<!-- JavaScript slideshow Card 3 -->
+<script>
+(() => {
+    const slider = document.getElementById('medical-slider');
+    if (!slider) return;
+
+    const gambar = slider.querySelectorAll('.medical-slide');
+    let indeks = 0;
+    let timer;
+
+    function paparGambar(nombor) {
+        indeks = (nombor + gambar.length) % gambar.length;
+        gambar.forEach((img, i) => {
+            img.classList.toggle('hidden', i !== indeks);
+        });
+    }
+
+    function mulaTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => paparGambar(indeks + 1), 5000);
+    }
+
+    slider.querySelector('[data-medical-prev]').addEventListener('click', () => {
+        paparGambar(indeks - 1);
+        mulaTimer();
+    });
+
+    slider.querySelector('[data-medical-next]').addEventListener('click', () => {
+        paparGambar(indeks + 1);
+        mulaTimer();
+    });
+
+    mulaTimer();
+})();
+</script>
+<!-- JavaScript slideshow Card 4 -->
+<script>
+(() => {
+    const slider = document.getElementById('latihan-slider');
+    if (!slider) return;
+
+    const gambar = slider.querySelectorAll('.latihan-slide');
+    let indeks = 0;
+    let timer;
+
+    function paparGambar(nombor) {
+        indeks = (nombor + gambar.length) % gambar.length;
+        gambar.forEach((img, i) => {
+            img.classList.toggle('hidden', i !== indeks);
+        });
+    }
+
+    function mulaTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => paparGambar(indeks + 1), 5000);
+    }
+
+    slider.querySelector('[data-latihan-prev]').addEventListener('click', () => {
+        paparGambar(indeks - 1);
+        mulaTimer();
+    });
+
+    slider.querySelector('[data-latihan-next]').addEventListener('click', () => {
+        paparGambar(indeks + 1);
+        mulaTimer();
+    });
+
+    mulaTimer();
+})();
+</script>
+<!-- Kaunter pelawat unik SJAM -->
+<script type="module">
+(async () => {
+    const paparan = document.getElementById('visitor-count');
+    if (!paparan) return;
+
+    try {
+        const [firebaseApp, firebaseAuth, firestore] = await Promise.all([
+            import('https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js'),
+            import('https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js'),
+            import('https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js')
+        ]);
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBN7nDNLjwreIBAPAjXiBUFKUqw75R384A",
+            authDomain: "sjam-kota-bharu.firebaseapp.com",
+            projectId: "sjam-kota-bharu",
+            storageBucket: "sjam-kota-bharu.firebasestorage.app",
+            messagingSenderId: "431728355604",
+            appId: "1:431728355604:web:7d62e9d61f1450eb48fa01"
+        };
+
+        const app = firebaseApp.initializeApp(
+            firebaseConfig,
+            'sjamVisitorCounter'
+        );
+
+        const auth = firebaseAuth.getAuth(app);
+        const db = firestore.getFirestore(app);
+
+        // Pulihkan identiti pelawat yang disimpan dalam pelayar.
+        await firebaseAuth.setPersistence(
+            auth,
+            firebaseAuth.browserLocalPersistence
+        );
+        await auth.authStateReady();
+
+        const pengguna = auth.currentUser ||
+            (await firebaseAuth.signInAnonymously(auth)).user;
+
+        const rekodJumlah = firestore.doc(db, 'stats', 'website');
+        const rekodPelawat = firestore.doc(db, 'visitors', pengguna.uid);
+
+        // Rekod pelawat dan tambah jumlah dalam satu transaksi.
+        await firestore.runTransaction(db, async (transaksi) => {
+            const pelawat = await transaksi.get(rekodPelawat);
+
+            // Pelawat ini pernah dikira.
+            if (pelawat.exists()) return;
+
+            const statistik = await transaksi.get(rekodJumlah);
+            const jumlah = statistik.exists()
+                ? statistik.data().total
+                : undefined;
+
+            if (!Number.isSafeInteger(jumlah) || jumlah < 0) {
+                throw new Error('Rekod stats/website tidak sah.');
+            }
+
+            transaksi.set(rekodPelawat, {
+                createdAt: firestore.serverTimestamp()
+            });
+
+            transaksi.update(rekodJumlah, {
+                total: jumlah + 1
+            });
+        });
+
+        // Paparkan jumlah terkini apabila ada pelawat baharu.
+        firestore.onSnapshot(rekodJumlah, (snapshot) => {
+            const jumlah = snapshot.exists()
+                ? snapshot.data().total
+                : undefined;
+
+            if (Number.isSafeInteger(jumlah) && jumlah >= 0) {
+                paparan.textContent = jumlah.toLocaleString('ms-MY');
+                paparan.removeAttribute('title');
+            } else {
+                paparan.textContent = 'Tidak tersedia';
+            }
+        }, (ralat) => {
+            console.error('Gagal membaca jumlah pelawat:', ralat);
+            paparan.textContent = 'Tidak tersedia';
+        });
+
+    } catch (ralat) {
+        console.error('Kaunter pelawat gagal:', ralat);
+        paparan.textContent = 'Tidak tersedia';
+        paparan.title = 'Sambungan kaunter pelawat belum berjaya.';
+    }
+})();
+</script>
+</body>
+</html>
