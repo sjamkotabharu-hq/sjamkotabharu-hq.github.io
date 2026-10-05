@@ -1181,5 +1181,74 @@ class="w-10 h-10 object-contain">
     }
 })();
 </script>
+<!-- Lagu SJAM -->
+<audio id="sjam-audio" preload="metadata">
+    <source src="./lagu-sjam.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    id="sjam-audio-btn"
+    type="button"
+    class="fixed bottom-4 right-4 z-50 bg-sjamBlue text-white px-4 py-3 rounded-full shadow-lg text-sm font-semibold"
+    aria-label="Main lagu SJAM">
+    ▶ Main Lagu SJAM
+</button>
+
+<script>
+(() => {
+    const audio = document.getElementById('sjam-audio');
+    const butang = document.getElementById('sjam-audio-btn');
+    let pernahMain = false;
+
+    function kemasKiniButang() {
+        butang.textContent = audio.paused
+            ? '▶ Main Lagu SJAM'
+            : '❚❚ Jeda Lagu SJAM';
+
+        butang.setAttribute('aria-label',
+            audio.paused ? 'Main lagu SJAM' : 'Jeda lagu SJAM'
+        );
+    }
+
+    async function mainLagu() {
+        try {
+            await audio.play();
+        } catch (ralat) {
+            kemasKiniButang();
+        }
+    }
+
+    function mulaSelepasKlik(event) {
+        if (butang.contains(event.target) || pernahMain) return;
+        mainLagu();
+    }
+
+    audio.addEventListener('playing', () => {
+        pernahMain = true;
+        document.removeEventListener('click', mulaSelepasKlik);
+        kemasKiniButang();
+    });
+
+    audio.addEventListener('pause', kemasKiniButang);
+    audio.addEventListener('ended', kemasKiniButang);
+
+    audio.addEventListener('error', () => {
+        butang.textContent = 'Lagu tidak dapat dimuatkan';
+    });
+
+    butang.addEventListener('click', () => {
+        if (audio.paused) {
+            mainLagu();
+        } else {
+            audio.pause();
+        }
+    });
+
+    document.addEventListener('click', mulaSelepasKlik);
+
+    // Cuba main secara automatik apabila halaman dibuka.
+    mainLagu();
+})();
+</script>
 </body>
 </html>
