@@ -756,6 +756,144 @@ alt="Aktiviti Latihan" class="w-full h-[350px] sm:h-[450px] object-cover">
         </div>
     </section>
 
+<!-- SUMBANGAN SJAM KKU -->
+<section id="sumbangan" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
+                <i class="fa-solid fa-hand-holding-heart mr-1"></i> Sokong Khidmat Kemanusiaan
+            </span>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+                Sumbangan Kepada SJAM KKU
+            </h2>
+
+            <p class="text-slate-600 leading-relaxed">
+                Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia
+                (SJAM) Kawasan Kelantan Utara meneruskan perkhidmatan dan aktiviti
+                kemanusiaan kepada masyarakat.
+            </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+
+            <div class="p-6 sm:p-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">
+                    <i class="fa-solid fa-circle-check text-sjamRed mr-2"></i>
+                    Kegunaan Sumbangan
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-truck-medical text-sjamRed mt-1"></i>
+                        <span class="text-slate-700 text-sm">
+                            Baik pulih dan penyelenggaraan kenderaan SJAM KKU
+                        </span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-building-circle-check text-sjamBlue mt-1"></i>
+                        <span class="text-slate-700 text-sm">
+                            Menampung kos operasi SJAM KKU
+                        </span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-kit-medical text-emerald-600 mt-1"></i>
+                        <span class="text-slate-700 text-sm">
+                            Menampung kos pembelian peralatan dan keperluan operasi
+                        </span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-people-group text-amber-600 mt-1"></i>
+                        <span class="text-slate-700 text-sm">
+                            Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Maklumat Akaun -->
+            <div class="bg-sjamBlue text-white p-6 sm:p-10 text-center">
+
+                <div class="w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-building-columns text-2xl"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-3">
+                    Salurkan Sumbangan Anda
+                </h3>
+
+                <p class="text-blue-100 text-sm mb-6">
+                    Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.
+                </p>
+
+                <div class="max-w-md mx-auto bg-white/10 border border-white/20 rounded-2xl p-6">
+
+                    <p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+    Nama Bank
+</p>
+<p class="font-semibold mb-4">
+    BANK MUAMALAT
+</p>
+
+                    <p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+    Nama Akaun
+</p>
+<p class="font-semibold mb-4">
+    ST JOHN AMBULANS MALAYSIA KEL UTARA
+</p>
+
+                    <p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+    No. Akaun
+</p>
+
+<p id="no-akaun-sjam" class="text-2xl font-bold tracking-wider mb-5">
+    03010000234710
+</p>
+
+                    <button
+                        type="button"
+                        onclick="salinAkaunSJAM()"
+                        class="bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition">
+                        <i class="fa-regular fa-copy mr-2"></i>
+                        Salin No. Akaun
+                    </button>
+
+                    <p id="mesej-salin" class="text-green-300 text-sm mt-3 hidden">
+                        ✓ Nombor akaun berjaya disalin
+                    </p>
+
+                </div>
+
+                <p class="text-blue-100 text-sm mt-6">
+                    Terima kasih atas sokongan dan sumbangan anda kepada SJAM KKU.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function salinAkaunSJAM() {
+    const nomborAkaun = document.getElementById('no-akaun-sjam').textContent.trim();
+
+    navigator.clipboard.writeText(nomborAkaun).then(() => {
+        const mesej = document.getElementById('mesej-salin');
+        mesej.classList.remove('hidden');
+
+        setTimeout(() => {
+            mesej.classList.add('hidden');
+        }, 3000);
+    });
+}
+</script>
+
 <!-- HUBUNGI KAMI -->
     <section id="hubungi" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1255,3 +1393,4 @@ class="w-10 h-10 object-contain">
 </script>
 </body>
 </html>
+
