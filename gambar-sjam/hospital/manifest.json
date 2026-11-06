@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "category": "hospital",
+  "images": [
+    {
+      "id": "legacy-hospital-1",
+      "fileName": "Gambar sedia ada 1",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=11nOqjVi4r0s_tyVvtlYSOjyKyCeLYfb7&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 1",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-2",
+      "fileName": "Gambar sedia ada 2",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1kBKJczi6W5-tW3kzIRbcn83vNrh0O1qh&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 2",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-3",
+      "fileName": "Gambar sedia ada 3",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1gIhYfcWIZuY0dyquek2-wiMNuWloAVf2&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 3",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-4",
+      "fileName": "Gambar sedia ada 4",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=16rAkXPTdrPFc45p_X4dcuq89jBxWUU_U&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 4",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-5",
+      "fileName": "Gambar sedia ada 5",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=14a1oYiOCn3J1VXzb2wz25vo1yrww2rLJ&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 5",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-6",
+      "fileName": "Gambar sedia ada 6",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=18nuaRKYrqQouUkjLkka8_qvQifv1UwqC&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 6",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-7",
+      "fileName": "Gambar sedia ada 7",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1OayHod_PTn_DtKOHRlgnxN70wL2QJefc&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 7",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-8",
+      "fileName": "Gambar sedia ada 8",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1lUjD2i-ieitSdWYy5jWsCp0_v3lwQnTw&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 8",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-9",
+      "fileName": "Gambar sedia ada 9",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1xeEMQaGbVrT3VcLyopNVA-L4YO_T2EB3&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 9",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-10",
+      "fileName": "Gambar sedia ada 10",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=1hgn6P62qlReGJwY_v3Nug6fUEypgrzLm&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 10",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    }
+  ]
+}
