@@ -497,34 +497,37 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </ul>
     </div>
 
-<div id="komuniti-slider" class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
-    <img
-        src="https://drive.google.com/thumbnail?id=1Uu_51qLOf2pM3Urmx92TWmBzE8wWBkoO&sz=w1200"
-        alt="Aktiviti SJAM — gambar 1"
-        class="komuniti-slide w-full h-64 object-contain">
 
-<img
-        src="https://drive.google.com/thumbnail?id=1F-0SDFgSMscKthMew-BmsZ8tsigOb9kc&sz=w1200"
-        alt="Aktiviti SJAM — gambar 2"
-        class="komuniti-slide hidden w-full h-64 object-contain">
+<!-- SJAM PHOTO ADMIN V2 - KHIDMAT KOMUNITI -->
+<div id="komuniti-slider"
+     data-category="komuniti"
+     class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-<img
-        src="https://drive.google.com/thumbnail?id=1yrb9sPVPJYj09jTErC-L6o7QDybavTBA&sz=w1200"
-        alt="Aktiviti SJAM — gambar 3"
-        class="komuniti-slide hidden w-full h-64 object-contain">
+    <div id="komuniti-gallery"
+         class="w-full h-64 flex items-center justify-center">
 
-<button type="button" data-komuniti-prev
-        aria-label="Gambar sebelumnya"
-        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+        <p class="text-slate-500 text-sm">
+            Memuatkan gambar Khidmat Komuniti...
+        </p>
+
+    </div>
+
+    <button type="button"
+            data-komuniti-prev
+            aria-label="Gambar sebelumnya"
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-chevron-left"></i>
     </button>
 
-<button type="button" data-komuniti-next
-        aria-label="Gambar seterusnya"
-        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
+    <button type="button"
+            data-komuniti-next
+            aria-label="Gambar seterusnya"
+            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-chevron-right"></i>
     </button>
+
 </div>
+<!-- TAMAT SLIDER KHIDMAT KOMUNITI -->
 </div>
 
 <!-- Card 1 -->
@@ -1854,41 +1857,120 @@ class="w-10 h-10 object-contain">
         setInterval(nextSlide, 5000);
        </script>
 
-<!-- JavaScript slideshow Card 5 -->
-    <script>
-    (() => {
-        const slider = document.getElementById('komuniti-slider');
-        if (!slider) return;
 
-        const gambar = slider.querySelectorAll('.komuniti-slide');
-        let indeks = 0;
-        let timer;
+<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT KOMUNITI -->
+<script>
+(() => {
+    const slider = document.getElementById('komuniti-slider');
+    const gallery = document.getElementById('komuniti-gallery');
 
-        function paparGambar(nombor) {
-            indeks = (nombor + gambar.length) % gambar.length;
-            gambar.forEach((img, i) => {
-                img.classList.toggle('hidden', i !== indeks);
-            });
+    if (!slider || !gallery) return;
+
+    const API_URL =
+      'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
+
+    const category = slider.dataset.category;
+
+    let images = [];
+    let index = 0;
+    let timer = null;
+
+    function showImage() {
+        gallery.innerHTML = '';
+
+        if (!images.length) {
+            gallery.textContent = 'Tiada gambar tersedia.';
+            return;
         }
 
-        function mulaTimer() {
-            clearInterval(timer);
-            timer = setInterval(() => paparGambar(indeks + 1), 5000);
+        const item = images[index];
+
+        const img = document.createElement('img');
+        img.src = item.url;
+        img.alt = item.alt || 'Aktiviti SJAM';
+        img.className = 'w-full h-64 object-contain';
+
+        gallery.appendChild(img);
+
+        if (item.caption) {
+            const caption = document.createElement('p');
+            caption.className =
+                'text-sm text-center text-slate-600 p-2';
+            caption.textContent = item.caption;
+            gallery.appendChild(caption);
         }
+    }
 
-        slider.querySelector('[data-komuniti-prev]').addEventListener('click', () => {
-            paparGambar(indeks - 1);
-            mulaTimer();
+    function nextImage() {
+        if (!images.length) return;
+        index = (index + 1) % images.length;
+        showImage();
+    }
+
+    function previousImage() {
+        if (!images.length) return;
+        index = (index - 1 + images.length) % images.length;
+        showImage();
+    }
+
+    function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(nextImage, 5000);
+    }
+
+    slider.querySelector('[data-komuniti-prev]')
+        .addEventListener('click', () => {
+            previousImage();
+            startTimer();
         });
 
-        slider.querySelector('[data-komuniti-next]').addEventListener('click', () => {
-            paparGambar(indeks + 1);
-            mulaTimer();
+    slider.querySelector('[data-komuniti-next]')
+        .addEventListener('click', () => {
+            nextImage();
+            startTimer();
         });
 
-        mulaTimer();
-    })();
-    </script>
+    function loadImages() {
+        gallery.textContent = 'Memuatkan gambar...';
+
+        const callbackName = 'sjamKomuniti_' + Date.now();
+        const script = document.createElement('script');
+
+        window[callbackName] = function(data) {
+            delete window[callbackName];
+            script.remove();
+
+            if (!data || !data.ok ||
+                !Array.isArray(data.images)) {
+                gallery.textContent = 'Gagal mendapatkan gambar.';
+                return;
+            }
+
+            images = data.images;
+            index = 0;
+
+            showImage();
+            startTimer();
+        };
+
+        script.onerror = function() {
+            delete window[callbackName];
+            script.remove();
+            gallery.textContent = 'Sambungan galeri gagal.';
+        };
+
+        script.src =
+            API_URL +
+            '?action=public' +
+            '&category=' + encodeURIComponent(category) +
+            '&callback=' + encodeURIComponent(callbackName);
+
+        document.body.appendChild(script);
+    }
+
+    loadImages();
+})();
+</script>
 <!-- JavaScript slideshow Card 1 -->
 <script>
 (() => {
