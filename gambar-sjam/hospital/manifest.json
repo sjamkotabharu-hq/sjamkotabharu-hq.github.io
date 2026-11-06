@@ -3,21 +3,21 @@
   "category": "hospital",
   "images": [
     {
-      "id": "legacy-hospital-1",
-      "fileName": "Gambar sedia ada 1",
-      "path": "",
-      "url": "https://drive.google.com/thumbnail?id=11nOqjVi4r0s_tyVvtlYSOjyKyCeLYfb7&sz=w1200",
-      "alt": "Hospital Transfer SJAM - gambar 1",
-      "caption": "",
-      "source": "drive",
-      "createdAt": ""
-    },
-    {
       "id": "legacy-hospital-2",
       "fileName": "Gambar sedia ada 2",
       "path": "",
       "url": "https://drive.google.com/thumbnail?id=1kBKJczi6W5-tW3kzIRbcn83vNrh0O1qh&sz=w1200",
       "alt": "Hospital Transfer SJAM - gambar 2",
+      "caption": "",
+      "source": "drive",
+      "createdAt": ""
+    },
+    {
+      "id": "legacy-hospital-1",
+      "fileName": "Gambar sedia ada 1",
+      "path": "",
+      "url": "https://drive.google.com/thumbnail?id=11nOqjVi4r0s_tyVvtlYSOjyKyCeLYfb7&sz=w1200",
+      "alt": "Hospital Transfer SJAM - gambar 1",
       "caption": "",
       "source": "drive",
       "createdAt": ""
