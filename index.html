@@ -1655,656 +1655,253 @@ class="w-10 h-10 object-contain">
        </script>
 
 
-<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT KOMUNITI -->
+
+<!-- SJAM PHOTO ADMIN V2 - UNIFIED GALLERY SCRIPT -->
 <script>
 (() => {
-    const slider = document.getElementById('komuniti-slider');
-    const gallery = document.getElementById('komuniti-gallery');
-
-    if (!slider || !gallery) return;
 
     const API_URL =
       'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
 
-    const category = slider.dataset.category;
-
-    let images = [];
-    let index = 0;
-    let timer = null;
-
-    function showImage() {
-        gallery.innerHTML = '';
-
-        if (!images.length) {
-            gallery.textContent = 'Tiada gambar tersedia.';
-            return;
+    const galleries = [
+        {
+            category: 'komuniti',
+            slider: 'komuniti-slider',
+            gallery: 'komuniti-gallery',
+            previous: '[data-komuniti-prev]',
+            next: '[data-komuniti-next]',
+            alt: 'Aktiviti SJAM'
+        },
+        {
+            category: 'ambulans',
+            slider: 'ambulans-slider',
+            gallery: 'ambulans-gallery',
+            previous: '[data-ambulans-prev]',
+            next: '[data-ambulans-next]',
+            alt: 'Perkhidmatan Ambulans SJAM'
+        },
+        {
+            category: 'hospital',
+            slider: 'hospital-slider',
+            gallery: 'hospital-gallery',
+            previous: '[data-hospital-prev]',
+            next: '[data-hospital-next]',
+            alt: 'Hospital Transfer SJAM'
+        },
+        {
+            category: 'medical',
+            slider: 'medical-slider',
+            gallery: 'medical-gallery',
+            previous: '[data-medical-prev]',
+            next: '[data-medical-next]',
+            alt: 'Medical Standby SJAM'
+        },
+        {
+            category: 'latihan',
+            slider: 'latihan-slider',
+            gallery: 'latihan-gallery',
+            previous: '[data-latihan-prev]',
+            next: '[data-latihan-next]',
+            alt: 'Latihan Pertolongan Cemas SJAM'
         }
+    ];
 
-        const item = images[index];
+    function initGallery(config) {
 
-        const img = document.createElement('img');
-        img.src = item.url;
-        img.alt = item.alt || 'Aktiviti SJAM';
-        img.className = 'w-full h-64 object-contain';
+        const slider = document.getElementById(config.slider);
+        const gallery = document.getElementById(config.gallery);
 
-        gallery.appendChild(img);
+        if (!slider || !gallery) return;
 
-        if (item.caption) {
-            const caption = document.createElement('p');
-            caption.className =
-                'text-sm text-center text-slate-600 p-2';
-            caption.textContent = item.caption;
-            gallery.appendChild(caption);
-        }
-    }
+        let images = [];
+        let index = 0;
+        let timer = null;
 
-    function nextImage() {
-        if (!images.length) return;
-        index = (index + 1) % images.length;
-        showImage();
-    }
+        function showImage() {
 
-    function previousImage() {
-        if (!images.length) return;
-        index = (index - 1 + images.length) % images.length;
-        showImage();
-    }
+            gallery.innerHTML = '';
 
-    function startTimer() {
-        clearInterval(timer);
-        timer = setInterval(nextImage, 5000);
-    }
-
-    slider.querySelector('[data-komuniti-prev]')
-        .addEventListener('click', () => {
-            previousImage();
-            startTimer();
-        });
-
-    slider.querySelector('[data-komuniti-next]')
-        .addEventListener('click', () => {
-            nextImage();
-            startTimer();
-        });
-
-    function loadImages() {
-        gallery.textContent = 'Memuatkan gambar...';
-
-        const callbackName = 'sjamKomuniti_' + Date.now();
-        const script = document.createElement('script');
-
-        window[callbackName] = function(data) {
-            delete window[callbackName];
-            script.remove();
-
-            if (!data || !data.ok ||
-                !Array.isArray(data.images)) {
-                gallery.textContent = 'Gagal mendapatkan gambar.';
+            if (!images.length) {
+                gallery.textContent = 'Tiada gambar tersedia.';
                 return;
             }
 
-            images = data.images;
-            index = 0;
+            const item = images[index];
+
+            const img = document.createElement('img');
+
+            img.src = item.url;
+            img.alt = item.alt || config.alt;
+            img.className = 'w-full h-64 object-contain';
+
+            gallery.appendChild(img);
+
+            if (item.caption) {
+
+                const caption = document.createElement('p');
+
+                caption.className =
+                    'text-sm text-center text-slate-600 p-2';
+
+                caption.textContent = item.caption;
+
+                gallery.appendChild(caption);
+            }
+        }
+
+        function nextImage() {
+
+            if (!images.length) return;
+
+            index = (index + 1) % images.length;
 
             showImage();
-            startTimer();
-        };
-
-        script.onerror = function() {
-            delete window[callbackName];
-            script.remove();
-            gallery.textContent = 'Sambungan galeri gagal.';
-        };
-
-        script.src =
-            API_URL +
-            '?action=public' +
-            '&category=' + encodeURIComponent(category) +
-            '&callback=' + encodeURIComponent(callbackName);
-
-        document.body.appendChild(script);
-    }
-
-    loadImages();
-})();
-</script>
-
-<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT AMBULANS -->
-<script>
-(() => {
-    const slider = document.getElementById('ambulans-slider');
-    const gallery = document.getElementById('ambulans-gallery');
-
-    if (!slider || !gallery) return;
-
-    const API_URL =
-      'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
-
-    const category = slider.dataset.category;
-
-    let images = [];
-    let index = 0;
-    let timer = null;
-
-    function showImage() {
-        gallery.innerHTML = '';
-
-        if (!images.length) {
-            gallery.textContent = 'Tiada gambar tersedia.';
-            return;
         }
 
-        const item = images[index];
+        function previousImage() {
 
-        const img = document.createElement('img');
-        img.src = item.url;
-        img.alt = item.alt || 'Perkhidmatan Ambulans SJAM';
-        img.className = 'w-full h-64 object-contain';
+            if (!images.length) return;
 
-        gallery.appendChild(img);
+            index = (index - 1 + images.length) % images.length;
 
-        if (item.caption) {
-            const caption = document.createElement('p');
-            caption.className =
-                'text-sm text-center text-slate-600 p-2';
-            caption.textContent = item.caption;
-            gallery.appendChild(caption);
+            showImage();
         }
-    }
 
-    function nextImage() {
-        if (!images.length) return;
-        index = (index + 1) % images.length;
-        showImage();
-    }
+        function startTimer() {
 
-    function previousImage() {
-        if (!images.length) return;
-        index = (index - 1 + images.length) % images.length;
-        showImage();
-    }
+            clearInterval(timer);
 
-    function startTimer() {
-        clearInterval(timer);
-        timer = setInterval(nextImage, 5000);
-    }
+            if (images.length > 1) {
+                timer = setInterval(nextImage, 5000);
+            }
+        }
 
-    slider.querySelector('[data-ambulans-prev]')
-        .addEventListener('click', () => {
-            previousImage();
-            startTimer();
-        });
+        const prevButton =
+            slider.querySelector(config.previous);
 
-    slider.querySelector('[data-ambulans-next]')
-        .addEventListener('click', () => {
-            nextImage();
-            startTimer();
-        });
+        const nextButton =
+            slider.querySelector(config.next);
 
-    function loadImages() {
-        gallery.textContent = 'Memuatkan gambar...';
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                previousImage();
+                startTimer();
+            });
+        }
 
-        const callbackName = 'sjamAmbulans_' + Date.now();
-        const script = document.createElement('script');
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                nextImage();
+                startTimer();
+            });
+        }
 
-        window[callbackName] = function(data) {
-            delete window[callbackName];
-            script.remove();
+        function loadImages() {
 
-            if (!data || !data.ok ||
-                !Array.isArray(data.images)) {
-                gallery.textContent = 'Gagal mendapatkan gambar.';
-                return;
+            gallery.textContent = 'Memuatkan gambar...';
+
+            const callbackName =
+                'sjamGallery_' +
+                config.category + '_' +
+                Date.now() + '_' +
+                Math.floor(Math.random() * 100000);
+
+            const script = document.createElement('script');
+
+            let completed = false;
+
+            const timeout = setTimeout(() => {
+
+                if (completed) return;
+
+                completed = true;
+
+                delete window[callbackName];
+
+                script.remove();
+
+                gallery.textContent =
+                    'Sambungan galeri gagal. Sila cuba semula.';
+
+            }, 20000);
+
+            function cleanup() {
+
+                completed = true;
+
+                clearTimeout(timeout);
+
+                delete window[callbackName];
+
+                script.remove();
             }
 
-            images = data.images;
-            index = 0;
+            window[callbackName] = function(data) {
 
-            showImage();
-            startTimer();
-        };
+                if (completed) return;
 
-        script.onerror = function() {
-            delete window[callbackName];
-            script.remove();
-            gallery.textContent = 'Sambungan galeri gagal.';
-        };
+                cleanup();
 
-        script.src =
-            API_URL +
-            '?action=public' +
-            '&category=' + encodeURIComponent(category) +
-            '&callback=' + encodeURIComponent(callbackName);
+                if (
+                    !data ||
+                    !data.ok ||
+                    !Array.isArray(data.images)
+                ) {
 
-        document.body.appendChild(script);
-    }
+                    gallery.textContent =
+                        'Gagal mendapatkan gambar.';
 
-    loadImages();
-})();
-</script>
+                    return;
+                }
 
-<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT HOSPITAL TRANSFER -->
-<script>
-(() => {
-    const slider = document.getElementById('hospital-slider');
-    const gallery = document.getElementById('hospital-gallery');
+                images = data.images.filter(item =>
+                    item &&
+                    typeof item.url === 'string' &&
+                    item.url.startsWith(
+                        'https://drive.google.com/thumbnail?id='
+                    )
+                );
 
-    if (!slider || !gallery) return;
+                index = 0;
 
-    const API_URL =
-      'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
+                showImage();
 
-    const category = slider.dataset.category;
+                startTimer();
+            };
 
-    let images = [];
-    let index = 0;
-    let timer = null;
+            script.async = true;
 
-    function showImage() {
-        gallery.innerHTML = '';
+            script.onerror = function() {
 
-        if (!images.length) {
-            gallery.textContent = 'Tiada gambar tersedia.';
-            return;
+                if (completed) return;
+
+                cleanup();
+
+                gallery.textContent =
+                    'Sambungan galeri gagal.';
+
+            };
+
+            script.src =
+                API_URL +
+                '?action=public' +
+                '&category=' +
+                encodeURIComponent(config.category) +
+                '&callback=' +
+                encodeURIComponent(callbackName) +
+                '&_=' + Date.now();
+
+            document.head.appendChild(script);
         }
 
-        const item = images[index];
-
-        const img = document.createElement('img');
-        img.src = item.url;
-        img.alt = item.alt || 'Hospital Transfer SJAM';
-        img.className = 'w-full h-64 object-contain';
-
-        gallery.appendChild(img);
-
-        if (item.caption) {
-            const caption = document.createElement('p');
-            caption.className =
-                'text-sm text-center text-slate-600 p-2';
-            caption.textContent = item.caption;
-            gallery.appendChild(caption);
-        }
+        loadImages();
     }
 
-    function nextImage() {
-        if (!images.length) return;
-        index = (index + 1) % images.length;
-        showImage();
-    }
-
-    function previousImage() {
-        if (!images.length) return;
-        index = (index - 1 + images.length) % images.length;
-        showImage();
-    }
-
-    function startTimer() {
-        clearInterval(timer);
-        timer = setInterval(nextImage, 5000);
-    }
-
-    slider.querySelector('[data-hospital-prev]')
-        .addEventListener('click', () => {
-            previousImage();
-            startTimer();
-        });
-
-    slider.querySelector('[data-hospital-next]')
-        .addEventListener('click', () => {
-            nextImage();
-            startTimer();
-        });
-
-    function loadImages() {
-        gallery.textContent = 'Memuatkan gambar...';
-
-        const callbackName = 'sjamHospital_' + Date.now();
-        const script = document.createElement('script');
-
-        window[callbackName] = function(data) {
-            delete window[callbackName];
-            script.remove();
-
-            if (!data || !data.ok ||
-                !Array.isArray(data.images)) {
-                gallery.textContent = 'Gagal mendapatkan gambar.';
-                return;
-            }
-
-            images = data.images;
-            index = 0;
-
-            showImage();
-            startTimer();
-        };
-
-        script.onerror = function() {
-            delete window[callbackName];
-            script.remove();
-            gallery.textContent = 'Sambungan galeri gagal.';
-        };
-
-        script.src =
-            API_URL +
-            '?action=public' +
-            '&category=' + encodeURIComponent(category) +
-            '&callback=' + encodeURIComponent(callbackName);
-
-        document.body.appendChild(script);
-    }
-
-    loadImages();
-})();
-</script>
-<!-- TAMAT JAVASCRIPT HOSPITAL TRANSFER -->
-<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT MEDICAL STANDBY -->
-<script>
-(() => {
-
-    const slider = document.getElementById('medical-slider');
-    const gallery = document.getElementById('medical-gallery');
-
-    if (!slider || !gallery) return;
-
-    const API_URL =
-      'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
-
-    const category = slider.dataset.category;
-
-    let images = [];
-    let index = 0;
-    let timer = null;
-
-    function showImage() {
-
-        gallery.innerHTML = '';
-
-        if (!images.length) {
-            gallery.textContent = 'Tiada gambar tersedia.';
-            return;
-        }
-
-        const item = images[index];
-
-        const img = document.createElement('img');
-
-        img.src = item.url;
-        img.alt = item.alt || 'Medical Standby SJAM';
-        img.className = 'w-full h-64 object-contain';
-
-        gallery.appendChild(img);
-
-        if (item.caption) {
-
-            const caption = document.createElement('p');
-
-            caption.className =
-                'text-sm text-center text-slate-600 p-2';
-
-            caption.textContent = item.caption;
-
-            gallery.appendChild(caption);
-
-        }
-
-    }
-
-    function nextImage() {
-
-        if (!images.length) return;
-
-        index = (index + 1) % images.length;
-
-        showImage();
-
-    }
-
-    function previousImage() {
-
-        if (!images.length) return;
-
-        index = (index - 1 + images.length) % images.length;
-
-        showImage();
-
-    }
-
-    function startTimer() {
-
-        clearInterval(timer);
-
-        timer = setInterval(nextImage, 5000);
-
-    }
-
-    slider.querySelector('[data-medical-prev]')
-        .addEventListener('click', () => {
-
-            previousImage();
-            startTimer();
-
-        });
-
-    slider.querySelector('[data-medical-next]')
-        .addEventListener('click', () => {
-
-            nextImage();
-            startTimer();
-
-        });
-
-    function loadImages() {
-
-        gallery.textContent = 'Memuatkan gambar...';
-
-        const callbackName = 'sjamMedical_' + Date.now();
-
-        const script = document.createElement('script');
-
-        window[callbackName] = function(data) {
-
-            delete window[callbackName];
-
-            script.remove();
-
-            if (!data || !data.ok ||
-                !Array.isArray(data.images)) {
-
-                gallery.textContent = 'Gagal mendapatkan gambar.';
-
-                return;
-
-            }
-
-            images = data.images;
-
-            index = 0;
-
-            showImage();
-
-            startTimer();
-
-        };
-
-        script.onerror = function() {
-
-            delete window[callbackName];
-
-            script.remove();
-
-            gallery.textContent = 'Sambungan galeri gagal.';
-
-        };
-
-        script.src =
-            API_URL +
-            '?action=public' +
-            '&category=' + encodeURIComponent(category) +
-            '&callback=' + encodeURIComponent(callbackName);
-
-        document.body.appendChild(script);
-
-    }
-
-    loadImages();
+    galleries.forEach(initGallery);
 
 })();
 </script>
-<!-- TAMAT JAVASCRIPT MEDICAL STANDBY -->
-<!-- SJAM PHOTO ADMIN V2 - JAVASCRIPT LATIHAN -->
-<script>
-(() => {
-
-    const slider = document.getElementById('latihan-slider');
-    const gallery = document.getElementById('latihan-gallery');
-
-    if (!slider || !gallery) return;
-
-    const API_URL =
-      'https://script.google.com/macros/s/AKfycbwalEIafvfEAPRwVqKphlIUrSIrsZ2Xom-kr8vN-URkP06pmpP2uKeaDImd-ArjSFI4/exec';
-
-    const category = slider.dataset.category;
-
-    let images = [];
-    let index = 0;
-    let timer = null;
-
-    function showImage() {
-
-        gallery.innerHTML = '';
-
-        if (!images.length) {
-            gallery.textContent = 'Tiada gambar tersedia.';
-            return;
-        }
-
-        const item = images[index];
-
-        const img = document.createElement('img');
-
-        img.src = item.url;
-        img.alt = item.alt || 'Latihan Pertolongan Cemas SJAM';
-        img.className = 'w-full h-64 object-contain';
-
-        gallery.appendChild(img);
-
-        if (item.caption) {
-
-            const caption = document.createElement('p');
-
-            caption.className =
-                'text-sm text-center text-slate-600 p-2';
-
-            caption.textContent = item.caption;
-
-            gallery.appendChild(caption);
-
-        }
-
-    }
-
-    function nextImage() {
-
-        if (!images.length) return;
-
-        index = (index + 1) % images.length;
-
-        showImage();
-
-    }
-
-    function previousImage() {
-
-        if (!images.length) return;
-
-        index = (index - 1 + images.length) % images.length;
-
-        showImage();
-
-    }
-
-    function startTimer() {
-
-        clearInterval(timer);
-
-        timer = setInterval(nextImage, 5000);
-
-    }
-
-    slider.querySelector('[data-latihan-prev]')
-        .addEventListener('click', () => {
-
-            previousImage();
-            startTimer();
-
-        });
-
-    slider.querySelector('[data-latihan-next]')
-        .addEventListener('click', () => {
-
-            nextImage();
-            startTimer();
-
-        });
-
-    function loadImages() {
-
-        gallery.textContent = 'Memuatkan gambar...';
-
-        const callbackName = 'sjamLatihan_' + Date.now();
-
-        const script = document.createElement('script');
-
-        window[callbackName] = function(data) {
-
-            delete window[callbackName];
-
-            script.remove();
-
-            if (!data || !data.ok ||
-                !Array.isArray(data.images)) {
-
-                gallery.textContent = 'Gagal mendapatkan gambar.';
-
-                return;
-
-            }
-
-            images = data.images;
-
-            index = 0;
-
-            showImage();
-
-            startTimer();
-
-        };
-
-        script.onerror = function() {
-
-            delete window[callbackName];
-
-            script.remove();
-
-            gallery.textContent = 'Sambungan galeri gagal.';
-
-        };
-
-        script.src =
-            API_URL +
-            '?action=public' +
-            '&category=' + encodeURIComponent(category) +
-            '&callback=' + encodeURIComponent(callbackName);
-
-        document.body.appendChild(script);
-
-    }
-
-    loadImages();
-
-})();
-</script>
-<!-- TAMAT JAVASCRIPT LATIHAN -->
+<!-- TAMAT SJAM PHOTO ADMIN V2 - UNIFIED GALLERY SCRIPT -->
 <!-- Kaunter pelawat unik SJAM -->
 <script type="module">
 (async () => {
