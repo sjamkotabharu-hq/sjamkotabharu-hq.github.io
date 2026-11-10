@@ -177,13 +177,41 @@ img, iframe {
             </div>
             <div class="flex items-center gap-4">
                 <a href="tel:+60199327091" class="hover:text-red-300 transition"><i class="fa-solid fa-phone mr-1"></i> +6019-932 7091</a>
-                <a href="https://wa.me/60199327091" target="_blank" class="hover:text-green-300 transition"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Hotline</a>
+                <a href="https://wa.me/60199327091"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="hover:text-green-300 transition">
+
+    <i class="fa-brands fa-whatsapp mr-1"></i>
+    WhatsApp Hotline
+
+</a>
+
+<!-- PEMILIH BAHASA SJAM -->
+<div class="flex items-center gap-2">
+
+    <i class="fa-solid fa-language text-white text-lg"></i>
+
+    <select
+        id="language-selector"
+        aria-label="Pilih bahasa"
+        class="bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-lg px-2 py-2 border border-white cursor-pointer">
+
+        <option value="ms">🇲🇾 Bahasa Melayu</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="en">🇬🇧 English</option>
+
+    </select>
+
+</div>
+<!-- TAMAT PEMILIH BAHASA SJAM -->
+
             </div>
         </div>
     </div>
 
-<!-- Main Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+<!-- Main Navigation --> 
+   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand / Logo -->
             <a href="#" class="flex items-center gap-3">
@@ -202,61 +230,110 @@ Kawasan Kelantan Utara Kota Bharu
             </a>
 
 <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
-                <a href="#home" class="hover:text-sjamRed transition">Utama</a>
-                <a href="#tentang" class="hover:text-sjamRed transition">Tentang Kami</a>
-<a href="#sejarah" class="hover:text-sjamRed transition">Sejarah</a>
-                <a href="#perkhidmatan" class="hover:text-sjamRed transition">Perkhidmatan</a>
-                <a href="#kelebihan" class="hover:text-sjamRed transition">Mengapa SJAM</a>
+<nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
 
-<a href="#galeri" class="hover:text-sjamRed transition">Galeri</a>
+    <a href="#home" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_home">Utama</span>
+    </a>
 
-<!-- MENU PENJELASAN AGAMA -->
-<a href="#penjelasan-agama" class="hover:text-sjamRed transition">
-    Penjelasan Agama
-</a>
+    <a href="#tentang" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_about">Tentang Kami</span>
+    </a>
 
-<a href="#sumbangan" class="hover:text-sjamRed transition">Sumbangan</a>  
-              <a href="#hubungi" class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">Hubungi Kami</a>
-            </nav>
+    <a href="#sejarah" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_history">Sejarah</span>
+    </a>
 
-<!-- Mobile Menu Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-        </div>
+    <a href="#perkhidmatan" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_services">Perkhidmatan</span>
+    </a>
+
+    <a href="#kelebihan" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_why">Mengapa SJAM</span>
+    </a>
+
+    <a href="#galeri" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_gallery">Galeri</span>
+    </a>
+
+    <a href="#penjelasan-agama" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_religion">Penjelasan Agama</span>
+    </a>
+
+    <a href="#sumbangan" class="hover:text-sjamRed transition">
+        <span data-i18n="nav_donation">Sumbangan</span>
+    </a>
+
+    <a href="#hubungi"
+       class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">
+
+        <span data-i18n="nav_contact">Hubungi Kami</span>
+
+    </a>
+
+</nav>
+
+<!-- MOBILE MENU BUTTON - DIKEKALKAN -->
+
+<button id="menu-btn"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
+
+    <i class="fa-solid fa-bars text-2xl"></i>
+
+</button>
+
+<!-- TAMAT MOBILE MENU BUTTON -->
 
 <!-- Mobile Menu dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Utama</a>
+<div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
 
-<a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Tentang Kami</a>
+    <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_home">Utama</span>
+    </a>
 
-<a href="#sejarah" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Sejarah</a>
+    <a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_about">Tentang Kami</span>
+    </a>
 
-<a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Perkhidmatan</a>
+    <a href="#sejarah" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_history">Sejarah</span>
+    </a>
 
-<a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    Mengapa SJAM
-</a>
+    <a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_services">Perkhidmatan</span>
+    </a>
 
-<a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    Galeri
-</a>
+    <a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_why">Mengapa SJAM</span>
+    </a>
 
-<!-- MENU PENJELASAN AGAMA -->
-<a href="#penjelasan-agama" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    Penjelasan Agama
-</a>
+    <a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_gallery">Galeri</span>
+    </a>
 
-<a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    Sumbangan
-</a>   
-         <div class="pt-2">
-                <a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">Hubungi Kami</a>
-            </div>
-        </div>
-    </header>
+    <a href="#penjelasan-agama" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_religion">Penjelasan Agama</span>
+    </a>
+
+    <a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_donation">Sumbangan</span>
+    </a>
+
+    <div class="pt-2">
+
+        <a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">
+
+            <span data-i18n="nav_contact">Hubungi Kami</span>
+
+        </a>
+
+    </div>
+
+</div>  
+
+  </header>
 
 <!-- HERO SECTION -->
     <section id="home" class="relative bg-sjamDarkBlue text-white overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
@@ -275,31 +352,76 @@ Kawasan Kelantan Utara Kota Bharu
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20 text-red-300">
-                    <i class="fa-solid fa-shield-heart"></i> Badan Berkanun Bukan Keuntungan
-                </div>
-                <h1 class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-2 leading-tight">
-                    ST JOHN AMBULANS MALAYSIA
-                </h1>
-                <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-200 mb-6">
-                    Kawasan Kelantan Utara Kota Bharu
-                </h2>
-                <p class="text-lg text-slate-200 mb-8 max-w-2xl font-light leading-relaxed">
+                <!-- HERO CONTENT - SISTEM TIGA BAHASA -->
+
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20 text-red-300">
+
+    <i class="fa-solid fa-shield-heart"></i>
+
+    <span data-i18n="hero_badge">
+        Badan Berkanun Bukan Keuntungan
+    </span>
+
+</div>
+
+
+<h1 data-i18n="hero_title"
+    class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-2 leading-tight">
+
+    ST JOHN AMBULANS MALAYSIA
+
+</h1>
+
+
+<h2 data-i18n="hero_subtitle"
+    class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-200 mb-6">
+
+    Kawasan Kelantan Utara Kota Bharu
+
+</h2>
+
+
+<p data-i18n="hero_description"
+   class="text-lg text-slate-200 mb-8 max-w-2xl font-light leading-relaxed">
+
     Berbakti Kepada Komuniti Melalui Perkhidmatan Sewa Ambulans, Tugas Awam dan Perkhidmatan Kesihatan yang profesional.
+
 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#tentang" class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
-                        Kenali Kami <i class="fa-solid fa-arrow-right text-sm"></i>
-                    </a>
-                    <a href="#perkhidmatan" class="bg-white/10 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
-                        Perkhidmatan Kami
-                    </a>
-                    <a href="tel:+60199327091" class="bg-slate-900/60 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
-    <i class="fa-solid fa-phone"></i>
-    Hubungi Kami
-</a>
-                </div>
-            </div>
+
+
+<div class="flex flex-wrap gap-4">
+
+    <a href="#tentang"
+       class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+
+        <span data-i18n="hero_about_btn">Kenali Kami</span>
+
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+
+    </a>
+
+
+    <a href="#perkhidmatan"
+       class="bg-white/10 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+
+        <span data-i18n="hero_services_btn">Perkhidmatan Kami</span>
+
+    </a>
+
+
+    <a href="tel:+60199327091"
+       class="bg-slate-900/60 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <span data-i18n="hero_contact_btn">Hubungi Kami</span>
+
+    </a>
+
+</div>
+
+<!-- TAMAT HERO CONTENT -->   
+         </div>
         </div>
     </section>
 
@@ -317,19 +439,48 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <!-- Text Content Column -->
                 <div>
-                    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-info-circle mr-1"></i> Mengenai Organisasi</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">Siapakah Kami?</h2>
-                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                    <!-- TENTANG KAMI - SISTEM TIGA BAHASA -->
 
-    St John Ambulans Malaysia Kawasan Kelantan Utara, Kota Bharu merupakan
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-    <strong class="text-red-600 font-bold">
+    <i class="fa-solid fa-info-circle mr-1"></i>
+
+    <span data-i18n="about_label">
+        Mengenai Organisasi
+    </span>
+
+</span>
+
+
+<h2 data-i18n="about_title"
+    class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+
+    Siapakah Kami?
+
+</h2>
+
+
+<p class="text-slate-600 text-lg mb-6 leading-relaxed">
+
+    <span data-i18n="about_intro">
+        St John Ambulans Malaysia Kawasan Kelantan Utara, Kota Bharu merupakan
+    </span>
+
+    <strong class="text-red-600 font-bold"
+            data-i18n="about_status">
+
         organisasi bukan kerajaan (Non-Profit Organisation) dan bukan Ambulans Swasta. Kami diperbadankan di bawah Undang-Undang Malaysia, Akta 74 iaitu Akta Perbadanan St. John Ambulans Malaysia 1972
+
     </strong>.
 
-    Organisasi kami menjalankan tugas sukarelawan membantu orang awam dan masyarakat setempat dalam hal berkaitan kecemasan dan bukan kecemasan bagi memastikan keselamatan serta nyawa mereka sentiasa terpelihara.
+    <span data-i18n="about_description">
+        Organisasi kami menjalankan tugas sukarelawan membantu orang awam dan masyarakat setempat dalam hal berkaitan kecemasan dan bukan kecemasan bagi memastikan keselamatan serta nyawa mereka sentiasa terpelihara.
+    </span>
 
 </p>
+
+
+<!-- TAMAT PENGENALAN TENTANG KAMI --> 
 <div class="space-y-4 mb-8">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-red-100 text-sjamRed flex items-center justify-center shrink-0 mt-1">
@@ -378,15 +529,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 Warisan & Sejarah
             </span>
 
-<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-                Sejarah St John Ambulans Malaysia
-            </h2>
+<h2 data-i18n="history_title"
+    class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+    Sejarah St John Ambulans Malaysia
+</h2>
 
-<p class="text-slate-600 leading-relaxed">
-                Menelusuri perjalanan St John Ambulans di Malaysia dalam memberikan
-                perkhidmatan pertolongan cemas, kemanusiaan dan khidmat kepada masyarakat.
-            </p>
-        </div>
+<p data-i18n="history_intro"
+   class="text-slate-600 leading-relaxed">
+    Menelusuri perjalanan St John Ambulans di Malaysia dalam memberikan
+    perkhidmatan pertolongan cemas, kemanusiaan dan khidmat kepada masyarakat.
+</p>  
+      </div>
 
 <!-- TIMELINE -->
         <div class="relative max-w-4xl mx-auto">
@@ -401,16 +554,18 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         1908
                     </span>
 
-<h3 class="font-bold text-lg text-slate-900 mb-2">
-                        Penubuhan St John Ambulans di Malaysia
-                    </h3>
+<h3 data-i18n="history_1908_title"
+    class="font-bold text-lg text-slate-900 mb-2">
+    Penubuhan St John Ambulans di Malaysia
+</h3>
 
-<p class="text-slate-600 text-sm leading-relaxed">
-                        St John Ambulans mula ditubuhkan di Malaysia pada tahun 1908.
-                        Dalam tempoh awal, aktiviti organisasi banyak tertumpu kepada
-                        perkhidmatan Tentera dan Kereta Api.
-                    </p>
-                </div>
+<p data-i18n="history_1908_desc"
+   class="text-slate-600 text-sm leading-relaxed">
+    St John Ambulans mula ditubuhkan di Malaysia pada tahun 1908.
+    Dalam tempoh awal, aktiviti organisasi banyak tertumpu kepada
+    perkhidmatan Tentera dan Kereta Api.
+</p>   
+             </div>
 
 <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-7 h-7 bg-sjamRed border-4 border-white rounded-full shadow"></div>
             </div>
@@ -422,16 +577,18 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         1938
                     </span>
 
-<h3 class="font-bold text-lg text-slate-900 mb-2">
-                        Penubuhan St John Ambulance Brigade
-                    </h3>
+<h3 data-i18n="history_1938_title"
+    class="font-bold text-lg text-slate-900 mb-2">
+    Penubuhan St John Ambulance Brigade
+</h3>
 
-<p class="text-slate-600 text-sm leading-relaxed">
-                        St John Ambulance Brigade mula ditubuhkan di negeri-negeri utama.
-                        Anggota direkrut sebagai pengusung pesakit dan diberikan latihan
-                        pertolongan cemas.
-                    </p>
-                </div>
+<p data-i18n="history_1938_desc"
+   class="text-slate-600 text-sm leading-relaxed">
+    St John Ambulance Brigade mula ditubuhkan di negeri-negeri utama.
+    Anggota direkrut sebagai pengusung pesakit dan diberikan latihan
+    pertolongan cemas.
+</p>    
+            </div>
 
 <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-7 h-7 bg-sjamBlue border-4 border-white rounded-full shadow"></div>
             </div>
@@ -443,18 +600,20 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         1941–1945
                     </span>
 
-<h3 class="font-bold text-lg text-slate-900 mb-2">
-                        Perkhidmatan Semasa Perang Dunia Kedua
-                    </h3>
+<h3 data-i18n="history_1941_title"
+    class="font-bold text-lg text-slate-900 mb-2">
+    Perkhidmatan Semasa Perang Dunia Kedua
+</h3>
 
-<p class="text-slate-600 text-sm leading-relaxed">
-                        Pada September 1941, Medical Auxiliary Service (MAS) diperkenalkan
-                        dan anggota St John Ambulance Brigade diserap ke dalam perkhidmatan
-                        tersebut. Sepanjang Perang Dunia Kedua, anggota turut memberikan
-                        perkhidmatan bersama Angkatan Tentera British dan Pentadbiran
-                        Kereta Api Malaya.
-                    </p>
-                </div>
+<p data-i18n="history_1941_desc"
+   class="text-slate-600 text-sm leading-relaxed">
+    Pada September 1941, Medical Auxiliary Service (MAS) diperkenalkan
+    dan anggota St John Ambulance Brigade diserap ke dalam perkhidmatan
+    tersebut. Sepanjang Perang Dunia Kedua, anggota turut memberikan
+    perkhidmatan bersama Angkatan Tentera British dan Pentadbiran
+    Kereta Api Malaya.
+</p>    
+            </div>
 
 <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-7 h-7 bg-sjamRed border-4 border-white rounded-full shadow"></div>
             </div>
@@ -466,15 +625,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         1959
                     </span>
 
-<h3 class="font-bold text-lg text-slate-900 mb-2">
-                        Perkhidmatan Di Seluruh Malaya
-                    </h3>
+<h3 data-i18n="history_1959_title"
+    class="font-bold text-lg text-slate-900 mb-2">
+    Perkhidmatan Di Seluruh Malaya
+</h3>
 
-<p class="text-slate-600 text-sm leading-relaxed">
-                        Menjelang tahun 1959, St John Ambulans telah menjalankan
-                        perkhidmatan di seluruh negeri di Malaya.
-                    </p>
-                </div>
+<p data-i18n="history_1959_desc"
+   class="text-slate-600 text-sm leading-relaxed">
+    Menjelang tahun 1959, St John Ambulans telah menjalankan
+    perkhidmatan di seluruh negeri di Malaya.
+</p>  
+              </div>
 
 <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-7 h-7 bg-sjamBlue border-4 border-white rounded-full shadow"></div>
             </div>
@@ -486,17 +647,19 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         1972
                     </span>
 
-<h3 class="font-bold text-lg text-slate-900 mb-2">
-                        St John Ambulans Malaysia
-                    </h3>
+<h3 data-i18n="history_1972_title"
+    class="font-bold text-lg text-slate-900 mb-2">
+    St John Ambulans Malaysia
+</h3>
 
-<p class="text-slate-600 text-sm leading-relaxed">
-                        St John Ambulance Association dan St John Ambulance Brigade
-                        di Malaysia digabungkan menjadi satu perbadanan yang dikenali
-                        sebagai St John Ambulans Malaysia di bawah Akta Perbadanan
-                        St. John Ambulans Malaysia 1972 (Akta 74).
-                    </p>
-                </div>
+<p data-i18n="history_1972_desc"
+   class="text-slate-600 text-sm leading-relaxed">
+    St John Ambulance Association dan St John Ambulance Brigade
+    di Malaysia digabungkan menjadi satu perbadanan yang dikenali
+    sebagai St John Ambulans Malaysia di bawah Akta Perbadanan
+    St. John Ambulans Malaysia 1972 (Akta 74).
+</p>    
+            </div>
 
 <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 w-7 h-7 bg-sjamRed border-4 border-white rounded-full shadow"></div>
             </div>
@@ -512,17 +675,19 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                     <i class="fa-solid fa-landmark text-2xl text-red-400"></i>
                 </div>
 
-<h3 class="text-2xl sm:text-3xl font-extrabold mb-4">
-                    Sejarah St John Ambulans di Kota Bharu
-                </h3>
+<h3 data-i18n="history_kb_title"
+    class="text-2xl sm:text-3xl font-extrabold mb-4">
+    Sejarah St John Ambulans di Kota Bharu
+</h3>
 
-<p class="text-slate-300 leading-relaxed">
-                    Rekod dokumentasi lama menunjukkan kewujudan bangunan
-                    St John Ambulans di Kota Bharu yang terletak berhampiran
-                    Jalan Mahmood. Bangunan ini menjadi sebahagian
-                    daripada sejarah perkembangan perkhidmatan St John Ambulans
-                    di Kota Bharu, Kelantan.
-                </p>
+<p data-i18n="history_kb_desc"
+   class="text-slate-300 leading-relaxed">
+    Rekod dokumentasi lama menunjukkan kewujudan bangunan
+    St John Ambulans di Kota Bharu yang terletak berhampiran
+    Jalan Mahmood. Bangunan ini menjadi sebahagian
+    daripada sejarah perkembangan perkhidmatan St John Ambulans
+    di Kota Bharu, Kelantan.
+</p>
 <!-- Galeri Gambar Lama St John Ambulans Kota Bharu -->
 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
 
@@ -862,8 +1027,15 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-briefcase-medical mr-1"></i> Tawaran Perkhidmatan</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Perkhidmatan Kami Untuk Anda</h2>
-                <p class="text-slate-600 text-base">Kami menyediakan perkhidmatan kesihatan sokongan berasaskan komuniti yang profesional di sekitar Kota Bharu dan Negeri Kelantan </p>
+                <h2 data-i18n="services_title"
+    class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+    Perkhidmatan Kami Untuk Anda
+</h2>
+
+<p data-i18n="services_intro"
+   class="text-slate-600 text-base">
+    Kami menyediakan perkhidmatan kesihatan sokongan berasaskan komuniti yang profesional di sekitar Kota Bharu dan Negeri Kelantan.
+</p>
             </div>
 
 <!-- 4 Professional Cards -->
@@ -876,25 +1048,30 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
             <i class="fa-solid fa-truck-medical"></i>
         </div>
 
-<h3 class="text-xl font-bold text-slate-900 mb-3">
-            Ambulans Kecemasan & Khidmat Komuniti Percuma
-        </h3>
+<h3 data-i18n="service_community_title"
+    class="text-xl font-bold text-slate-900 mb-3">
+    Ambulans Kecemasan & Khidmat Komuniti Percuma
+</h3>
 
 <ul class="space-y-2 text-slate-600 text-sm mb-6">
-            <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
-                Perkhidmatan ambulans kecemasan
-            </li>
-            <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
-                Khidmat komuniti secara percuma
-            </li>
-            <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-sjamRed text-xs"></i>
-                Bantuan kemanusiaan kepada masyarakat
-            </li>
-        </ul>
-    </div>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_community_1">Perkhidmatan ambulans kecemasan</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_community_2">Khidmat komuniti secara percuma</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_community_3">Bantuan kemanusiaan kepada masyarakat</span>
+    </li>
+
+</ul>  
+  </div>
 
 
 <!-- SJAM PHOTO ADMIN V2 - KHIDMAT KOMUNITI -->
@@ -935,13 +1112,29 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         <div class="w-14 h-14 bg-red-50 text-sjamRed rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sjamRed group-hover:text-white transition duration-300">
                             <i class="fa-solid fa-ambulance"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Perkhidmatan Ambulans</h3>
-                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Ambulans bukan kecemasan</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Pengangkutan pesakit harian</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamRed text-xs"></i> Rujukan hospital terpilih</li>
-                        </ul>
+                        <h3 data-i18n="service_ambulance_title"
+    class="text-xl font-bold text-slate-900 mb-3">
+    Perkhidmatan Ambulans
+</h3>
 
+<ul class="space-y-2 text-slate-600 text-sm mb-6">
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_ambulance_1">Ambulans bukan kecemasan</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_ambulance_2">Pengangkutan pesakit harian</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamRed text-xs"></i>
+        <span data-i18n="service_ambulance_3">Rujukan hospital terpilih</span>
+    </li>
+
+</ul>
 <!-- Slideshow Perkhidmatan Ambulans -->
 
 <!-- SJAM PHOTO ADMIN V2 - PERKHIDMATAN AMBULANS -->
@@ -983,13 +1176,29 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         <div class="w-14 h-14 bg-blue-50 text-sjamBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sjamBlue group-hover:text-white transition duration-300">
                             <i class="fa-solid fa-hospital"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Hospital Transfer</h3>
-                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Rumah ke hospital</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Hospital ke rumah pesakit</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sjamBlue text-xs"></i> Pemindahan pesakit selamat</li>
-                        </ul>
+                        <h3 data-i18n="service_hospital_title"
+    class="text-xl font-bold text-slate-900 mb-3">
+    Hospital Transfer
+</h3>
 
+<ul class="space-y-2 text-slate-600 text-sm mb-6">
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
+        <span data-i18n="service_hospital_1">Rumah ke hospital</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
+        <span data-i18n="service_hospital_2">Hospital ke rumah pesakit</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
+        <span data-i18n="service_hospital_3">Pemindahan pesakit selamat</span>
+    </li>
+
+</ul>
 
 <!-- SJAM PHOTO ADMIN V2 - HOSPITAL TRANSFER -->
 <div id="hospital-slider"
@@ -1032,13 +1241,30 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
                             <i class="fa-solid fa-user-doctor"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Medical Standby</h3>
-                        <ul class="space-y-2 text-slate-600 text-sm mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Program & majlis komuniti</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Acara sukan & keramaian</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600 text-xs"></i> Aktiviti rasmi organisasi</li>
-                        </ul>
-                    </div>
+                        <h3 data-i18n="service_medical_title"
+    class="text-xl font-bold text-slate-900 mb-3">
+    Medical Standby
+</h3>
+
+<ul class="space-y-2 text-slate-600 text-sm mb-6">
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+        <span data-i18n="service_medical_1">Program & majlis komuniti</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+        <span data-i18n="service_medical_2">Acara sukan & keramaian</span>
+    </li>
+
+    <li class="flex items-center gap-2">
+        <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+        <span data-i18n="service_medical_3">Aktiviti rasmi organisasi</span>
+    </li>
+
+</ul>  
+                  </div>
                     <!-- SJAM PHOTO ADMIN V2 - MEDICAL STANDBY -->
 <div id="medical-slider"
      data-category="medical"
@@ -1081,16 +1307,21 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                         <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
                             <i class="fa-solid fa-book-medical"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Latihan Pertolongan Cemas</h3>
+                        <h3 data-i18n="service_training_title"
+    class="text-xl font-bold text-slate-900 mb-3">
+    Latihan Pertolongan Cemas
+</h3>
 
-<p class="text-slate-600 text-sm mb-4 leading-relaxed">
+<p data-i18n="service_training_1"
+   class="text-slate-600 text-sm mb-4 leading-relaxed">
     Latihan Kesihatan St. John Ambulance Malaysia menawarkan kursus pertolongan cemas profesional, bantuan kecemasan, dan latihan kemahiran kesihatan untuk orang awam, pelajar, serta pekerja syarikat.
 </p>
 
-<p class="text-slate-600 text-sm mb-6 leading-relaxed">
+<p data-i18n="service_training_2"
+   class="text-slate-600 text-sm mb-6 leading-relaxed">
     Latihan bertaraf profesional yang boleh dituntut melalui HRD Corp dan diiktiraf oleh Jabatan Keselamatan dan Kesihatan Pekerjaan (DOSH).
-</p>
-                    </div>
+</p>   
+                 </div>
                     <!-- SJAM PHOTO ADMIN V2 - LATIHAN PERTOLONGAN CEMAS -->
 <div id="latihan-slider"
      data-category="latihan"
@@ -1143,43 +1374,98 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span class="text-red-400 font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-award mr-1"></i> Kepercayaan Masyarakat</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">Kenapa Pilih SJAM Kelantan Utara?</h2>
-                        <p class="text-slate-300 text-base mb-8 leading-relaxed">
-                            Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.
-                        </p>
+                        <!-- MENGAPA PILIH SJAM - SISTEM TIGA BAHASA -->
 
+<span class="text-red-400 font-bold uppercase tracking-wider text-sm block mb-2">
+
+    <i class="fa-solid fa-award mr-1"></i>
+
+    <span data-i18n="why_label">Kepercayaan Masyarakat</span>
+
+</span>
+
+<h2 data-i18n="why_title"
+    class="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">
+
+    Kenapa Pilih SJAM Kelantan Utara?
+
+</h2>
+
+<p data-i18n="why_description"
+   class="text-slate-300 text-base mb-8 leading-relaxed">
+
+    Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.
+
+</p>
+
+<!-- TAMAT MENGAPA PILIH SJAM -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
-                                <span class="font-medium text-sm">Pasukan terlatih & bertauliah</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
-                                <span class="font-medium text-sm">Fokus keselamatan pesakit</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
-                                <span class="font-medium text-sm">Sokongan komuniti prihatin</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                                <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
-                                <span class="font-medium text-sm">Berteraskan kebajikan murni</span>
-                            </div>
-                        </div>
-                    </div>
+
+    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+
+        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+
+        <span data-i18n="why_point_1" class="font-medium text-sm">
+            Pasukan terlatih & bertauliah
+        </span>
+
+    </div>
+
+    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+
+        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+
+        <span data-i18n="why_point_2" class="font-medium text-sm">
+            Fokus keselamatan pesakit
+        </span>
+
+    </div>
+
+    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+
+        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+
+        <span data-i18n="why_point_3" class="font-medium text-sm">
+            Sokongan komuniti prihatin
+        </span>
+
+    </div>
+
+    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+
+        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+
+        <span data-i18n="why_point_4" class="font-medium text-sm">
+            Berteraskan kebajikan murni
+        </span>
+
+    </div>
+
+</div>  
+                  </div>
 
 <!-- Highlight Box / Stats -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl text-center">
                         <div class="text-5xl font-black text-red-400 mb-2">100%</div>
-                        <div class="text-lg font-semibold mb-4">Dedikasi Untuk Kemanusiaan</div>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            "Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti."
-                        </p>
-                        <div class="inline-block bg-sjamRed text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow">
-                            Sentiasa Bersedia Membantu
-                        </div>
-                    </div>
+
+<div data-i18n="why_stat_title" class="text-lg font-semibold mb-4">
+    Dedikasi Untuk Kemanusiaan
+</div>
+
+<p data-i18n="why_stat_description"
+   class="text-slate-300 text-sm mb-6 leading-relaxed">
+
+    "Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti."
+
+</p>
+
+<div data-i18n="why_stat_button"
+     class="inline-block bg-sjamRed text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow">
+
+    Sentiasa Bersedia Membantu
+
+</div>  
+                  </div>
                 </div>
             </div>
         </div>
@@ -1189,9 +1475,29 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
     <section id="galeri" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-images mr-1"></i> Dokumentasi Aktiviti</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Galeri Aktiviti & Perkhidmatan</h2>
-                <p class="text-slate-600 text-base">Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.</p>
+                <!-- GALERI - SISTEM TIGA BAHASA -->
+
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
+
+    <i class="fa-solid fa-images mr-1"></i>
+
+    <span data-i18n="gallery_label">Dokumentasi Aktiviti</span>
+
+</span>
+
+<h2 data-i18n="gallery_title"
+    class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+
+    Galeri Aktiviti & Perkhidmatan
+
+</h2>
+
+<p data-i18n="gallery_description"
+   class="text-slate-600 text-base">
+
+    Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.
+
+</p>
             </div>
 
 <!-- Carousel Wrapper -->
@@ -1207,10 +1513,21 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
          alt="Operasi Ambulans SJAM 1"
          class="w-full h-[350px] sm:h-[450px] object-contain bg-slate-900">
     <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-        <span class="bg-sjamRed text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Ambulans</span>
-        <h3 class="text-xl font-bold mt-2">Kenderaan Ambulans Siapsiaga</h3>
-        <p class="text-slate-200 text-sm">Unit ambulans sentiasa diselenggara untuk khidmat pemindahan pesakit yang selamat.</p>
-    </div>
+        <span data-i18n="gallery_ambulance"
+      class="bg-sjamRed text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+    Ambulans
+</span>
+
+<h3 data-i18n="gallery_vehicle_title"
+    class="text-xl font-bold mt-2">
+    Kenderaan Ambulans Siapsiaga
+</h3>
+
+<p data-i18n="gallery_vehicle_desc"
+   class="text-slate-200 text-sm">
+    Unit ambulans sentiasa diselenggara untuk khidmat pemindahan pesakit yang selamat.
+</p>  
+  </div>
 </div>
 
 <!-- Slide 2 -->
@@ -1408,21 +1725,39 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <section id="sumbangan" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
+<!-- TAJUK SUMBANGAN - SISTEM TIGA BAHASA -->
+
 <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
-                <i class="fa-solid fa-hand-holding-heart mr-1"></i> Sokong Khidmat Kemanusiaan
-            </span>
 
-<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-                Sumbangan Kepada SJAM KKU
-            </h2>
+    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-<p class="text-slate-600 leading-relaxed">
-                Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia
-                (SJAM) Kawasan Kelantan Utara meneruskan perkhidmatan dan aktiviti
-                kemanusiaan kepada masyarakat.
-            </p>
-        </div>
+        <i class="fa-solid fa-hand-holding-heart mr-1"></i>
+
+        <span data-i18n="donation_label">
+            Sokong Khidmat Kemanusiaan
+        </span>
+
+    </span>
+
+    <h2 data-i18n="donation_title"
+        class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+
+        Sumbangan Kepada SJAM KKU
+
+    </h2>
+
+    <p data-i18n="donation_intro"
+       class="text-slate-600 leading-relaxed">
+
+        Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia
+        (SJAM) Kawasan Kelantan Utara meneruskan perkhidmatan dan aktiviti
+        kemanusiaan kepada masyarakat.
+
+    </p>
+
+</div>
+
+<!-- TAMAT TAJUK SUMBANGAN -->
 
 
 <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
@@ -1433,33 +1768,54 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="p-6 sm:p-10 border-b border-slate-200 bg-white">
 
-    <div class="text-center max-w-3xl mx-auto mb-10">
+    <!-- PENGHARGAAN PENYUMBANG - SISTEM TIGA BAHASA -->
 
-        <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
-            <i class="fa-solid fa-handshake-angle mr-2"></i>
+<div class="text-center max-w-3xl mx-auto mb-10">
+
+    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
+
+        <i class="fa-solid fa-handshake-angle mr-2"></i>
+
+        <span data-i18n="donor_label">
             JASA DAN SUMBANGAN DIHARGAI
         </span>
 
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-5">
-            Penghargaan Kepada Penyumbang Korporat & Individu Prihatin
-        </h3>
+    </span>
 
-        <p class="text-slate-600 leading-relaxed mb-4">
-            St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara
-            Kota Bharu merakamkan setinggi-tinggi penghargaan dan
-            ucapan terima kasih kepada pihak korporat, organisasi
-            serta para penderma yang prihatin atas sumbangan
-            kenderaan operasi pacuan empat roda (4x4) dan ambulans.
-        </p>
 
-        <p class="text-slate-600 leading-relaxed">
-            Sumbangan yang amat bermakna ini membantu memperkukuh
-            kesiapsiagaan pasukan SJAM dalam melaksanakan tugas
-            kecemasan, pengangkutan pesakit, bantuan kemanusiaan
-            serta perkhidmatan kebajikan kepada masyarakat.
-        </p>
+    <h3 data-i18n="donor_title"
+        class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-5">
 
-    </div>
+        Penghargaan Kepada Penyumbang Korporat & Individu Prihatin
+
+    </h3>
+
+
+    <p data-i18n="donor_description_1"
+       class="text-slate-600 leading-relaxed mb-4">
+
+        St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara
+        Kota Bharu merakamkan setinggi-tinggi penghargaan dan
+        ucapan terima kasih kepada pihak korporat, organisasi
+        serta para penderma yang prihatin atas sumbangan
+        kenderaan operasi pacuan empat roda (4x4) dan ambulans.
+
+    </p>
+
+
+    <p data-i18n="donor_description_2"
+       class="text-slate-600 leading-relaxed">
+
+        Sumbangan yang amat bermakna ini membantu memperkukuh
+        kesiapsiagaan pasukan SJAM dalam melaksanakan tugas
+        kecemasan, pengangkutan pesakit, bantuan kemanusiaan
+        serta perkhidmatan kebajikan kepada masyarakat.
+
+    </p>
+
+</div>
+
+<!-- TAMAT PENGHARGAAN PENYUMBANG -->
 
     <!-- GALERI GAMBAR PENYERAHAN KENDERAAN -->
 
@@ -1473,11 +1829,12 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption class="p-5 text-sm text-slate-600 leading-relaxed">
-                Majlis penyerahan kenderaan operasi hasil
-                sumbangan pihak korporat bagi menyokong
-                perkhidmatan kemanusiaan SJAM.
-            </figcaption>
+            <figcaption data-i18n="donor_image_1"
+            class="p-5 text-sm text-slate-600 leading-relaxed">
+    Majlis penyerahan kenderaan operasi hasil
+    sumbangan pihak korporat bagi menyokong
+    perkhidmatan kemanusiaan SJAM.
+</figcaption>
         </figure>
 
         <!-- GAMBAR 2 -->
@@ -1488,12 +1845,13 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption class="p-5 text-sm text-slate-600 leading-relaxed">
-                Sesi pertemuan dan perbincangan bersama
-                wakil organisasi bagi memperkukuh kerjasama
-                serta sokongan terhadap khidmat komuniti.
-            </figcaption>
-        </figure>
+            <figcaption data-i18n="donor_image_2"
+            class="p-5 text-sm text-slate-600 leading-relaxed">
+    Sesi pertemuan dan perbincangan bersama
+    wakil organisasi bagi memperkukuh kerjasama
+    serta sokongan terhadap khidmat komuniti.
+</figcaption>    
+    </figure>
 
         <!-- GAMBAR 3 -->
         <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
@@ -1503,11 +1861,12 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption class="p-5 text-sm text-slate-600 leading-relaxed">
-                Penyerahan unit ambulans bagi meningkatkan
-                keupayaan operasi dan kesiapsiagaan dalam
-                memberikan bantuan kepada masyarakat.
-            </figcaption>
+            <figcaption data-i18n="donor_image_3"
+            class="p-5 text-sm text-slate-600 leading-relaxed">
+    Penyerahan unit ambulans bagi meningkatkan
+    keupayaan operasi dan kesiapsiagaan dalam
+    memberikan bantuan kepada masyarakat.
+</figcaption>
         </figure>
 
         <!-- GAMBAR 4 -->
@@ -1518,37 +1877,44 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption class="p-5 text-sm text-slate-600 leading-relaxed">
-                Suasana majlis penyerahan ambulans sebagai
-                tanda penghargaan kepada penyumbang yang
-                prihatin terhadap kesejahteraan komuniti.
-            </figcaption>
+            <figcaption data-i18n="donor_image_4"
+            class="p-5 text-sm text-slate-600 leading-relaxed">
+    Suasana majlis penyerahan ambulans sebagai
+    tanda penghargaan kepada penyumbang yang
+    prihatin terhadap kesejahteraan komuniti.
+</figcaption>
         </figure>
 
     </div>
 
     <!-- UCAPAN PENGHARGAAN -->
 
-    <div class="mt-10 bg-sjamBlue rounded-2xl p-6 sm:p-8 text-center text-white">
+    <!-- PENGHARGAAN PENYUMBANG - TIGA BAHASA -->
 
-        <i class="fa-solid fa-heart text-red-400 text-3xl mb-4"></i>
+<div class="mt-10 bg-sjamBlue rounded-2xl p-6 sm:p-8 text-center text-white">
 
-        <h4 class="text-xl sm:text-2xl font-bold mb-3">
-            Terima Kasih Atas Keprihatinan Anda
-        </h4>
+    <i class="fa-solid fa-heart text-red-400 text-3xl mb-4"></i>
 
-        <p class="text-blue-100 leading-relaxed max-w-2xl mx-auto">
-            Setiap sumbangan amat bernilai dalam memastikan
-            kesinambungan khidmat kemanusiaan SJAM kepada
-            mereka yang memerlukan.
-        </p>
+    <h4 data-i18n="donor_thanks_title"
+        class="text-xl sm:text-2xl font-bold mb-3">
+        Terima Kasih Atas Keprihatinan Anda
+    </h4>
 
-        <p class="text-red-300 font-semibold mt-5">
-            Bersama Berbakti Demi Kesejahteraan Komuniti
-        </p>
+    <p data-i18n="donor_thanks_description"
+       class="text-blue-100 leading-relaxed max-w-2xl mx-auto">
+        Setiap sumbangan amat bernilai dalam memastikan
+        kesinambungan khidmat kemanusiaan SJAM kepada
+        mereka yang memerlukan.
+    </p>
 
-    </div>
+    <p data-i18n="donor_thanks_closing"
+       class="text-red-300 font-semibold mt-5">
+        Bersama Berbakti Demi Kesejahteraan Komuniti
+    </p>
 
+</div>
+
+<!-- TAMAT PENGHARGAAN PENYUMBANG -->
 </div>
 
 <!-- ====================================== -->
@@ -1558,127 +1924,235 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <!-- Maklumat Sumbangan & Pengecualian Cukai -->
 <div class="p-6 sm:p-10 border-b border-slate-200">
 <div class="p-6 sm:p-10 border-b border-slate-200">
-    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 sm:p-8">
+    <!-- SUMBANGAN DAN PENGECUALIAN CUKAI - TIGA BAHASA -->
 
-<div class="flex items-start gap-4">
+<div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 sm:p-8">
 
-<div class="w-12 h-12 bg-sjamBlue text-white rounded-xl flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-receipt text-xl"></i>
-            </div>
+    <div class="flex items-start gap-4">
 
-<div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">
-                    Sumbangan & Pengecualian Cukai
-                </h3>
+        <div class="w-12 h-12 bg-sjamBlue text-white rounded-xl flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-receipt text-xl"></i>
+        </div>
 
-<p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                    St. John Ambulans Malaysia (SJAM) merupakan badan berkanun
-                    bukan kerajaan yang menyediakan perkhidmatan tanpa berasaskan
-                    keuntungan kepada masyarakat. Berdasarkan maklumat rasmi SJAM,
-                    sumbangan kepada SJAM dikecualikan daripada Cukai Pendapatan
-                    menurut Warta Kerajaan Persekutuan L.N.334 bertarikh
-                    22 Jun 1955.
-                </p>
+        <div>
+
+            <h3 data-i18n="tax_title"
+                class="text-xl font-bold text-slate-900 mb-3">
+
+                Sumbangan & Pengecualian Cukai
+
+            </h3>
+
+            <p data-i18n="tax_description"
+               class="text-slate-600 text-sm sm:text-base leading-relaxed">
+
+                St. John Ambulans Malaysia (SJAM) merupakan badan berkanun
+                bukan kerajaan yang menyediakan perkhidmatan tanpa berasaskan
+                keuntungan kepada masyarakat. Berdasarkan maklumat rasmi SJAM,
+                sumbangan kepada SJAM dikecualikan daripada Cukai Pendapatan
+                menurut Warta Kerajaan Persekutuan L.N.334 bertarikh
+                22 Jun 1955.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
-</div>
+<!-- TAMAT SUMBANGAN DAN PENGECUALIAN CUKAI -->
 
 </div>
 </div>
 
+<!-- KEGUNAAN SUMBANGAN - SISTEM TIGA BAHASA -->
 <div class="p-6 sm:p-10">
-                <h3 class="text-xl font-bold text-slate-900 mb-6">
-                    <i class="fa-solid fa-circle-check text-sjamRed mr-2"></i>
-                    Kegunaan Sumbangan
-                </h3>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <h3 class="text-xl font-bold text-slate-900 mb-6">
 
-<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-truck-medical text-sjamRed mt-1"></i>
-                        <span class="text-slate-700 text-sm">
-                            Baik pulih dan penyelenggaraan kenderaan SJAM KKU
-                        </span>
-                    </div>
+        <i class="fa-solid fa-circle-check text-sjamRed mr-2"></i>
 
-<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-building-circle-check text-sjamBlue mt-1"></i>
-                        <span class="text-slate-700 text-sm">
-                            Menampung kos operasi SJAM KKU
-                        </span>
-                    </div>
+        <span data-i18n="donation_usage_title">
+            Kegunaan Sumbangan
+        </span>
 
-<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-kit-medical text-emerald-600 mt-1"></i>
-                        <span class="text-slate-700 text-sm">
-                            Menampung kos pembelian peralatan dan keperluan operasi
-                        </span>
-                    </div>
+    </h3>
 
-<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
-                        <i class="fa-solid fa-people-group text-amber-600 mt-1"></i>
-                        <span class="text-slate-700 text-sm">
-                            Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam
-                        </span>
-                    </div>
 
-</div>
-            </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-<!-- Maklumat Akaun -->
-            <div class="bg-sjamBlue text-white p-6 sm:p-10 text-center">
 
-<div class="w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-building-columns text-2xl"></i>
-                </div>
+        <!-- KEGUNAAN 1 -->
 
-<h3 class="text-2xl font-bold mb-3">
-                    Salurkan Sumbangan Anda
-                </h3>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
 
-<p class="text-blue-100 text-sm mb-6">
-                    Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.
-                </p>
+            <i class="fa-solid fa-truck-medical text-sjamRed mt-1"></i>
 
-<div class="max-w-md mx-auto bg-white/10 border border-white/20 rounded-2xl p-6">
+            <span data-i18n="donation_usage_1"
+                  class="text-slate-700 text-sm">
 
-<p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
-    Nama Bank
-</p>
-<p class="font-semibold mb-4">
-    BANK MUAMALAT
-</p>
+                Baik pulih dan penyelenggaraan kenderaan SJAM KKU
 
-<p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
-    Nama Akaun
-</p>
-<p class="font-semibold mb-4">
-    ST JOHN AMBULANS MALAYSIA KEL UTARA
-</p>
+            </span>
 
-<p class="text-blue-200 text-xs uppercase tracking-wider mb-1">
-    No. Akaun
-</p>
+        </div>
 
-<p id="no-akaun-sjam" class="text-2xl font-bold tracking-wider mb-5">
-    03010000234710
-</p>
 
-<button
-                        type="button"
-                        onclick="salinAkaunSJAM()"
-                        class="bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition">
-                        <i class="fa-regular fa-copy mr-2"></i>
-                        Salin No. Akaun
-                    </button>
+        <!-- KEGUNAAN 2 -->
 
-<p id="mesej-salin" class="text-green-300 text-sm mt-3 hidden">
-                        ✓ Nombor akaun berjaya disalin
-                    </p>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+
+            <i class="fa-solid fa-building-circle-check text-sjamBlue mt-1"></i>
+
+            <span data-i18n="donation_usage_2"
+                  class="text-slate-700 text-sm">
+
+                Menampung kos operasi SJAM KKU
+
+            </span>
+
+        </div>
+
+
+        <!-- KEGUNAAN 3 -->
+
+        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+
+            <i class="fa-solid fa-kit-medical text-emerald-600 mt-1"></i>
+
+            <span data-i18n="donation_usage_3"
+                  class="text-slate-700 text-sm">
+
+                Menampung kos pembelian peralatan dan keperluan operasi
+
+            </span>
+
+        </div>
+
+
+        <!-- KEGUNAAN 4 -->
+
+        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+
+            <i class="fa-solid fa-people-group text-amber-600 mt-1"></i>
+
+            <span data-i18n="donation_usage_4"
+                  class="text-slate-700 text-sm">
+
+                Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam
+
+            </span>
+
+        </div>
+
+
+    </div>
 
 </div>
 
+<!-- TAMAT KEGUNAAN SUMBANGAN -->
+<!-- MAKLUMAT AKAUN BANK - SISTEM TIGA BAHASA -->
+
+<div class="bg-sjamBlue text-white p-6 sm:p-10 text-center">
+
+    <div class="w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
+        <i class="fa-solid fa-building-columns text-2xl"></i>
+    </div>
+
+
+    <h3 data-i18n="bank_title"
+        class="text-2xl font-bold mb-3">
+
+        Salurkan Sumbangan Anda
+
+    </h3>
+
+
+    <p data-i18n="bank_description"
+       class="text-blue-100 text-sm mb-6">
+
+        Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.
+
+    </p>
+
+
+    <div class="max-w-md mx-auto bg-white/10 border border-white/20 rounded-2xl p-6">
+
+
+        <!-- NAMA BANK -->
+
+        <p data-i18n="bank_name_label"
+           class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+
+            Nama Bank
+
+        </p>
+
+        <p class="font-semibold mb-4">
+            BANK MUAMALAT
+        </p>
+
+
+        <!-- NAMA AKAUN -->
+
+        <p data-i18n="bank_account_label"
+           class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+
+            Nama Akaun
+
+        </p>
+
+        <p class="font-semibold mb-4">
+            ST JOHN AMBULANS MALAYSIA KEL UTARA
+        </p>
+
+
+        <!-- NOMBOR AKAUN -->
+
+        <p data-i18n="bank_number_label"
+           class="text-blue-200 text-xs uppercase tracking-wider mb-1">
+
+            No. Akaun
+
+        </p>
+
+        <p id="no-akaun-sjam"
+           class="text-2xl font-bold tracking-wider mb-5">
+
+            03010000234710
+
+        </p>
+
+
+        <!-- BUTANG SALIN AKAUN -->
+
+        <button
+            type="button"
+            onclick="salinAkaunSJAM()"
+            class="bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition">
+
+            <i class="fa-regular fa-copy mr-2"></i>
+
+            <span data-i18n="bank_copy_button">
+                Salin No. Akaun
+            </span>
+
+        </button>
+
+
+        <!-- MESEJ BERJAYA DISALIN -->
+
+        <p id="mesej-salin"
+           data-i18n="bank_copy_success"
+           class="text-green-300 text-sm mt-3 hidden">
+
+            ✓ Nombor akaun berjaya disalin
+
+        </p>
+
+
+    </div>
 <!-- Selepas Membuat Sumbangan -->
 
 <!-- ===================================== -->
@@ -1693,17 +2167,26 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
             <i class="fa-solid fa-file-invoice text-2xl text-white"></i>
         </div>
 
-        <h4 class="text-xl sm:text-2xl font-bold text-white mb-3">
-            Dokumen Sokongan Akaun Bank
-        </h4>
+        <!-- DOKUMEN SOKONGAN AKAUN BANK - TIGA BAHASA -->
 
-        <p class="text-blue-100 text-sm leading-relaxed">
-            Paparan dokumen penyata Bank Muamalat
-            sebagai rujukan maklumat akaun
-            St John Ambulans Malaysia
-            Kawasan Kelantan Utara Kota Bharu.
-        </p>
+<h4 data-i18n="bank_document_title"
+    class="text-xl sm:text-2xl font-bold text-white mb-3">
 
+    Dokumen Sokongan Akaun Bank
+
+</h4>
+
+<p data-i18n="bank_document_description"
+   class="text-blue-100 text-sm leading-relaxed">
+
+    Paparan dokumen penyata Bank Muamalat
+    sebagai rujukan maklumat akaun
+    St John Ambulans Malaysia
+    Kawasan Kelantan Utara Kota Bharu.
+
+</p>
+
+<!-- TAMAT TAJUK DOKUMEN SOKONGAN -->
     </div>
 
     <!-- GAMBAR PENYATA BANK -->
@@ -1718,13 +2201,15 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
     </div>
 
-    <p class="text-blue-200 text-xs leading-relaxed mt-5 text-center">
-        Dokumen bertarikh Jun 2019 ini dipaparkan
-        sebagai rujukan maklumat akaun.
-        Sila hubungi pihak SJAM untuk pengesahan
-        maklumat akaun terkini.
-    </p>
+    <p data-i18n="bank_document_note"
+   class="text-blue-200 text-xs leading-relaxed mt-5 text-center">
 
+    Dokumen bertarikh Jun 2019 ini dipaparkan
+    sebagai rujukan maklumat akaun.
+    Sila hubungi pihak SJAM untuk pengesahan
+    maklumat akaun terkini.
+
+</p>
 </div>
 
 <!-- ===================================== -->
@@ -1733,83 +2218,161 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 
 <!-- Selepas Membuat Sumbangan -->
+<!-- SELEPAS MEMBUAT SUMBANGAN - SISTEM TIGA BAHASA -->
+
 <div class="max-w-2xl mx-auto mt-8 bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 text-left">
 
-<h4 class="text-xl font-bold text-white mb-3">
+
+    <!-- TAJUK -->
+
+    <h4 class="text-xl font-bold text-white mb-3">
+
         <i class="fa-solid fa-envelope-circle-check mr-2 text-red-300"></i>
-        Selepas Membuat Sumbangan
+
+        <span data-i18n="after_donation_title">
+            Selepas Membuat Sumbangan
+        </span>
+
     </h4>
 
-<p class="text-blue-100 text-sm leading-relaxed mb-5">
+
+    <!-- PENERANGAN -->
+
+    <p data-i18n="after_donation_description"
+       class="text-blue-100 text-sm leading-relaxed mb-5">
+
         Selepas membuat sumbangan, sila hantarkan slip transaksi bank
         berserta maklumat penyumbang kepada e-mel rasmi SJAM Kawasan
         Kelantan Utara Kota Bharu untuk tujuan rekod dan tindakan lanjut.
+
     </p>
 
-<div class="bg-white/10 rounded-xl p-5 mb-5">
 
-<p class="text-blue-200 text-xs uppercase tracking-wider mb-2">
+    <!-- E-MEL -->
+
+    <div class="bg-white/10 rounded-xl p-5 mb-5">
+
+        <p data-i18n="email_label"
+           class="text-blue-200 text-xs uppercase tracking-wider mb-2">
+
             E-mel
+
         </p>
 
-<a href="mailto:sjamkotabharu@gmail.com"
+        <a href="mailto:sjamkotabharu@gmail.com"
            class="text-white font-bold text-base sm:text-lg hover:text-red-300 transition break-all">
+
             <i class="fa-solid fa-envelope mr-2"></i>
+
             sjamkotabharu@gmail.com
+
         </a>
 
-</div>
+    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
 
-<!-- Penyumbang Individu -->
+    <!-- MAKLUMAT PENYUMBANG -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+
+        <!-- PENYUMBANG INDIVIDU -->
+
         <div class="bg-white/10 rounded-xl p-5">
+
             <h5 class="font-bold text-white mb-3">
+
                 <i class="fa-solid fa-user mr-2"></i>
-                Penyumbang Individu
+
+                <span data-i18n="individual_title">
+                    Penyumbang Individu
+                </span>
+
             </h5>
 
-<ul class="text-blue-100 text-sm space-y-2">
-                <li>• Nama penuh</li>
-                <li>• Nombor MyKad</li>
-                <li>• Alamat surat-menyurat</li>
-                <li>• Nombor telefon</li>
-                <li>• E-mel</li>
+            <ul class="text-blue-100 text-sm space-y-2">
+
+                <li data-i18n="individual_1">• Nama penuh</li>
+
+                <li data-i18n="individual_2">• Nombor MyKad</li>
+
+                <li data-i18n="individual_3">• Alamat surat-menyurat</li>
+
+                <li data-i18n="individual_4">• Nombor telefon</li>
+
+                <li data-i18n="individual_5">• E-mel</li>
+
             </ul>
+
         </div>
 
-<!-- Penyumbang Korporat -->
+
+        <!-- PENYUMBANG KORPORAT -->
+
         <div class="bg-white/10 rounded-xl p-5">
+
             <h5 class="font-bold text-white mb-3">
+
                 <i class="fa-solid fa-building mr-2"></i>
-                Penyumbang Korporat
+
+                <span data-i18n="corporate_title">
+                    Penyumbang Korporat
+                </span>
+
             </h5>
 
-<ul class="text-blue-100 text-sm space-y-2">
-                <li>• Nama syarikat / perniagaan</li>
-                <li>• Nombor pendaftaran perniagaan</li>
-                <li>• Nama pegawai untuk dihubungi</li>
-                <li>• Nombor telefon</li>
-                <li>• Alamat syarikat</li>
+            <ul class="text-blue-100 text-sm space-y-2">
+
+                <li data-i18n="corporate_1">• Nama syarikat / perniagaan</li>
+
+                <li data-i18n="corporate_2">• Nombor pendaftaran perniagaan</li>
+
+                <li data-i18n="corporate_3">• Nama pegawai untuk dihubungi</li>
+
+                <li data-i18n="corporate_4">• Nombor telefon</li>
+
+                <li data-i18n="corporate_5">• Alamat syarikat</li>
+
             </ul>
+
         </div>
 
-</div>
+    </div>
 
-<a href="mailto:sjamkotabharu@gmail.com?subject=Maklumat%20Sumbangan%20SJAM%20KKU"
+
+    <!-- BUTANG HANTAR E-MEL -->
+
+    <a href="mailto:sjamkotabharu@gmail.com?subject=Maklumat%20Sumbangan%20SJAM%20KKU"
        class="w-full bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition flex items-center justify-center gap-2">
+
         <i class="fa-solid fa-paper-plane"></i>
-        Hantar Slip Melalui E-mel
+
+        <span data-i18n="email_submit">
+            Hantar Slip Melalui E-mel
+        </span>
+
     </a>
 
-<p class="text-blue-200 text-xs leading-relaxed mt-5">
+
+    <!-- NOTA KERAHSIAAN -->
+
+    <p class="text-blue-200 text-xs leading-relaxed mt-5">
+
         <i class="fa-solid fa-lock mr-1"></i>
-        Segala maklumat yang diberikan akan dikendalikan secara sulit
-        dan digunakan bagi urusan berkaitan sumbangan.
+
+        <span data-i18n="privacy_note">
+
+            Segala maklumat yang diberikan akan dikendalikan secara sulit
+            dan digunakan bagi urusan berkaitan sumbangan.
+
+        </span>
+
     </p>
+
 
 </div>
 
+<!-- TAMAT SELEPAS MEMBUAT SUMBANGAN -->
 <p class="text-blue-100 text-sm mt-6">
     Terima kasih atas sokongan dan sumbangan anda kepada SJAM KKU.
 </p>
@@ -1837,62 +2400,205 @@ function salinAkaunSJAM() {
 <!-- HUBUNGI KAMI -->
     <section id="hubungi" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2"><i class="fa-solid fa-phone-volume mr-1"></i> Saluran Komunikasi</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Hubungi Kami</h2>
-                <p class="text-slate-600 text-base">Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.</p>
-            </div>
+            <!-- HUBUNGI KAMI - SISTEM TIGA BAHASA -->
+
+<div class="text-center max-w-2xl mx-auto mb-16">
+
+    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
+
+        <i class="fa-solid fa-phone-volume mr-1"></i>
+
+        <span data-i18n="contact_label">
+            Saluran Komunikasi
+        </span>
+
+    </span>
+
+    <h2 data-i18n="contact_title"
+        class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+
+        Hubungi Kami
+
+    </h2>
+
+    <p data-i18n="contact_description"
+       class="text-slate-600 text-base">
+
+        Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.
+
+    </p>
+
+</div>
+
+<!-- TAMAT TAJUK HUBUNGI KAMI -->
+
+<!-- MAKLUMAT PERHUBUNGAN SJAM - TIGA BAHASA -->
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                <!-- Info Box 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <div class="w-14 h-14 bg-red-100 text-sjamRed rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-2">Telefon Pejabat</h3>
-                    <p class="text-slate-600 text-sm mb-4">Waktu pejabat rasmi</p>
-                    <a href="tel:+6011-53649991" class="text-sjamRed font-bold text-lg hover:underline">+6011-53649991</a>
-                </div>
 
-<!-- Info Box 2 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-2">WhatsApp Hotline</h3>
-                    <p class="text-slate-600 text-sm mb-4">Pertanyaan & Khidmat Waris</p>
-                    <a href="https://wa.me/60199327091" target="_blank" class="text-green-600 font-bold text-lg hover:underline">+6019-932 7091</a>
-                </div>
+    <!-- TELEFON PEJABAT -->
 
-<!-- Info Box 3 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <div class="w-14 h-14 bg-blue-100 text-sjamBlue rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-2">E-mel Rasmi</h3>
-                    <p class="text-slate-600 text-sm mb-4">Urusan rasmi & surat menyurat</p>
-                    <a href="mailto:sjamkotabharu@gmail.com" class="text-sjamBlue font-bold text-sm sm:text-base hover:underline">sjamkotabharu@gmail.com</a>
-                </div>
-            </div>
+    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
 
+        <div class="w-14 h-14 bg-red-100 text-sjamRed rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+
+            <i class="fa-solid fa-phone"></i>
+
+        </div>
+
+        <h3 data-i18n="contact_phone_title"
+            class="font-bold text-slate-900 text-lg mb-2">
+
+            Telefon Pejabat
+
+        </h3>
+
+        <p data-i18n="contact_phone_description"
+           class="text-slate-600 text-sm mb-4">
+
+            Waktu pejabat rasmi
+
+        </p>
+
+        <a href="tel:+6011-53649991"
+           class="text-sjamRed font-bold text-lg hover:underline">
+
+            +6011-53649991
+
+        </a>
+
+    </div>
+
+
+    <!-- WHATSAPP HOTLINE -->
+
+    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+
+        <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </div>
+
+        <h3 data-i18n="contact_whatsapp_title"
+            class="font-bold text-slate-900 text-lg mb-2">
+
+            WhatsApp Hotline
+
+        </h3>
+
+        <p data-i18n="contact_whatsapp_description"
+           class="text-slate-600 text-sm mb-4">
+
+            Pertanyaan & Khidmat Waris
+
+        </p>
+
+        <a href="https://wa.me/60199327091"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="text-green-600 font-bold text-lg hover:underline">
+
+            +6019-932 7091
+
+        </a>
+
+    </div>
+
+
+    <!-- E-MEL RASMI -->
+
+    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+
+        <div class="w-14 h-14 bg-blue-100 text-sjamBlue rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </div>
+
+        <h3 data-i18n="contact_email_title"
+            class="font-bold text-slate-900 text-lg mb-2">
+
+            E-mel Rasmi
+
+        </h3>
+
+        <p data-i18n="contact_email_description"
+           class="text-slate-600 text-sm mb-4">
+
+            Urusan rasmi & surat menyurat
+
+        </p>
+
+        <a href="mailto:sjamkotabharu@gmail.com"
+           class="text-sjamBlue font-bold text-sm sm:text-base hover:underline">
+
+            sjamkotabharu@gmail.com
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- TAMAT MAKLUMAT PERHUBUNGAN -->
 <!-- Google Maps & Action Button -->
             <div class="bg-slate-100 rounded-3xl p-6 sm:p-8 border border-slate-200">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">ST JOHN AMBULANS MALAYSIA</h3>
-                        <h4 class="text-lg font-semibold text-sjamRed mb-4">Kawasan Kelantan Utara Kota Bharu</h4>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Pusat operasi kami terletak di strategik bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://maps.app.goo.gl/nuEe5dvdtUWTSsnt6" target="_blank" class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
-                                <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
-                            </a>
-                            <a href="https://wa.me/60199327091" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
-                                <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
-                            </a>
-                        </div>
-                    </div>
+                        <!-- MAKLUMAT LOKASI SJAM - TIGA BAHASA -->
+
+<h3 class="text-2xl font-bold text-slate-900 mb-3">
+    ST JOHN AMBULANS MALAYSIA
+</h3>
+
+<h4 data-i18n="map_area"
+    class="text-lg font-semibold text-sjamRed mb-4">
+
+    Kawasan Kelantan Utara Kota Bharu
+
+</h4>
+
+<p data-i18n="map_description"
+   class="text-slate-600 mb-6 leading-relaxed">
+
+    Pusat operasi kami terletak di strategik bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.
+
+</p>
+
+<div class="flex flex-wrap gap-4">
+
+    <a href="https://maps.app.goo.gl/nuEe5dvdtUWTSsnt6"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <span data-i18n="map_button">
+            Buka Google Maps
+        </span>
+
+    </a>
+
+
+    <a href="https://wa.me/60199327091"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <span data-i18n="map_contact_button">
+            Hubungi Kami
+        </span>
+
+    </a>
+
+</div>
+
+<!-- TAMAT MAKLUMAT LOKASI -->  
+                  </div>
 
 <!-- Embedded Map Placeholder Container -->
                     <div class="rounded-2xl overflow-hidden shadow-inner border border-slate-300 h-72 bg-slate-200">
@@ -1929,10 +2635,12 @@ function salinAkaunSJAM() {
 <section class="bg-sjamDarkBlue py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wider mb-8">
-            FOLLOW US ON SOCIAL MEDIA
-        </h2>
+<h2 data-i18n="social_title"
+    class="text-2xl sm:text-3xl font-extrabold text-white tracking-wider mb-8">
 
+    FOLLOW US ON SOCIAL MEDIA
+
+</h2>
 <div class="flex flex-wrap justify-center items-center gap-5">
 
 <!-- Facebook -->
@@ -1986,26 +2694,67 @@ class="w-10 h-10 object-contain">
                         <span class="block text-xs text-slate-400">Kawasan Kelantan Utara Kota Bharu</span>
                     </div>
                 </div>
-                <div class="flex items-center gap-6 text-sm text-slate-300">
-                    <a href="#home" class="hover:text-red-400 transition">Utama</a>
-                    <a href="#tentang" class="hover:text-red-400 transition">Tentang Kami</a>
-                    <a href="#perkhidmatan" class="hover:text-red-400 transition">Perkhidmatan</a>
-                    <a href="#galeri" class="hover:text-red-400 transition">Galeri</a>
-                    <a href="#hubungi" class="hover:text-red-400 transition">Hubungi Kami</a>
-                </div>
-            </div>
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-                <p>© 2026 St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara Kota Bharu. Hak Cipta Terpelihara.</p>
-                <div class="flex flex-col items-center sm:items-end gap-2">
-    <p>Website Rasmi Maklumat Awam & Komuniti</p>
+                <!-- FOOTER NAVIGATION - TIGA BAHASA -->
 
-<p class="flex items-center gap-2 text-slate-300">
-        <i class="fa-solid fa-eye" aria-hidden="true"></i>
-        <span>Pelawat unik:</span>
-        <span id="visitor-count" class="font-semibold text-white">—</span>
-    </p>
+<div class="flex items-center gap-6 text-sm text-slate-300">
+
+    <a href="#home" class="hover:text-red-400 transition">
+        <span data-i18n="nav_home">Utama</span>
+    </a>
+
+    <a href="#tentang" class="hover:text-red-400 transition">
+        <span data-i18n="nav_about">Tentang Kami</span>
+    </a>
+
+    <a href="#perkhidmatan" class="hover:text-red-400 transition">
+        <span data-i18n="nav_services">Perkhidmatan</span>
+    </a>
+
+    <a href="#galeri" class="hover:text-red-400 transition">
+        <span data-i18n="nav_gallery">Galeri</span>
+    </a>
+
+    <a href="#hubungi" class="hover:text-red-400 transition">
+        <span data-i18n="nav_contact">Hubungi Kami</span>
+    </a>
+
 </div>
-            </div>
+
+<!-- FOOTER COPYRIGHT DAN KAUNTER PELAWAT -->
+
+<div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+
+    <p>
+        © 2026 St John Ambulans Malaysia (SJAM)
+        Kawasan Kelantan Utara Kota Bharu.
+        Hak Cipta Terpelihara.
+    </p>
+
+    <div class="flex flex-col items-center sm:items-end gap-2">
+
+        <p>
+            Website Rasmi Maklumat Awam & Komuniti
+        </p>
+
+        <p class="flex items-center gap-2 text-slate-300">
+
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+
+            <span>Pelawat unik:</span>
+
+            <span id="visitor-count"
+                  class="font-semibold text-white">—</span>
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- TAMAT FOOTER COPYRIGHT DAN KAUNTER PELAWAT -->
+
+<!-- TAMAT FOOTER NAVIGATION -->   
+         </div>
         </div>
     </footer>
 
@@ -2462,6 +3211,515 @@ class="w-10 h-10 object-contain">
     mainLagu();
 })();
 </script>
+
+<!-- ==========================================
+     SJAM KKU - SISTEM TERJEMAHAN 3 BAHASA
+     BAHASA MELAYU / CINA / INGGERIS
+========================================== -->
+
+<script>
+(() => {
+
+    const translations = {
+
+        ms: {
+            nav_home: "Utama",
+            nav_about: "Tentang Kami",
+            nav_history: "Sejarah",
+            nav_services: "Perkhidmatan",
+            nav_why: "Mengapa SJAM",
+            nav_gallery: "Galeri",
+            nav_religion: "Penjelasan Agama",
+            nav_donation: "Sumbangan",
+            nav_contact: "Hubungi Kami",
+
+            hero_badge: "Badan Berkanun Bukan Keuntungan",
+            hero_title: "ST JOHN AMBULANS MALAYSIA",
+            hero_subtitle: "Kawasan Kelantan Utara Kota Bharu",
+            hero_description: "Berbakti Kepada Komuniti Melalui Perkhidmatan Sewa Ambulans, Tugas Awam dan Perkhidmatan Kesihatan yang profesional.",
+            hero_about_btn: "Kenali Kami",
+            hero_services_btn: "Perkhidmatan Kami",
+            hero_contact_btn: "Hubungi Kami",
+
+            about_label: "Mengenai Organisasi",
+            about_title: "Siapakah Kami?",
+            about_intro: "St John Ambulans Malaysia Kawasan Kelantan Utara, Kota Bharu merupakan",
+            about_status: "organisasi bukan kerajaan (Non-Profit Organisation) dan bukan Ambulans Swasta. Kami diperbadankan di bawah Undang-Undang Malaysia, Akta 74 iaitu Akta Perbadanan St. John Ambulans Malaysia 1972",
+            about_description: "Organisasi kami menjalankan tugas sukarelawan membantu orang awam dan masyarakat setempat dalam hal berkaitan kecemasan dan bukan kecemasan bagi memastikan keselamatan serta nyawa mereka sentiasa terpelihara.",
+
+            history_title: "Sejarah St John Ambulans Malaysia",
+            history_intro: "Menelusuri perjalanan St John Ambulans di Malaysia dalam memberikan perkhidmatan pertolongan cemas, kemanusiaan dan khidmat kepada masyarakat.",
+            history_1908_title: "Penubuhan St John Ambulans di Malaysia",
+            history_1908_desc: "St John Ambulans mula ditubuhkan di Malaysia pada tahun 1908. Dalam tempoh awal, aktiviti organisasi banyak tertumpu kepada perkhidmatan Tentera dan Kereta Api.",
+            history_1938_title: "Penubuhan St John Ambulance Brigade",
+            history_1938_desc: "St John Ambulance Brigade mula ditubuhkan di negeri-negeri utama. Anggota direkrut sebagai pengusung pesakit dan diberikan latihan pertolongan cemas.",
+            history_1941_title: "Perkhidmatan Semasa Perang Dunia Kedua",
+            history_1941_desc: "Pada September 1941, Medical Auxiliary Service (MAS) diperkenalkan dan anggota St John Ambulance Brigade diserap ke dalam perkhidmatan tersebut. Sepanjang Perang Dunia Kedua, anggota turut memberikan perkhidmatan bersama Angkatan Tentera British dan Pentadbiran Kereta Api Malaya.",
+            history_1959_title: "Perkhidmatan Di Seluruh Malaya",
+            history_1959_desc: "Menjelang tahun 1959, St John Ambulans telah menjalankan perkhidmatan di seluruh negeri di Malaya.",
+            history_1972_title: "St John Ambulans Malaysia",
+            history_1972_desc: "St John Ambulance Association dan St John Ambulance Brigade di Malaysia digabungkan menjadi satu perbadanan yang dikenali sebagai St John Ambulans Malaysia di bawah Akta Perbadanan St. John Ambulans Malaysia 1972 (Akta 74).",
+            history_kb_title: "Sejarah St John Ambulans di Kota Bharu",
+            history_kb_desc: "Rekod dokumentasi lama menunjukkan kewujudan bangunan St John Ambulans di Kota Bharu yang terletak berhampiran Jalan Mahmood. Bangunan ini menjadi sebahagian daripada sejarah perkembangan perkhidmatan St John Ambulans di Kota Bharu, Kelantan.",
+
+            services_title: "Perkhidmatan Kami Untuk Anda",
+            services_intro: "Kami menyediakan perkhidmatan kesihatan sokongan berasaskan komuniti yang profesional di sekitar Kota Bharu dan Negeri Kelantan.",
+            service_community_title: "Ambulans Kecemasan & Khidmat Komuniti Percuma",
+            service_community_1: "Perkhidmatan ambulans kecemasan",
+            service_community_2: "Khidmat komuniti secara percuma",
+            service_community_3: "Bantuan kemanusiaan kepada masyarakat",
+            service_ambulance_title: "Perkhidmatan Ambulans",
+            service_ambulance_1: "Ambulans bukan kecemasan",
+            service_ambulance_2: "Pengangkutan pesakit harian",
+            service_ambulance_3: "Rujukan hospital terpilih",
+            service_hospital_title: "Hospital Transfer",
+            service_hospital_1: "Rumah ke hospital",
+            service_hospital_2: "Hospital ke rumah pesakit",
+            service_hospital_3: "Pemindahan pesakit selamat",
+            service_medical_title: "Medical Standby",
+            service_medical_1: "Program & majlis komuniti",
+            service_medical_2: "Acara sukan & keramaian",
+            service_medical_3: "Aktiviti rasmi organisasi",
+            service_training_title: "Latihan Pertolongan Cemas",
+            service_training_1: "Latihan Kesihatan St. John Ambulance Malaysia menawarkan kursus pertolongan cemas profesional, bantuan kecemasan, dan latihan kemahiran kesihatan untuk orang awam, pelajar, serta pekerja syarikat.",
+            service_training_2: "Latihan bertaraf profesional yang boleh dituntut melalui HRD Corp dan diiktiraf oleh Jabatan Keselamatan dan Kesihatan Pekerjaan (DOSH).",
+
+            why_label: "Kepercayaan Masyarakat",
+            why_title: "Kenapa Pilih SJAM Kelantan Utara?",
+            why_description: "Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.",
+            why_point_1: "Pasukan terlatih & bertauliah",
+            why_point_2: "Fokus keselamatan pesakit",
+            why_point_3: "Sokongan komuniti prihatin",
+            why_point_4: "Berteraskan kebajikan murni",
+            why_stat_title: "Dedikasi Untuk Kemanusiaan",
+            why_stat_description: "Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti.",
+            why_stat_button: "Sentiasa Bersedia Membantu",
+
+            gallery_label: "Dokumentasi Aktiviti",
+            gallery_title: "Galeri Aktiviti & Perkhidmatan",
+            gallery_description: "Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.",
+            gallery_ambulance: "Ambulans",
+            gallery_vehicle_title: "Kenderaan Ambulans Siapsiaga",
+            gallery_vehicle_desc: "Unit ambulans sentiasa diselenggara untuk khidmat pemindahan pesakit yang selamat.",
+
+            donation_label: "Sokong Khidmat Kemanusiaan",
+            donation_title: "Sumbangan Kepada SJAM KKU",
+            donation_intro: "Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara meneruskan perkhidmatan dan aktiviti kemanusiaan kepada masyarakat.",
+            donor_label: "JASA DAN SUMBANGAN DIHARGAI",
+            donor_title: "Penghargaan Kepada Penyumbang Korporat & Individu Prihatin",
+            donor_description_1: "St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara Kota Bharu merakamkan setinggi-tinggi penghargaan dan ucapan terima kasih kepada pihak korporat, organisasi serta para penderma yang prihatin atas sumbangan kenderaan operasi pacuan empat roda (4x4) dan ambulans.",
+            donor_description_2: "Sumbangan yang amat bermakna ini membantu memperkukuh kesiapsiagaan pasukan SJAM dalam melaksanakan tugas kecemasan, pengangkutan pesakit, bantuan kemanusiaan serta perkhidmatan kebajikan kepada masyarakat.",donor_image_1: "Majlis penyerahan kenderaan operasi hasil sumbangan pihak korporat bagi menyokong perkhidmatan kemanusiaan SJAM.",
+donor_image_2: "Sesi pertemuan dan perbincangan bersama wakil organisasi bagi memperkukuh kerjasama serta sokongan terhadap khidmat komuniti.",
+donor_image_3: "Penyerahan unit ambulans bagi meningkatkan keupayaan operasi dan kesiapsiagaan dalam memberikan bantuan kepada masyarakat.",
+donor_image_4: "Suasana majlis penyerahan ambulans sebagai tanda penghargaan kepada penyumbang yang prihatin terhadap kesejahteraan komuniti.",
+donor_thanks_title: "Terima Kasih Atas Keprihatinan Anda",
+donor_thanks_description: "Setiap sumbangan amat bernilai dalam memastikan kesinambungan khidmat kemanusiaan SJAM kepada mereka yang memerlukan.",
+donor_thanks_closing: "Bersama Berbakti Demi Kesejahteraan Komuniti",
+
+            tax_title: "Sumbangan & Pengecualian Cukai",
+            tax_description: "St. John Ambulans Malaysia (SJAM) merupakan badan berkanun bukan kerajaan yang menyediakan perkhidmatan tanpa berasaskan keuntungan kepada masyarakat. Berdasarkan maklumat rasmi SJAM, sumbangan kepada SJAM dikecualikan daripada Cukai Pendapatan menurut Warta Kerajaan Persekutuan L.N.334 bertarikh 22 Jun 1955.",
+            donation_usage_title: "Kegunaan Sumbangan",
+            donation_usage_1: "Baik pulih dan penyelenggaraan kenderaan SJAM KKU",
+            donation_usage_2: "Menampung kos operasi SJAM KKU",
+            donation_usage_3: "Menampung kos pembelian peralatan dan keperluan operasi",
+            donation_usage_4: "Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam",
+
+            bank_title: "Salurkan Sumbangan Anda",
+            bank_description: "Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.",
+            bank_name_label: "Nama Bank",
+            bank_account_label: "Nama Akaun",
+            bank_number_label: "No. Akaun",
+            bank_copy_button: "Salin No. Akaun",
+            bank_copy_success: "✓ Nombor akaun berjaya disalin",
+            bank_document_title: "Dokumen Sokongan Akaun Bank",
+            bank_document_description: "Paparan dokumen penyata Bank Muamalat sebagai rujukan maklumat akaun St John Ambulans Malaysia Kawasan Kelantan Utara Kota Bharu.",
+            bank_document_note: "Dokumen bertarikh Jun 2019 ini dipaparkan sebagai rujukan maklumat akaun. Sila hubungi pihak SJAM untuk pengesahan maklumat akaun terkini.",
+
+            after_donation_title: "Selepas Membuat Sumbangan",
+            after_donation_description: "Selepas membuat sumbangan, sila hantarkan slip transaksi bank berserta maklumat penyumbang kepada e-mel rasmi SJAM Kawasan Kelantan Utara Kota Bharu untuk tujuan rekod dan tindakan lanjut.",
+            email_label: "E-mel",
+            individual_title: "Penyumbang Individu",
+            individual_1: "• Nama penuh",
+            individual_2: "• Nombor MyKad",
+            individual_3: "• Alamat surat-menyurat",
+            individual_4: "• Nombor telefon",
+            individual_5: "• E-mel",
+            corporate_title: "Penyumbang Korporat",
+            corporate_1: "• Nama syarikat / perniagaan",
+            corporate_2: "• Nombor pendaftaran perniagaan",
+            corporate_3: "• Nama pegawai untuk dihubungi",
+            corporate_4: "• Nombor telefon",
+            corporate_5: "• Alamat syarikat",
+            email_submit: "Hantar Slip Melalui E-mel",
+            privacy_note: "Segala maklumat yang diberikan akan dikendalikan secara sulit dan digunakan bagi urusan berkaitan sumbangan.",
+
+            contact_label: "Saluran Komunikasi",
+            contact_title: "Hubungi Kami",
+            contact_description: "Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.",
+            contact_phone_title: "Telefon Pejabat",
+            contact_phone_description: "Waktu pejabat rasmi",
+            contact_whatsapp_title: "WhatsApp Hotline",
+            contact_whatsapp_description: "Pertanyaan & Khidmat Waris",
+            contact_email_title: "E-mel Rasmi",
+            contact_email_description: "Urusan rasmi & surat menyurat",
+            map_area: "Kawasan Kelantan Utara Kota Bharu",
+            map_description: "Pusat operasi kami terletak di bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.",
+            map_button: "Buka Google Maps",
+            map_contact_button: "Hubungi Kami",
+            social_title: "IKUTI KAMI DI MEDIA SOSIAL"
+        },
+
+        en: {
+            nav_home: "Home",
+            nav_about: "About Us",
+            nav_history: "History",
+            nav_services: "Services",
+            nav_why: "Why SJAM",
+            nav_gallery: "Gallery",
+            nav_religion: "Religious Explanation",
+            nav_donation: "Donations",
+            nav_contact: "Contact Us",
+
+            hero_badge: "Statutory Non-Profit Organisation",
+            hero_title: "ST JOHN AMBULANCE MALAYSIA",
+            hero_subtitle: "Northern Kelantan Area, Kota Bharu",
+            hero_description: "Serving the community through ambulance services, public duties and professional healthcare support.",
+            hero_about_btn: "About Us",
+            hero_services_btn: "Our Services",
+            hero_contact_btn: "Contact Us",
+
+            about_label: "About the Organisation",
+            about_title: "Who Are We?",
+            about_intro: "St John Ambulance Malaysia, Northern Kelantan Area, Kota Bharu, is",
+            about_status: "a non-governmental non-profit organisation and not a private ambulance company. We are incorporated under Malaysian law, Act 74, the St. John Ambulance of Malaysia Corporation Act 1972",
+            about_description: "Our organisation carries out volunteer duties to assist the public and local communities in emergencies and non-emergency situations, helping to protect safety and preserve lives.",
+
+            history_title: "History of St John Ambulance Malaysia",
+            history_intro: "Explore the journey of St John Ambulance in Malaysia in providing first aid, humanitarian assistance and community services.",
+            history_1908_title: "Establishment of St John Ambulance in Malaysia",
+            history_1908_desc: "St John Ambulance was first established in Malaysia in 1908. During its early years, the organisation focused mainly on military and railway services.",
+            history_1938_title: "Establishment of St John Ambulance Brigade",
+            history_1938_desc: "St John Ambulance Brigade was established in major states. Members were recruited as stretcher bearers and received first aid training.",
+            history_1941_title: "Service During the Second World War",
+            history_1941_desc: "In September 1941, the Medical Auxiliary Service (MAS) was introduced and members of St John Ambulance Brigade were absorbed into the service. During the Second World War, members also served alongside the British Armed Forces and the Malayan Railway Administration.",
+            history_1959_title: "Services Throughout Malaya",
+            history_1959_desc: "By 1959, St John Ambulance had expanded its services throughout the states of Malaya.",
+            history_1972_title: "St John Ambulance Malaysia",
+            history_1972_desc: "The St John Ambulance Association and St John Ambulance Brigade in Malaysia were merged into one corporation known as St John Ambulance Malaysia under the St. John Ambulance of Malaysia Corporation Act 1972 (Act 74).",
+            history_kb_title: "History of St John Ambulance in Kota Bharu",
+            history_kb_desc: "Historical records indicate the existence of a St John Ambulance building near Jalan Mahmood in Kota Bharu. The building forms part of the history of St John Ambulance services in Kota Bharu, Kelantan.",
+
+            services_title: "Our Services",
+            services_intro: "We provide professional community-based healthcare support services in Kota Bharu and throughout Kelantan.",
+            service_community_title: "Emergency Ambulance & Free Community Services",
+            service_community_1: "Emergency ambulance services",
+            service_community_2: "Free community services",
+            service_community_3: "Humanitarian assistance to the community",
+            service_ambulance_title: "Ambulance Services",
+            service_ambulance_1: "Non-emergency ambulance services",
+            service_ambulance_2: "Daily patient transportation",
+            service_ambulance_3: "Transfers to selected hospitals",
+            service_hospital_title: "Hospital Transfers",
+            service_hospital_1: "Home to hospital",
+            service_hospital_2: "Hospital to patient's home",
+            service_hospital_3: "Safe patient transfers",
+            service_medical_title: "Medical Standby",
+            service_medical_1: "Community programmes and functions",
+            service_medical_2: "Sports events and public gatherings",
+            service_medical_3: "Official organisational activities",
+            service_training_title: "First Aid Training",
+            service_training_1: "St. John Ambulance Malaysia Health Training offers professional first aid courses, emergency assistance and healthcare skills training for the public, students and company employees.",
+            service_training_2: "Professional training that may be claimable through HRD Corp and recognised by the Department of Occupational Safety and Health (DOSH).",
+
+            why_label: "Community Trust",
+            why_title: "Why Choose SJAM Northern Kelantan?",
+            why_description: "We are committed to providing high-quality humanitarian services with strict safety standards for the peace of mind of families and patients.",
+            why_point_1: "Trained and certified team",
+            why_point_2: "Focus on patient safety",
+            why_point_3: "Caring community support",
+            why_point_4: "Committed to humanitarian values",
+            why_stat_title: "Dedicated to Humanity",
+            why_stat_description: "Serving people who need emergency assistance and healthcare support in Kota Bharu with integrity.",
+            why_stat_button: "Always Ready to Help",
+
+            gallery_label: "Activity Documentation",
+            gallery_title: "Activities & Services Gallery",
+            gallery_description: "A visual record of daily activities, emergency training and SJAM team readiness in the field.",
+            gallery_ambulance: "Ambulance",
+            gallery_vehicle_title: "Ambulance on Standby",
+            gallery_vehicle_desc: "Our ambulance units are regularly maintained to support safe patient transfers.",
+
+            donation_label: "Support Humanitarian Services",
+            donation_title: "Donate to SJAM KKU",
+            donation_intro: "Your contributions are greatly appreciated and help St. John Ambulance Malaysia (SJAM), Northern Kelantan Area, continue its humanitarian services and community activities.",
+            donor_label: "APPRECIATING GENEROSITY AND SUPPORT",
+            donor_title: "Appreciation to Corporate and Individual Donors",
+            donor_description_1: "St John Ambulance Malaysia (SJAM), Northern Kelantan Area, Kota Bharu, extends its sincere appreciation and thanks to corporations, organisations and generous donors for their contributions of four-wheel-drive (4x4) operational vehicles and ambulances.",
+            donor_description_2: "These meaningful contributions strengthen SJAM's operational readiness for emergency duties, patient transportation, humanitarian assistance and community welfare services.", donor_image_1: "Vehicle handover ceremony made possible through corporate contributions to support SJAM humanitarian services.",
+donor_image_2: "Meeting and discussion with organisational representatives to strengthen cooperation and support for community services.",
+donor_image_3: "Ambulance handover to enhance operational capabilities and readiness in providing assistance to the community.",
+donor_image_4: "Ambulance handover ceremony as a token of appreciation to donors who care about community welfare.",
+donor_thanks_title: "Thank You for Your Generosity",
+donor_thanks_description: "Every contribution is valuable in ensuring the continuity of SJAM humanitarian services for those in need.",
+donor_thanks_closing: "Serving Together for the Well-being of Our Community",
+
+            tax_title: "Donations & Tax Exemption",
+            tax_description: "St. John Ambulance Malaysia (SJAM) is a non-profit statutory organisation providing services to the community. According to SJAM information, donations to SJAM are exempt from income tax under Federal Government Gazette L.N.334 dated 22 June 1955.",
+            donation_usage_title: "How Donations Are Used",
+            donation_usage_1: "Repair and maintenance of SJAM KKU vehicles",
+            donation_usage_2: "Supporting SJAM KKU operating costs",
+            donation_usage_3: "Purchasing equipment and operational supplies",
+            donation_usage_4: "Supporting programmes and services for the public",
+
+            bank_title: "Make a Donation",
+            bank_description: "Donations can be transferred directly to the official SJAM KKU bank account.",
+            bank_name_label: "Bank Name",
+            bank_account_label: "Account Name",
+            bank_number_label: "Account Number",
+            bank_copy_button: "Copy Account Number",
+            bank_copy_success: "✓ Account number copied successfully",
+            bank_document_title: "Bank Account Supporting Document",
+            bank_document_description: "A Bank Muamalat statement is displayed as a reference for the bank account details of St John Ambulance Malaysia, Northern Kelantan Area, Kota Bharu.",
+            bank_document_note: "This document dated June 2019 is displayed for account reference. Please contact SJAM to confirm the latest account details.",
+
+            after_donation_title: "After Making a Donation",
+            after_donation_description: "After making a donation, please email the bank transaction slip together with donor details to the official SJAM Northern Kelantan Area, Kota Bharu email address for record and further action.",
+            email_label: "Email",
+            individual_title: "Individual Donor",
+            individual_1: "• Full name",
+            individual_2: "• MyKad number",
+            individual_3: "• Mailing address",
+            individual_4: "• Telephone number",
+            individual_5: "• Email",
+            corporate_title: "Corporate Donor",
+            corporate_1: "• Company / business name",
+            corporate_2: "• Business registration number",
+            corporate_3: "• Contact person",
+            corporate_4: "• Telephone number",
+            corporate_5: "• Company address",
+            email_submit: "Send Slip by Email",
+            privacy_note: "All information provided will be handled confidentially and used only for donation-related matters.",
+
+            contact_label: "Communication Channels",
+            contact_title: "Contact Us",
+            contact_description: "For enquiries about ambulance services, training or community programmes, please contact our office directly.",
+            contact_phone_title: "Office Telephone",
+            contact_phone_description: "Official office hours",
+            contact_whatsapp_title: "WhatsApp Hotline",
+            contact_whatsapp_description: "Enquiries and family assistance",
+            contact_email_title: "Official Email",
+            contact_email_description: "Official matters and correspondence",
+            map_area: "Northern Kelantan Area, Kota Bharu",
+            map_description: "Our operations centre is located in Kota Bharu, Kelantan. Please refer to the map for visits or official matters relating to community healthcare services.",
+            map_button: "Open Google Maps",
+            map_contact_button: "Contact Us",
+            social_title: "FOLLOW US ON SOCIAL MEDIA"
+        },
+
+        zh: {
+            nav_home: "首页",
+            nav_about: "关于我们",
+            nav_history: "历史",
+            nav_services: "服务项目",
+            nav_why: "为何选择 SJAM",
+            nav_gallery: "活动相册",
+            nav_religion: "宗教说明",
+            nav_donation: "捐款",
+            nav_contact: "联系我们",
+
+            hero_badge: "法定非营利组织",
+            hero_title: "马来西亚圣约翰救护机构",
+            hero_subtitle: "吉兰丹北区哥打巴鲁",
+            hero_description: "通过救护车服务、公共服务及专业医疗支援，为社区提供服务。",
+            hero_about_btn: "认识我们",
+            hero_services_btn: "我们的服务",
+            hero_contact_btn: "联系我们",
+
+            about_label: "组织简介",
+            about_title: "我们是谁？",
+            about_intro: "马来西亚圣约翰救护机构吉兰丹北区哥打巴鲁是",
+            about_status: "一个非政府非营利组织，并非私人救护车公司。本机构根据马来西亚法律第74号法令，即1972年马来西亚圣约翰救护机构法令成立",
+            about_description: "本组织通过志愿服务，在紧急及非紧急情况下协助公众和当地社区，以保障安全及保护生命。",
+
+            history_title: "马来西亚圣约翰救护机构历史",
+            history_intro: "了解圣约翰救护机构在马来西亚提供急救、人道援助及社区服务的发展历程。",
+            history_1908_title: "圣约翰救护机构在马来西亚成立",
+            history_1908_desc: "圣约翰救护机构于1908年在马来西亚成立。早期活动主要集中于军事及铁路服务。",
+            history_1938_title: "圣约翰救护队成立",
+            history_1938_desc: "圣约翰救护队开始在主要州属成立。队员被招募为担架员，并接受急救训练。",
+            history_1941_title: "第二次世界大战期间的服务",
+            history_1941_desc: "1941年9月，医疗辅助服务（MAS）成立，圣约翰救护队成员被纳入该服务。在第二次世界大战期间，成员也与英国军队及马来亚铁路管理部门共同提供服务。",
+            history_1959_title: "服务扩展至马来亚各地",
+            history_1959_desc: "截至1959年，圣约翰救护机构的服务已扩展至马来亚各州。",
+            history_1972_title: "马来西亚圣约翰救护机构",
+            history_1972_desc: "马来西亚圣约翰救护协会与圣约翰救护队合并为一个法人机构，并根据1972年马来西亚圣约翰救护机构法令（第74号法令）成立。",
+            history_kb_title: "圣约翰救护机构在哥打巴鲁的历史",
+            history_kb_desc: "历史记录显示，哥打巴鲁Jalan Mahmood附近曾有一座圣约翰救护机构建筑。这座建筑是吉兰丹哥打巴鲁圣约翰救护服务发展历史的一部分。",
+
+            services_title: "为您提供的服务",
+            services_intro: "我们在哥打巴鲁及吉兰丹州提供专业的社区医疗支援服务。",
+            service_community_title: "紧急救护车及免费社区服务",
+            service_community_1: "紧急救护车服务",
+            service_community_2: "免费社区服务",
+            service_community_3: "为社区提供人道援助",
+            service_ambulance_title: "救护车服务",
+            service_ambulance_1: "非紧急救护车服务",
+            service_ambulance_2: "日常病患接送",
+            service_ambulance_3: "转送至指定医院",
+            service_hospital_title: "医院接送服务",
+            service_hospital_1: "从家中送往医院",
+            service_hospital_2: "从医院送返病患住家",
+            service_hospital_3: "安全转送病患",
+            service_medical_title: "医疗现场支援",
+            service_medical_1: "社区活动及庆典",
+            service_medical_2: "体育赛事及公众集会",
+            service_medical_3: "组织官方活动",
+            service_training_title: "急救培训",
+            service_training_1: "马来西亚圣约翰救护机构提供专业急救课程、紧急援助及医疗技能培训，适合公众、学生及公司员工参加。",
+            service_training_2: "专业培训课程可通过HRD Corp申请培训费用，并获职业安全与卫生局（DOSH）认可。",
+
+            why_label: "社区信任",
+            why_title: "为何选择吉兰丹北区 SJAM？",
+            why_description: "我们致力于提供高品质的人道服务，并遵守严格的安全标准，让患者及家属安心。",
+            why_point_1: "受训及合格的团队",
+            why_point_2: "重视病患安全",
+            why_point_3: "关怀社区的支援",
+            why_point_4: "秉持人道关怀精神",
+            why_stat_title: "致力于人道服务",
+            why_stat_description: "以诚信为本，为哥打巴鲁有紧急援助及医疗支援需求的人士提供服务。",
+            why_stat_button: "随时准备提供协助",
+
+            gallery_label: "活动记录",
+            gallery_title: "活动与服务相册",
+            gallery_description: "展示日常活动、紧急训练及SJAM团队在现场的服务准备情况。",
+            gallery_ambulance: "救护车",
+            gallery_vehicle_title: "随时待命的救护车",
+            gallery_vehicle_desc: "救护车定期进行维护，以确保安全运送病患。",
+
+            donation_label: "支持人道服务",
+            donation_title: "捐助 SJAM KKU",
+            donation_intro: "感谢您的捐助，帮助马来西亚圣约翰救护机构吉兰丹北区继续为社会提供人道服务及社区活动。",
+            donor_label: "感谢各界的支持与捐献",
+            donor_title: "感谢企业及热心人士的捐助",
+            donor_description_1: "马来西亚圣约翰救护机构吉兰丹北区哥打巴鲁，谨向企业、组织及热心捐助者致以诚挚谢意，感谢各方捐赠四轮驱动车辆（4x4）及救护车。",
+            donor_description_2: "这些宝贵捐助有助于加强SJAM的应急准备能力，以执行紧急任务、病患运送、人道援助及社区福利服务。", donor_image_1: "企业捐赠行动车辆的移交仪式，以支持SJAM的人道服务。",
+donor_image_2: "与相关组织代表举行会议及交流，以加强合作并支持社区服务。",
+donor_image_3: "救护车移交仪式，以提升行动能力及服务准备，为社区提供援助。",
+donor_image_4: "救护车移交仪式，向关心社区福祉的捐助者表达诚挚谢意。",
+donor_thanks_title: "衷心感谢您的慷慨支持",
+donor_thanks_description: "每一份捐助都非常珍贵，有助于确保SJAM能够持续为有需要的人士提供人道服务。",
+donor_thanks_closing: "携手服务，共创社区美好未来",
+
+            tax_title: "捐款与税务豁免",
+            tax_description: "马来西亚圣约翰救护机构（SJAM）是为社区提供非营利服务的法定组织。根据SJAM资料，向SJAM捐款可依据1955年6月22日联邦政府宪报L.N.334获得所得税豁免。",
+            donation_usage_title: "捐款用途",
+            donation_usage_1: "维修及保养SJAM KKU车辆",
+            donation_usage_2: "支付SJAM KKU营运费用",
+            donation_usage_3: "购买设备及营运用品",
+            donation_usage_4: "支持各类公众活动及社区服务",
+
+            bank_title: "捐款方式",
+            bank_description: "捐款可直接汇入SJAM KKU官方银行账户。",
+            bank_name_label: "银行名称",
+            bank_account_label: "账户名称",
+            bank_number_label: "银行账户号码",
+            bank_copy_button: "复制账户号码",
+            bank_copy_success: "✓ 账户号码已成功复制",
+            bank_document_title: "银行账户证明文件",
+            bank_document_description: "此处展示马来亚银行Muamalat的银行结单，供公众参考马来西亚圣约翰救护机构吉兰丹北区哥打巴鲁的账户资料。",
+            bank_document_note: "此文件日期为2019年6月，仅供账户资料参考。请联系SJAM确认最新账户资料。",
+
+            after_donation_title: "完成捐款后",
+            after_donation_description: "完成捐款后，请将银行交易收据及捐助者资料发送至SJAM吉兰丹北区哥打巴鲁官方电子邮箱，以作记录及后续处理。",
+            email_label: "电子邮箱",
+            individual_title: "个人捐助者",
+            individual_1: "• 全名",
+            individual_2: "• MyKad身份证号码",
+            individual_3: "• 通讯地址",
+            individual_4: "• 电话号码",
+            individual_5: "• 电子邮箱",
+            corporate_title: "企业捐助者",
+            corporate_1: "• 公司 / 商业名称",
+            corporate_2: "• 商业注册号码",
+            corporate_3: "• 联络负责人姓名",
+            corporate_4: "• 电话号码",
+            corporate_5: "• 公司地址",
+            email_submit: "通过电子邮件发送收据",
+            privacy_note: "所有提供的资料将予以保密，并仅用于与捐款有关的事务。",
+
+            contact_label: "联络渠道",
+            contact_title: "联系我们",
+            contact_description: "如有关于救护车服务、培训或社区活动的问题，请直接联系我们的办公室。",
+            contact_phone_title: "办公室电话",
+            contact_phone_description: "办公时间",
+            contact_whatsapp_title: "WhatsApp热线",
+            contact_whatsapp_description: "查询及家属协助",
+            contact_email_title: "官方电子邮箱",
+            contact_email_description: "官方事务及信函往来",
+            map_area: "吉兰丹北区哥打巴鲁",
+            map_description: "我们的行动中心位于吉兰丹哥打巴鲁市。请参考地图，以便前来访问或处理社区医疗服务相关事务。",
+            map_button: "打开Google地图",
+            map_contact_button: "联系我们",
+            social_title: "关注我们的社交媒体"
+        }
+
+    };
+
+    function setLanguage(language) {
+
+        const selectedLanguage = translations[language]
+            ? language
+            : "ms";
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+
+            const key = element.getAttribute("data-i18n");
+            const translatedText = translations[selectedLanguage][key];
+
+            if (typeof translatedText === "string") {
+                element.textContent = translatedText;
+            }
+
+        });
+
+        document.documentElement.lang = selectedLanguage;
+
+        const selector = document.getElementById("language-selector");
+
+        if (selector) {
+            selector.value = selectedLanguage;
+        }
+
+        try {
+            localStorage.setItem("sjam_language", selectedLanguage);
+        } catch (error) {
+            console.warn("Pilihan bahasa tidak dapat disimpan.");
+        }
+    }
+
+    const selector = document.getElementById("language-selector");
+
+    if (!selector) return;
+
+    selector.addEventListener("change", function() {
+        setLanguage(this.value);
+    });
+
+    let savedLanguage = "ms";
+
+    try {
+        savedLanguage = localStorage.getItem("sjam_language") || "ms";
+    } catch (error) {
+        savedLanguage = "ms";
+    }
+
+    setLanguage(savedLanguage);
+
+})();
+</script>
+
+<!-- TAMAT SISTEM TERJEMAHAN 3 BAHASA SJAM -->
+
 </body>
 </html>
 
