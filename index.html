@@ -175,7 +175,7 @@ img, iframe {
                 <span class="hidden md:inline">|</span>
                 <span class="hidden md:inline"><i class="fa-solid fa-ambulance mr-1.5 text-sjamRed"></i> Perkhidmatan Sewa Ambulans & Khidmat Komuniti</span>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 w-full sm:w-auto">
                 <a href="tel:+60199327091" class="hover:text-red-300 transition"><i class="fa-solid fa-phone mr-1"></i> +6019-932 7091</a>
                 <a href="https://wa.me/60199327091"
    target="_blank"
@@ -214,14 +214,14 @@ img, iframe {
    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand / Logo -->
-            <a href="#" class="flex items-center gap-3">
+            <a href="#" class="flex items-center gap-2 min-w-0 flex-1">
                 <img
 src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
     alt="SJAM Logo"
-    class="w-10 h-10 object-contain">
+    class="w-10 h-10 object-contain shrink-0">
 
-<div>
-                    <span class="block font-bold text-base sm:text-lg text-sjamBlue tracking-tight">
+<div class="min-w-0 flex-1">
+    <span class="block font-bold text-xs sm:text-lg leading-tight text-sjamBlue tracking-tight break-words">
     سن ة جون امبولن س مليسيا
 <br>
 Kawasan Kelantan Utara Kota Bharu
@@ -287,7 +287,8 @@ Kawasan Kelantan Utara Kota Bharu
 <!-- TAMAT MOBILE MENU BUTTON -->
 
 <!-- Mobile Menu dropdown -->
-<div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+<div id="mobile-menu"
+     class="hidden lg:hidden absolute top-full left-0 right-0 z-50 w-full max-h-[75vh] overflow-y-auto bg-white border-t border-slate-200 shadow-xl px-5 pt-4 pb-6 space-y-2">
 
     <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_home">Utama</span>
@@ -2765,9 +2766,12 @@ class="w-10 h-10 object-contain">
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    mobileMenu.classList.toggle('hidden');
 
+    const menuTerbuka = !mobileMenu.classList.contains('hidden');
+
+    menuBtn.setAttribute('aria-expanded', menuTerbuka);
+});
         // Close mobile menu when clicking a link
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
@@ -3722,5 +3726,3 @@ donor_thanks_closing: "携手服务，共创社区美好未来",
 
 </body>
 </html>
-
-
