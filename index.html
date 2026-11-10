@@ -46,6 +46,123 @@
         .carousel-item.active {
             display: block;
         }
+
+/* =====================================
+   SJAM KKU - RESPONSIVE SCREEN SETTINGS
+   ===================================== */
+
+/* ASAS SEMUA PERANTI */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, iframe {
+    max-width: 100%;
+}
+
+/* TELEFON - 480px KE BAWAH */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        line-height: 1.4;
+    }
+
+    .carousel-item img {
+        height: 260px;
+    }
+
+    #sjam-audio-btn {
+        bottom: 12px;
+        right: 12px;
+        font-size: 12px;
+    }
+}
+
+/* TELEFON BESAR & TABLET KECIL */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .carousel-item img {
+        height: 320px;
+    }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .carousel-item img {
+        height: 380px;
+    }
+}
+
+/* LAPTOP & PC */
+@media (min-width: 1024px) {
+
+    section {
+        scroll-margin-top: 90px;
+    }
+
+    .carousel-item img {
+        max-height: 500px;
+    }
+}
+
+/* PC SKRIN BESAR */
+@media (min-width: 1280px) {
+
+    body {
+        font-size: 16px;
+    }
+}
+
+/* MESRA AKSESIBILITI */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   TAMAT CSS RESPONSIVE SJAM KKU
+   ===================================== */
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sjamRed selection:text-white">
@@ -91,9 +208,16 @@ Kawasan Kelantan Utara Kota Bharu
 <a href="#sejarah" class="hover:text-sjamRed transition">Sejarah</a>
                 <a href="#perkhidmatan" class="hover:text-sjamRed transition">Perkhidmatan</a>
                 <a href="#kelebihan" class="hover:text-sjamRed transition">Mengapa SJAM</a>
-                <a href="#galeri" class="hover:text-sjamRed transition">Galeri</a>
-<a href="#sumbangan" class="hover:text-sjamRed transition">Sumbangan</a>
-                <a href="#hubungi" class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">Hubungi Kami</a>
+
+<a href="#galeri" class="hover:text-sjamRed transition">Galeri</a>
+
+<!-- MENU PENJELASAN AGAMA -->
+<a href="#penjelasan-agama" class="hover:text-sjamRed transition">
+    Penjelasan Agama
+</a>
+
+<a href="#sumbangan" class="hover:text-sjamRed transition">Sumbangan</a>  
+              <a href="#hubungi" class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">Hubungi Kami</a>
             </nav>
 
 <!-- Mobile Menu Button -->
@@ -112,10 +236,23 @@ Kawasan Kelantan Utara Kota Bharu
 
 <a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Perkhidmatan</a>
 
-<a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Mengapa SJAM</a>
-            <a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Galeri</a>
-<a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">Sumbangan</a>
-            <div class="pt-2">
+<a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+    Mengapa SJAM
+</a>
+
+<a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+    Galeri
+</a>
+
+<!-- MENU PENJELASAN AGAMA -->
+<a href="#penjelasan-agama" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+    Penjelasan Agama
+</a>
+
+<a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+    Sumbangan
+</a>   
+         <div class="pt-2">
                 <a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">Hubungi Kami</a>
             </div>
         </div>
@@ -458,6 +595,261 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 </div>
 </section>
+
+<!-- ==================================================
+     PENJELASAN STATUS LAMBANG ST JOHN AMBULANCE
+     SJAM KAWASAN KELANTAN UTARA KOTA BHARU
+================================================== -->
+
+<section id="penjelasan-agama"
+         class="py-20 bg-slate-50 border-y border-slate-200">
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- TAJUK UTAMA -->
+
+        <div class="text-center max-w-3xl mx-auto mb-12">
+
+            <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
+
+                <i class="fa-solid fa-book-open mr-2"></i>
+
+                Rujukan Agama & Penjelasan
+
+            </span>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-5">
+
+                Penjelasan Status Lambang
+                St. John Ambulance
+
+            </h2>
+
+            <p class="text-slate-600 leading-relaxed">
+
+                Penjelasan berdasarkan petikan yang diterbitkan
+                dalam Suara Majlis Agama Islam Perak berhubung
+                persoalan lambang St. John Ambulance dan
+                penyertaan orang Islam dalam pertubuhan ini.
+
+            </p>
+
+        </div>
+
+
+        <!-- KAD UTAMA -->
+
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-8">
+
+
+            <!-- TAJUK POSTER -->
+
+            <div class="text-center mb-6">
+
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+
+                    Petikan Rujukan Bertulis
+
+                </h3>
+
+                <p class="text-slate-500 text-sm mt-2">
+
+                    Suara Majlis Agama Islam Perak
+
+                </p>
+
+            </div>
+
+
+            <!-- POSTER ASAL GOOGLE DRIVE -->
+
+            <div class="max-w-4xl mx-auto bg-slate-100 rounded-2xl p-2 sm:p-4">
+
+                <img
+
+                    src="https://drive.google.com/thumbnail?id=1nf84oQ19LM94LaL_TjvtLYaWP5rsHwfa&sz=w1600"
+
+                    alt="Petikan penjelasan mengenai lambang St John Ambulance daripada Suara Majlis Agama Islam Perak"
+
+                    loading="lazy"
+
+                    class="w-full h-auto object-contain rounded-lg">
+
+            </div>
+
+
+            <!-- RINGKASAN KANDUNGAN -->
+
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+                <!-- PENJELASAN LAMBANG -->
+
+                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+
+                    <div class="flex items-center gap-3 mb-4">
+
+                        <i class="fa-solid fa-shield-halved text-sjamBlue text-2xl"></i>
+
+                        <h3 class="font-bold text-slate-900">
+
+                            Penjelasan Lambang
+
+                        </h3>
+
+                    </div>
+
+                    <p class="text-slate-700 text-sm leading-relaxed">
+
+                        Menurut petikan yang dipaparkan,
+                        lambang pertubuhan St. John Ambulance
+                        tidak menyerupai salib agama Kristian
+                        dan merupakan lambang sebuah pertubuhan kebajikan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- PENYERTAAN ORANG ISLAM -->
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+
+                    <div class="flex items-center gap-3 mb-4">
+
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-2xl"></i>
+
+                        <h3 class="font-bold text-slate-900">
+
+                            Penyertaan Orang Islam
+
+                        </h3>
+
+                    </div>
+
+                    <p class="text-slate-700 text-sm leading-relaxed">
+
+                        Petikan tersebut menyatakan bahawa
+                        orang Islam harus menganggotai pertubuhan
+                        ini selama mana penyertaan mereka
+                        tidak bercanggah dengan ajaran Islam.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAKLUMAT RUJUKAN RASMI -->
+
+            <div class="mt-8 bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
+
+                <div class="flex items-center gap-3 mb-5">
+
+                    <i class="fa-solid fa-file-lines text-amber-400 text-2xl"></i>
+
+                    <h3 class="text-xl font-bold">
+
+                        Maklumat Rujukan
+
+                    </h3>
+
+                </div>
+
+
+                <div class="space-y-3 text-sm text-slate-200">
+
+                    <p>
+
+                        <strong class="text-white">Penerbit:</strong>
+
+                        Suara Majlis Agama Islam Perak
+
+                    </p>
+
+
+                    <p>
+
+                        <strong class="text-white">Keluaran:</strong>
+
+                        Bil. 215 (Mac–April 2003)
+
+                    </p>
+
+
+                    <p>
+
+                        <strong class="text-white">Pekeliling:</strong>
+
+                        SJAM/HQ/COSO/G/4/05
+
+                    </p>
+
+                </div>
+
+
+                               <!-- NOTA RUJUKAN -->
+
+                <div class="border-t border-slate-700 mt-6 pt-5">
+
+                    <p class="text-slate-300 text-xs leading-relaxed">
+
+                        Nota: Kandungan ini merupakan petikan rujukan yang dipaparkan untuk maklumat masyarakat.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAUTAN FACEBOOK -->
+
+            <div class="mt-8 text-center">
+
+                <p class="text-slate-600 text-sm mb-5">
+
+                    Untuk maklumat dan perkongsian lanjut,
+                    sila lihat hantaran berkaitan di Facebook.
+
+                </p>
+
+                <a
+                    href="https://www.facebook.com/share/p/14uyYRkEeq5/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-3
+                    bg-blue-600 hover:bg-blue-700
+                    text-white font-semibold
+                    px-7 py-4 rounded-xl
+                    shadow-lg transition">
+
+                    <i class="fa-brands fa-facebook text-2xl"></i>
+
+                    Lihat Hantaran Asal Di Facebook
+
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+
+                </a>
+
+            </div>
+
+            <!-- TAMAT PAUTAN FACEBOOK -->
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     TAMAT PENJELASAN STATUS LAMBANG SJAM
+================================================== -->
+
 <!-- PERKHIDMATAN KAMI -->
     <section id="perkhidmatan" class="py-20 bg-slate-100 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2065,4 +2457,3 @@ class="w-10 h-10 object-contain">
 </script>
 </body>
 </html>
-
