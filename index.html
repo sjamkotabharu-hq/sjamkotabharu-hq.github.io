@@ -329,6 +329,58 @@ body {
    TAMAT FIX HEADER TIGA BAHASA
    ===================================== */
 
+/* =========================================
+   SJAM - FIXED FLOATING MOBILE MENU
+   SENTIASA KEKAL SEMASA SCROLL
+========================================= */
+
+@media (max-width: 1023px) {
+
+/* BUTANG TIGA GARIS MERAH */
+    #menu-btn {
+        position: fixed !important;
+        top: 110px !important;
+        right: 16px !important;
+        z-index: 99999 !important;
+
+display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+width: 48px;
+        height: 48px;
+
+background-color: #DC2626 !important;
+        color: #ffffff !important;
+
+border: none;
+        border-radius: 12px;
+
+box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+/* DROPDOWN MENU */
+    #mobile-menu {
+        position: fixed !important;
+
+top: 165px !important;
+        right: 16px !important;
+        left: auto !important;
+
+z-index: 99998 !important;
+
+width: min(320px, calc(100vw - 32px)) !important;
+        max-height: 75vh !important;
+
+overflow-y: auto;
+    }
+
+}
+
+/* =========================================
+   TAMAT FIXED FLOATING MOBILE MENU
+========================================= */
+
 </style>
 
 </head>
@@ -464,12 +516,28 @@ body {
 
 </nav>
 
-<!-- MOBILE MENU BUTTON - DIKEKALKAN -->
+<!-- TAMAT DESKTOP MENU -->
 
-<button id="menu-btn"
-        aria-label="Toggle Menu"
-        aria-expanded="false"
-        class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
+</div>
+
+<!-- TAMAT HEADER CONTAINER -->
+
+</header>
+
+<!-- =========================================
+     SJAM - FLOATING MOBILE MENU
+     BERADA DI LUAR HEADER
+========================================= -->
+
+<!-- BUTANG TIGA GARIS MERAH -->
+
+<button
+    id="menu-btn"
+    type="button"
+    aria-label="Buka menu navigasi"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
 
 <i class="fa-solid fa-bars text-2xl"></i>
 
@@ -477,36 +545,33 @@ body {
 
 <!-- TAMAT MOBILE MENU BUTTON -->
 
-<!-- Mobile Menu dropdown -->
-<div id="mobile-menu"
-     class="hidden lg:hidden absolute top-full left-0 right-0 z-50 w-full max-h-[75vh] overflow-y-auto bg-white border-t border-slate-200 shadow-xl px-5 pt-4 pb-6 space-y-2">
+<!-- MOBILE MENU DROPDOWN -->
+
+<div
+    id="mobile-menu"
+    class="hidden lg:hidden absolute top-full left-0 right-0 z-50 w-full max-h-[75vh] overflow-y-auto bg-white border-t border-slate-200 shadow-xl px-5 pt-4 pb-6 space-y-2">
 
 <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_home">Utama</span>
     </a>
 
 <a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    <span data-i18n="nav_about">Tentang Kami</span>
-</a>
-
-<!-- MENU OBJEKTIF SJAM -->
+        <span data-i18n="nav_about">Tentang Kami</span>
+    </a>
 
 <a href="#objektif-sjam" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    <span data-i18n="nav_objective">Objektif SJAM</span>
-</a>
-
-<!-- MENU MENGENALI LAMBANG -->
+        <span data-i18n="nav_objective">Objektif SJAM</span>
+    </a>
 
 <a href="#lambang-sjam" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    <span data-i18n="nav_emblem">Mengenali Lambang</span>
-</a>
-
-<!-- TAMAT MENU MENGENALI LAMBANG -->
+        <span data-i18n="nav_emblem">Mengenali Lambang</span>
+    </a>
 
 <a href="#sejarah" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
-    <span data-i18n="nav_history">Sejarah</span>
-</a>
-    <a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+        <span data-i18n="nav_history">Sejarah</span>
+    </a>
+
+<a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_services">Perkhidmatan</span>
     </a>
 
@@ -528,7 +593,8 @@ body {
 
 <div class="pt-2">
 
-<a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">
+<a href="#hubungi"
+           class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">
 
 <span data-i18n="nav_contact">Hubungi Kami</span>
 
@@ -539,12 +605,6 @@ body {
 </div>
 
 <!-- TAMAT MOBILE MENU DROPDOWN -->
-
-</div>
-
-<!-- TAMAT HEADER CONTAINER -->
-
-</header>
 
 <!-- HERO SECTION -->
 
@@ -3569,23 +3629,69 @@ class="w-10 h-10 object-contain">
 
 <!-- JavaScript for Mobile Menu & Carousel Slider -->
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        
+// =========================================
+// SJAM - MOBILE MENU TOGGLE
+// =========================================
 
-        menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-    const menuTerbuka = !mobileMenu.classList.contains('hidden');
+if (menuBtn && mobileMenu) {
 
-    menuBtn.setAttribute('aria-expanded', menuTerbuka);
-});
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+    // BUKA DAN TUTUP MENU
+    menuBtn.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('hidden');
+
+        const menuTerbuka =
+            !mobileMenu.classList.contains('hidden');
+
+        menuBtn.setAttribute(
+            'aria-expanded',
+            String(menuTerbuka)
+        );
+
+        menuBtn.setAttribute(
+            'aria-label',
+            menuTerbuka
+                ? 'Tutup menu navigasi'
+                : 'Buka menu navigasi'
+        );
+
+        // TUKAR IKON GARIS TIGA KEPADA X
+        menuBtn.innerHTML = menuTerbuka
+            ? '<i class="fa-solid fa-xmark text-2xl"></i>'
+            : '<i class="fa-solid fa-bars text-2xl"></i>';
+
+    });
+
+    // TUTUP MENU APABILA PAUTAN DIPILIH
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenu.classList.add('hidden');
+
+            menuBtn.setAttribute('aria-expanded', 'false');
+
+            menuBtn.setAttribute(
+                'aria-label',
+                'Buka menu navigasi'
+            );
+
+            menuBtn.innerHTML =
+                '<i class="fa-solid fa-bars text-2xl"></i>';
+
         });
+
+    });
+
+}
+
+// =========================================
+// TAMAT MOBILE MENU TOGGLE
+// =========================================
 
         // Gallery Carousel Logic
         let currentSlide = 0;
