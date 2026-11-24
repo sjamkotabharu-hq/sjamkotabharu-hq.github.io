@@ -68,34 +68,34 @@ img, iframe {
 /* TELEFON - 480px KE BAWAH */
 @media (max-width: 480px) {
 
-    body {
+body {
         font-size: 14px;
     }
 
-    section {
+section {
         padding-top: 45px;
         padding-bottom: 45px;
     }
 
-    h1 {
+h1 {
         font-size: 2rem;
         line-height: 1.2;
     }
 
-    h2 {
+h2 {
         font-size: 1.6rem;
         line-height: 1.3;
     }
 
-    h3 {
+h3 {
         line-height: 1.4;
     }
 
-    .carousel-item img {
+.carousel-item img {
         height: 260px;
     }
 
-    #sjam-audio-btn {
+#sjam-audio-btn {
         bottom: 12px;
         right: 12px;
         font-size: 12px;
@@ -105,12 +105,12 @@ img, iframe {
 /* TELEFON BESAR & TABLET KECIL */
 @media (min-width: 481px) and (max-width: 767px) {
 
-    section {
+section {
         padding-top: 55px;
         padding-bottom: 55px;
     }
 
-    .carousel-item img {
+.carousel-item img {
         height: 320px;
     }
 }
@@ -118,12 +118,12 @@ img, iframe {
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    section {
+section {
         padding-top: 65px;
         padding-bottom: 65px;
     }
 
-    .carousel-item img {
+.carousel-item img {
         height: 380px;
     }
 }
@@ -131,11 +131,11 @@ img, iframe {
 /* LAPTOP & PC */
 @media (min-width: 1024px) {
 
-    section {
+section {
         scroll-margin-top: 90px;
     }
 
-    .carousel-item img {
+.carousel-item img {
         max-height: 500px;
     }
 }
@@ -143,7 +143,7 @@ img, iframe {
 /* PC SKRIN BESAR */
 @media (min-width: 1280px) {
 
-    body {
+body {
         font-size: 16px;
     }
 }
@@ -151,7 +151,7 @@ img, iframe {
 /* MESRA AKSESIBILITI */
 @media (prefers-reduced-motion: reduce) {
 
-    *,
+*,
     *::before,
     *::after {
         scroll-behavior: auto !important;
@@ -159,7 +159,6 @@ img, iframe {
         transition-duration: 0.01ms !important;
     }
 }
-
 
 /* =====================================
    TAMAT CSS RESPONSIVE SJAM KKU
@@ -232,11 +231,11 @@ img, iframe {
 
 @media (min-width: 1280px) {
 
-    .sjam-desktop-nav {
+.sjam-desktop-nav {
         display: flex;
     }
 
-    #menu-btn,
+#menu-btn,
     #mobile-menu {
         display: none;
     }
@@ -246,7 +245,7 @@ img, iframe {
 
 @media (min-width: 1440px) {
 
-    .sjam-desktop-nav {
+.sjam-desktop-nav {
         gap: 18px;
         font-size: 13px;
     }
@@ -256,34 +255,34 @@ img, iframe {
 
 @media (min-width: 1024px) and (max-width: 1279px) {
 
-    .sjam-header-container {
+.sjam-header-container {
         gap: 10px;
     }
 
-    .sjam-desktop-nav {
+.sjam-desktop-nav {
         display: flex;
         gap: 8px;
         font-size: 10px;
     }
 
-    .sjam-desktop-nav a:last-child {
+.sjam-desktop-nav a:last-child {
         padding: 9px 10px;
         font-size: 10px;
     }
 
-    .sjam-brand-jawi {
+.sjam-brand-jawi {
         font-size: 13px;
     }
 
-    .sjam-brand-area {
+.sjam-brand-area {
         font-size: 11px;
     }
 
-    .sjam-brand {
+.sjam-brand {
         gap: 6px;
     }
 
-    #menu-btn,
+#menu-btn,
     #mobile-menu {
         display: none;
     }
@@ -293,12 +292,12 @@ img, iframe {
 
 @media (max-width: 1023px) {
 
-    .sjam-brand {
+.sjam-brand {
         flex-shrink: 1;
         min-width: 0;
     }
 
-    .sjam-brand-text {
+.sjam-brand-text {
         min-width: 0;
         white-space: normal;
     }
@@ -308,20 +307,20 @@ img, iframe {
 
 @media (max-width: 480px) {
 
-    .sjam-header-container {
+.sjam-header-container {
         min-height: 70px;
         gap: 8px;
     }
 
-    .sjam-brand {
+.sjam-brand {
         gap: 6px;
     }
 
-    .sjam-brand-jawi {
+.sjam-brand-jawi {
         font-size: 13px;
     }
 
-    .sjam-brand-area {
+.sjam-brand-area {
         font-size: 11px;
     }
 }
@@ -330,7 +329,7 @@ img, iframe {
    TAMAT FIX HEADER TIGA BAHASA
    ===================================== */
 
-    </style>
+</style>
 
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sjamRed selection:text-white">
@@ -350,7 +349,7 @@ img, iframe {
    rel="noopener noreferrer"
    class="hover:text-green-300 transition">
 
-    <i class="fa-brands fa-whatsapp mr-1"></i>
+<i class="fa-brands fa-whatsapp mr-1"></i>
     WhatsApp Hotline
 
 </a>
@@ -358,102 +357,97 @@ img, iframe {
 <!-- PEMILIH BAHASA SJAM -->
 <div class="flex items-center gap-2">
 
-    <i class="fa-solid fa-language text-white text-lg"></i>
+<i class="fa-solid fa-language text-white text-lg"></i>
 
-    <select
+<select
         id="language-selector"
         aria-label="Pilih bahasa"
         class="bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-lg px-2 py-2 border border-white cursor-pointer">
 
-        <option value="ms">🇲🇾 Bahasa Melayu</option>
+<option value="ms">🇲🇾 Bahasa Melayu</option>
         <option value="zh">🇨🇳 中文</option>
         <option value="en">🇬🇧 English</option>
 
-    </select>
+</select>
 
 </div>
 <!-- TAMAT PEMILIH BAHASA SJAM -->
 
-            </div>
+</div>
         </div>
     </div>
-
 
 <!-- Main Navigation -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
 
-    <div class="sjam-header-container max-w-[1600px] mx-auto px-3 sm:px-4">
+<div class="sjam-header-container max-w-[1600px] mx-auto px-3 sm:px-4">
 
-            
 <!-- BRAND / LOGO SJAM -->
 
 <a href="#home" class="sjam-brand">
 
-    <img
+<img
         src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
         alt="SJAM Logo"
         class="w-10 h-10 object-contain shrink-0">
 
-    <div class="sjam-brand-text">
+<div class="sjam-brand-text">
 
-        <span class="sjam-brand-jawi" lang="ms-Arab">
+<span class="sjam-brand-jawi" lang="ms-Arab">
             سن ة جون امبولن س مليسيا
         </span>
 
-        <span class="sjam-brand-area">
+<span class="sjam-brand-area">
             Kawasan Kelantan Utara Kota Bharu
         </span>
 
-    </div>
+</div>
 
 </a>
 
 <!-- TAMAT BRAND / LOGO SJAM -->
 
-
-
 <!-- Desktop Menu -->
 <nav class="sjam-desktop-nav text-slate-700">
 
-
-    <a href="#home" class="hover:text-sjamRed transition">
+<a href="#home" class="hover:text-sjamRed transition">
         <span data-i18n="nav_home">Utama</span>
     </a>
 
-    <a href="#tentang" class="hover:text-sjamRed transition">
+<a href="#tentang" class="hover:text-sjamRed transition">
         <span data-i18n="nav_about">Tentang Kami</span>
     </a>
 
-    <a href="#sejarah" class="hover:text-sjamRed transition">
+<a href="#sejarah" class="hover:text-sjamRed transition">
         <span data-i18n="nav_history">Sejarah</span>
     </a>
 
-    <a href="#perkhidmatan" class="hover:text-sjamRed transition">
+<a href="#perkhidmatan" class="hover:text-sjamRed transition">
         <span data-i18n="nav_services">Perkhidmatan</span>
     </a>
 
-    <a href="#kelebihan" class="hover:text-sjamRed transition">
+<a href="#kelebihan" class="hover:text-sjamRed transition">
         <span data-i18n="nav_why">Mengapa SJAM</span>
     </a>
 
-    <a href="#galeri" class="hover:text-sjamRed transition">
+<a href="#galeri" class="hover:text-sjamRed transition">
         <span data-i18n="nav_gallery">Galeri</span>
     </a>
 
-    <a href="#penjelasan-agama" class="hover:text-sjamRed transition">
+<a href="#penjelasan-agama" class="hover:text-sjamRed transition">
         <span data-i18n="nav_religion">Penjelasan Agama</span>
     </a>
 
-    <a href="#sumbangan" class="hover:text-sjamRed transition">
+<a href="#sumbangan" class="hover:text-sjamRed transition">
         <span data-i18n="nav_donation">Sumbangan</span>
     </a>
 
-    <a href="#hubungi"
+<a href="#hubungi"
        class="bg-sjamRed hover:bg-sjamDarkRed text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition transform hover:-translate-y-0.5">
 
-        <span data-i18n="nav_contact">Hubungi Kami</span>
+<span data-i18n="nav_contact">Hubungi Kami</span>
 
-    </a>
+</a>
 
 </nav>
 
@@ -464,7 +458,7 @@ img, iframe {
         aria-expanded="false"
         class="lg:hidden text-slate-700 hover:text-sjamRed focus:outline-none p-2">
 
-    <i class="fa-solid fa-bars text-2xl"></i>
+<i class="fa-solid fa-bars text-2xl"></i>
 
 </button>
 
@@ -474,48 +468,47 @@ img, iframe {
 <div id="mobile-menu"
      class="hidden lg:hidden absolute top-full left-0 right-0 z-50 w-full max-h-[75vh] overflow-y-auto bg-white border-t border-slate-200 shadow-xl px-5 pt-4 pb-6 space-y-2">
 
-    <a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#home" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_home">Utama</span>
     </a>
 
-    <a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#tentang" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_about">Tentang Kami</span>
     </a>
 
-    <a href="#sejarah" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#sejarah" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_history">Sejarah</span>
     </a>
 
-    <a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#perkhidmatan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_services">Perkhidmatan</span>
     </a>
 
-    <a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#kelebihan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_why">Mengapa SJAM</span>
     </a>
 
-    <a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#galeri" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_gallery">Galeri</span>
     </a>
 
-    <a href="#penjelasan-agama" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#penjelasan-agama" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_religion">Penjelasan Agama</span>
     </a>
 
-    <a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
+<a href="#sumbangan" class="block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-100">
         <span data-i18n="nav_donation">Sumbangan</span>
     </a>
 
-    <div class="pt-2">
+<div class="pt-2">
 
-        <a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">
+<a href="#hubungi" class="block text-center bg-sjamRed text-white px-4 py-2.5 rounded-xl font-semibold shadow">
 
-            <span data-i18n="nav_contact">Hubungi Kami</span>
+<span data-i18n="nav_contact">Hubungi Kami</span>
 
-        </a>
+</a>
 
-    </div>
-
+</div>
 
 </div>
 
@@ -529,7 +522,7 @@ img, iframe {
 
 <!-- HERO SECTION -->
 
-    <section id="home" class="relative bg-sjamDarkBlue text-white overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
+<section id="home" class="relative bg-sjamDarkBlue text-white overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
         <!-- Background Banner Image with Overlay -->
 
 <!-- Background Banner Image with Overlay -->
@@ -549,67 +542,61 @@ img, iframe {
 
 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20 text-red-300">
 
-    <i class="fa-solid fa-shield-heart"></i>
+<i class="fa-solid fa-shield-heart"></i>
 
-    <span data-i18n="hero_badge">
+<span data-i18n="hero_badge">
         Badan Berkanun Bukan Keuntungan
     </span>
 
 </div>
 
-
 <h1 data-i18n="hero_title"
     class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-2 leading-tight">
 
-    ST JOHN AMBULANS MALAYSIA
+ST JOHN AMBULANS MALAYSIA
 
 </h1>
-
 
 <h2 data-i18n="hero_subtitle"
     class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-200 mb-6">
 
-    Kawasan Kelantan Utara Kota Bharu
+Kawasan Kelantan Utara Kota Bharu
 
 </h2>
-
 
 <p data-i18n="hero_description"
    class="text-lg text-slate-200 mb-8 max-w-2xl font-light leading-relaxed">
 
-    Berbakti Kepada Komuniti Melalui Perkhidmatan Sewa Ambulans, Tugas Awam dan Perkhidmatan Kesihatan yang profesional.
+Berbakti Kepada Komuniti Melalui Perkhidmatan Sewa Ambulans, Tugas Awam dan Perkhidmatan Kesihatan yang profesional.
 
 </p>
 
-
 <div class="flex flex-wrap gap-4">
 
-    <a href="#tentang"
+<a href="#tentang"
        class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
 
-        <span data-i18n="hero_about_btn">Kenali Kami</span>
+<span data-i18n="hero_about_btn">Kenali Kami</span>
 
-        <i class="fa-solid fa-arrow-right text-sm"></i>
+<i class="fa-solid fa-arrow-right text-sm"></i>
 
-    </a>
+</a>
 
-
-    <a href="#perkhidmatan"
+<a href="#perkhidmatan"
        class="bg-white/10 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
 
-        <span data-i18n="hero_services_btn">Perkhidmatan Kami</span>
+<span data-i18n="hero_services_btn">Perkhidmatan Kami</span>
 
-    </a>
+</a>
 
-
-    <a href="tel:+60199327091"
+<a href="tel:+60199327091"
        class="bg-slate-900/60 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
 
-        <i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-phone"></i>
 
-        <span data-i18n="hero_contact_btn">Hubungi Kami</span>
+<span data-i18n="hero_contact_btn">Hubungi Kami</span>
 
-    </a>
+</a>
 
 </div>
 
@@ -636,42 +623,39 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-    <i class="fa-solid fa-info-circle mr-1"></i>
+<i class="fa-solid fa-info-circle mr-1"></i>
 
-    <span data-i18n="about_label">
+<span data-i18n="about_label">
         Mengenai Organisasi
     </span>
 
 </span>
 
-
 <h2 data-i18n="about_title"
     class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
 
-    Siapakah Kami?
+Siapakah Kami?
 
 </h2>
 
-
 <p class="text-slate-600 text-lg mb-6 leading-relaxed">
 
-    <span data-i18n="about_intro">
+<span data-i18n="about_intro">
         St John Ambulans Malaysia Kawasan Kelantan Utara, Kota Bharu merupakan
     </span>
 
-    <strong class="text-red-600 font-bold"
+<strong class="text-red-600 font-bold"
             data-i18n="about_status">
 
-        organisasi bukan kerajaan (Non-Profit Organisation) dan bukan Ambulans Swasta. Kami diperbadankan di bawah Undang-Undang Malaysia, Akta 74 iaitu Akta Perbadanan St. John Ambulans Malaysia 1972
+organisasi bukan kerajaan (Non-Profit Organisation) dan bukan Ambulans Swasta. Kami diperbadankan di bawah Undang-Undang Malaysia, Akta 74 iaitu Akta Perbadanan St. John Ambulans Malaysia 1972
 
-    </strong>.
+</strong>.
 
-    <span data-i18n="about_description">
+<span data-i18n="about_description">
         Organisasi kami menjalankan tugas sukarelawan membantu orang awam dan masyarakat setempat dalam hal berkaitan kecemasan dan bukan kecemasan bagi memastikan keselamatan serta nyawa mereka sentiasa terpelihara.
     </span>
 
 </p>
-
 
 <!-- TAMAT PENGENALAN TENTANG KAMI --> 
 <div class="space-y-4 mb-8">
@@ -717,89 +701,88 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <section id="lambang-sjam" class="py-16 bg-white">
 
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="text-center max-w-3xl mx-auto mb-10">
+<div class="text-center max-w-3xl mx-auto mb-10">
 
-      <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3"
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3"
             data-i18n="symbol_label">
         Identiti Organisasi
       </span>
 
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4"
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4"
           data-i18n="symbol_title">
         Mengenali Lambang dan Simbol SJAM
       </h2>
 
-      <p class="text-slate-600 leading-relaxed"
+<p class="text-slate-600 leading-relaxed"
          data-i18n="symbol_intro">
         Mengenali identiti dan nilai murni yang
         menjadi asas perkhidmatan kemanusiaan
         St. John Ambulans Malaysia.
       </p>
 
-    </div>
+</div>
 
-    <!-- KAD LAMBANG SJAM -->
+<!-- KAD LAMBANG SJAM -->
 
-    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-md">
+<div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-md">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        <!-- GAMBAR LAMBANG -->
+<!-- GAMBAR LAMBANG -->
 
-        <div class="flex items-center justify-center bg-white rounded-2xl p-8">
+<div class="flex items-center justify-center bg-white rounded-2xl p-8">
 
-          <img
+<img
             src="https://drive.google.com/thumbnail?id=1khcTlaJW0XoBHVVKkuPm49tPehsVHRtV&sz=w1000"
             alt="Lambang St John Ambulans Malaysia"
             loading="lazy"
             class="w-full max-w-[280px] h-auto object-contain">
 
-        </div>
+</div>
 
-        <!-- PENERANGAN LAMBANG -->
+<!-- PENERANGAN LAMBANG -->
 
-        <div>
+<div>
 
-          <h3 class="text-2xl font-bold text-sjamBlue mb-4"
+<h3 class="text-2xl font-bold text-sjamBlue mb-4"
               data-i18n="symbol_cross_title">
-            Lambang Lapan Penjuru St. John
+            Lapan Penjuru St. John
           </h3>
 
-          <p class="text-slate-600 leading-relaxed mb-4"
+<p class="text-slate-600 leading-relaxed mb-4"
              data-i18n="symbol_cross_desc">
-            Lambang lapan penjuru St. John
+            Lapan penjuru St. John
             melambangkan nilai-nilai murni yang
             menjadi panduan kepada anggota dalam
             melaksanakan tugas pertolongan cemas
             dan perkhidmatan kemanusiaan.
           </p>
 
-          <p class="text-slate-600 leading-relaxed"
+<p class="text-slate-600 leading-relaxed"
              data-i18n="symbol_cross_desc2">
             Nilai-nilai ini mencerminkan kecekapan,
             disiplin, keprihatinan dan tanggungjawab
             terhadap masyarakat.
           </p>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-      <!-- LAPAN NILAI MURNI -->
+<!-- LAPAN NILAI MURNI -->
 
-      <div class="mt-10 border-t border-slate-200 pt-8">
+<div class="mt-10 border-t border-slate-200 pt-8">
 
-        <h3 class="text-xl sm:text-2xl font-bold text-center text-slate-900 mb-8"
+<h3 class="text-xl sm:text-2xl font-bold text-center text-slate-900 mb-8"
             data-i18n="symbol_values_title">
           Lapan Nilai Murni Pertolongan Cemas
         </h3>
 
-        
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-    <!-- 01 PENELITI -->
+<!-- 01 PENELITI -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">01</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_1">Peneliti</h4>
@@ -809,7 +792,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 02 BIJAKSANA -->
+<!-- 02 BIJAKSANA -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">02</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_2">Bijaksana</h4>
@@ -819,7 +802,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 03 BERIKHTIAR -->
+<!-- 03 BERIKHTIAR -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">03</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_3">Berikhtiar</h4>
@@ -829,7 +812,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 04 CEKAP -->
+<!-- 04 CEKAP -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">04</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_4">Cekap</h4>
@@ -839,7 +822,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 05 JELAS -->
+<!-- 05 JELAS -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">05</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_5">Jelas</h4>
@@ -849,7 +832,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 06 KEUTAMAAN -->
+<!-- 06 KEUTAMAAN -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">06</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_6">Keutamaan</h4>
@@ -859,7 +842,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 07 TABAH -->
+<!-- 07 TABAH -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">07</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_7">Tabah</h4>
@@ -869,7 +852,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         </p>
     </div>
 
-    <!-- 08 SIMPATI -->
+<!-- 08 SIMPATI -->
     <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-lg transition">
         <span class="text-sjamRed font-extrabold text-3xl">08</span>
         <h4 class="font-bold text-slate-900 mt-3" data-i18n="symbol_value_8">Simpati</h4>
@@ -881,9 +864,85 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 </div>
 
-    </div>
+<!-- ========================================== -->
+<!-- PENERANGAN LENGKAP LAMBANG DAN SIMBOL SJAM -->
+<!-- ========================================== -->
 
-  </div>
+<div class="mt-8 bg-sjamDarkBlue text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+
+<!-- PENGENALAN EMBLEM SJAM -->
+
+<h3 data-i18n="symbol_panel_intro_title"
+    class="text-xl sm:text-2xl font-bold text-red-300 mb-4">
+
+Pengenalan Emblem SJAM
+
+</h3>
+
+<p data-i18n="symbol_panel_intro"
+   class="text-slate-200 leading-relaxed text-sm sm:text-base">
+
+Emblem SJAM merupakan lambang utama SJAM yang digunakan di bangunan,
+    asset dan pakaian seragam SJAM. Emblem SJAM membawa ciri-ciri lambang
+    St. John Antarabangsa. Lagu SJAM, bendera St. John dan cogan kata
+    St. John juga merupakan sebahagian daripada lambang dan simbol SJAM.
+
+</p>
+    <!-- LAMBANG LAPAN PENJURU -->
+
+<div class="border-t border-white/20 mt-7 pt-7">
+
+<h3 data-i18n="symbol_panel_history_title"
+            class="text-xl sm:text-2xl font-bold text-red-300 mb-5">
+
+Lapan Penjuru St. John
+
+</h3>
+
+<p data-i18n="symbol_panel_history_1"
+           class="text-slate-200 leading-relaxed text-sm sm:text-base mb-5">
+
+Lambang St. John pada asalnya merupakan lambang Republik Amalfi
+            (Itali) pada Zaman Pertengahan. St. John menggunakan lambang ini
+            sebagai tanda bagi mengenang jasa pendermaan saudagar-saudagar
+            Republik Amalfi atas pembinaan hospital.
+
+</p>
+
+<p data-i18n="symbol_panel_history_2"
+           class="text-slate-200 leading-relaxed text-sm sm:text-base">
+
+Singa dan binatang unicorn berwarna kuning merupakan lambang
+            DiRaja Britain yang ditambah apabila St. John di Britain
+            dianugerah Piagam DiRaja oleh Ratu Victoria. Lambang ini juga
+            digunakan di Malta dengan latar belakang merah dan dikenali
+            sebagai lapan penjuru Malta.
+
+</p>
+
+</div>
+
+<!-- PENUTUP PENERANGAN -->
+
+<div class="border-t border-white/20 mt-7 pt-6">
+
+<p data-i18n="symbol_panel_closing"
+           class="text-slate-200 leading-relaxed text-sm sm:text-base">
+
+Lambang ini dikelilingi lapan nilai-nilai murni ahli pertolongan
+            cemas yang membantunya dalam menjalankan tugas harian.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- TAMAT PENERANGAN LAMBANG DAN SIMBOL SJAM -->
+
+</div>
+
+</div>
 
 </section>
 
@@ -1139,7 +1198,6 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </div>
 </section>
 
-
 <!-- ==================================================
      PENJELASAN STATUS LAMBANG ST JOHN AMBULANCE
      SJAM KAWASAN KELANTAN UTARA KOTA BHARU
@@ -1148,204 +1206,203 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <section id="penjelasan-agama"
          class="py-20 bg-slate-50 border-y border-slate-200">
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- TAJUK UTAMA -->
+<!-- TAJUK UTAMA -->
 
-        <div class="text-center max-w-3xl mx-auto mb-12">
+<div class="text-center max-w-3xl mx-auto mb-12">
 
-            <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
 
-                <i class="fa-solid fa-book-open mr-2"></i>
+<i class="fa-solid fa-book-open mr-2"></i>
 
-                Rujukan Agama & Penjelasan
+Rujukan Agama & Penjelasan
 
-            </span>
+</span>
 
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-5">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-5">
 
-                Penjelasan Status Lambang
+Penjelasan Status Lambang
                 St. John Ambulance
 
-            </h2>
+</h2>
 
-            <p class="text-slate-600 leading-relaxed">
+<p class="text-slate-600 leading-relaxed">
 
-                Penjelasan berdasarkan dokumen rujukan
+Penjelasan berdasarkan dokumen rujukan
                 berkaitan persoalan lambang St. John Ambulance
                 dan penyertaan orang Islam dalam pertubuhan ini.
 
-            </p>
+</p>
 
-        </div>
+</div>
 
-        <!-- ==========================================
+<!-- ==========================================
              RUJUKAN PERTAMA
              MAJLIS AGAMA ISLAM PERAK
         ========================================== -->
 
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-8">
+<div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-8">
 
-            <div class="text-center mb-6">
+<div class="text-center mb-6">
 
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+<h3 class="text-xl sm:text-2xl font-bold text-slate-900">
 
-                    Rujukan Majlis Agama Islam Perak
+Rujukan Majlis Agama Islam Perak
 
-                </h3>
+</h3>
 
-                <p class="text-slate-500 text-sm mt-2">
+<p class="text-slate-500 text-sm mt-2">
 
-                    Suara Majlis Agama Islam Perak
+Suara Majlis Agama Islam Perak
 
-                </p>
+</p>
 
-            </div>
+</div>
 
-            <!-- POSTER ASAL GOOGLE DRIVE -->
+<!-- POSTER ASAL GOOGLE DRIVE -->
 
-            <div class="max-w-4xl mx-auto bg-slate-100 rounded-2xl p-2 sm:p-4">
+<div class="max-w-4xl mx-auto bg-slate-100 rounded-2xl p-2 sm:p-4">
 
-                <img
+<img
                     src="https://drive.google.com/thumbnail?id=1nf84oQ19LM94LaL_TjvtLYaWP5rsHwfa&sz=w1600"
                     alt="Petikan penjelasan mengenai lambang St John Ambulance daripada Suara Majlis Agama Islam Perak"
                     loading="lazy"
                     class="w-full h-auto object-contain rounded-lg">
 
-            </div>
+</div>
 
-            <!-- RINGKASAN KANDUNGAN -->
+<!-- RINGKASAN KANDUNGAN -->
 
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- PENJELASAN LAMBANG -->
+<!-- PENJELASAN LAMBANG -->
 
-                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+<div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
 
-                    <div class="flex items-center gap-3 mb-4">
+<div class="flex items-center gap-3 mb-4">
 
-                        <i class="fa-solid fa-shield-halved text-sjamBlue text-2xl"></i>
+<i class="fa-solid fa-shield-halved text-sjamBlue text-2xl"></i>
 
-                        <h3 class="font-bold text-slate-900">
+<h3 class="font-bold text-slate-900">
 
-                            Penjelasan Lambang
+Penjelasan Lambang
 
-                        </h3>
+</h3>
 
-                    </div>
+</div>
 
-                    <p class="text-slate-700 text-sm leading-relaxed">
+<p class="text-slate-700 text-sm leading-relaxed">
 
-                        Menurut petikan yang dipaparkan,
+Menurut petikan yang dipaparkan,
                         lambang pertubuhan St. John Ambulance
                         tidak menyerupai salib agama Kristian
                         dan merupakan lambang sebuah pertubuhan kebajikan.
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-                <!-- PENYERTAAN ORANG ISLAM -->
+<!-- PENYERTAAN ORANG ISLAM -->
 
-                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+<div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
 
-                    <div class="flex items-center gap-3 mb-4">
+<div class="flex items-center gap-3 mb-4">
 
-                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-2xl"></i>
+<i class="fa-solid fa-hand-holding-heart text-emerald-600 text-2xl"></i>
 
-                        <h3 class="font-bold text-slate-900">
+<h3 class="font-bold text-slate-900">
 
-                            Penyertaan Orang Islam
+Penyertaan Orang Islam
 
-                        </h3>
+</h3>
 
-                    </div>
+</div>
 
-                    <p class="text-slate-700 text-sm leading-relaxed">
+<p class="text-slate-700 text-sm leading-relaxed">
 
-                        Petikan tersebut menyatakan bahawa
+Petikan tersebut menyatakan bahawa
                         orang Islam harus menganggotai pertubuhan
                         ini selama mana penyertaan mereka
                         tidak bercanggah dengan ajaran Islam.
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-            <!-- MAKLUMAT RUJUKAN PERAK -->
+<!-- MAKLUMAT RUJUKAN PERAK -->
 
-            <div class="mt-8 bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
+<div class="mt-8 bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
 
-                <div class="flex items-center gap-3 mb-5">
+<div class="flex items-center gap-3 mb-5">
 
-                    <i class="fa-solid fa-file-lines text-amber-400 text-2xl"></i>
+<i class="fa-solid fa-file-lines text-amber-400 text-2xl"></i>
 
-                    <h3 class="text-xl font-bold">
+<h3 class="text-xl font-bold">
 
-                        Maklumat Rujukan
+Maklumat Rujukan
 
-                    </h3>
+</h3>
 
-                </div>
+</div>
 
-                <div class="space-y-3 text-sm text-slate-200">
+<div class="space-y-3 text-sm text-slate-200">
 
-                    <p>
+<p>
 
-                        <strong class="text-white">Penerbit:</strong>
+<strong class="text-white">Penerbit:</strong>
 
-                        Suara Majlis Agama Islam Perak
+Suara Majlis Agama Islam Perak
 
-                    </p>
+</p>
 
-                    <p>
+<p>
 
-                        <strong class="text-white">Keluaran:</strong>
+<strong class="text-white">Keluaran:</strong>
 
-                        Bil. 215 (Mac–April 2003)
+Bil. 215 (Mac–April 2003)
 
-                    </p>
+</p>
 
-                    <p>
+<p>
 
-                        <strong class="text-white">Pekeliling:</strong>
+<strong class="text-white">Pekeliling:</strong>
 
-                        SJAM/HQ/COSO/G/4/05
+SJAM/HQ/COSO/G/4/05
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-                <div class="border-t border-slate-700 mt-6 pt-5">
+<div class="border-t border-slate-700 mt-6 pt-5">
 
-                    <p class="text-slate-300 text-xs leading-relaxed">
+<p class="text-slate-300 text-xs leading-relaxed">
 
-                        Nota: Kandungan ini merupakan petikan rujukan
+Nota: Kandungan ini merupakan petikan rujukan
                         yang dipaparkan untuk maklumat masyarakat.
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-            
 <!-- PAUTAN FACEBOOK DAN MIFA -->
 
 <div class="mt-8 text-center">
 
-    <p class="text-slate-600 text-sm mb-5">
+<p class="text-slate-600 text-sm mb-5">
 
-        Untuk maklumat lanjut dan rujukan rasmi,
+Untuk maklumat lanjut dan rujukan rasmi,
         sila layari sumber asal berikut.
 
-    </p>
+</p>
 
-    <!-- BUTANG FACEBOOK -->
+<!-- BUTANG FACEBOOK -->
 
-    <a
+<a
         href="https://www.facebook.com/share/p/14uyYRkEeq5/"
         target="_blank"
         rel="noopener noreferrer"
@@ -1355,133 +1412,132 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
         px-7 py-4 rounded-xl
         shadow-lg transition mb-4">
 
-        <i class="fa-brands fa-facebook text-2xl"></i>
+<i class="fa-brands fa-facebook text-2xl"></i>
 
-        Lihat Hantaran Asal Di Facebook
+Lihat Hantaran Asal Di Facebook
 
-        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+<i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
 
-    </a>
+</a>
 
-        </div>
+</div>
 
-        <!-- ==========================================
+<!-- ==========================================
              RUJUKAN KEDUA
              MUZAKARAH MAJLIS FATWA NEGERI SABAH
         ========================================== -->
 
-        <div class="mt-10 bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-8">
+<div class="mt-10 bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-8">
 
-            <!-- TAJUK RUJUKAN SABAH -->
+<!-- TAJUK RUJUKAN SABAH -->
 
-            <div class="text-center mb-8">
+<div class="text-center mb-8">
 
-                <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
 
-                    <i class="fa-solid fa-book-open mr-2"></i>
+<i class="fa-solid fa-book-open mr-2"></i>
 
-                    Rujukan Fatwa Negeri Sabah
+Rujukan Fatwa Negeri Sabah
 
-                </span>
+</span>
 
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
 
-                    Hukum Penggunaan Logo
+Hukum Penggunaan Logo
                     St. John Ambulans
 
-                </h3>
+</h3>
 
-                <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
 
-                    Muzakarah Majlis Fatwa Negeri Sabah Bil. 1/2017
+Muzakarah Majlis Fatwa Negeri Sabah Bil. 1/2017
 
-                </p>
+</p>
 
-            </div>
+</div>
 
-            <!-- GAMBAR ASAL GOOGLE DRIVE -->
+<!-- GAMBAR ASAL GOOGLE DRIVE -->
 
-            <div class="max-w-4xl mx-auto bg-slate-100 rounded-2xl p-2 sm:p-4">
+<div class="max-w-4xl mx-auto bg-slate-100 rounded-2xl p-2 sm:p-4">
 
-                <img
+<img
                     src="https://drive.google.com/thumbnail?id=1uSllmEvaYDmF0eOH8ehA3xp3SUlLde-y&sz=w1600"
                     alt="Dokumen Muzakarah Majlis Fatwa Negeri Sabah Bil. 1/2017 mengenai hukum penggunaan logo St John Ambulans"
                     loading="lazy"
                     class="w-full h-auto object-contain rounded-lg">
 
-            </div>
+</div>
 
-            <!-- MAKLUMAT RUJUKAN SABAH -->
+<!-- MAKLUMAT RUJUKAN SABAH -->
 
-            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-2xl p-6">
+<div class="mt-8 bg-blue-50 border border-blue-200 rounded-2xl p-6">
 
-                <div class="flex items-center gap-3 mb-5">
+<div class="flex items-center gap-3 mb-5">
 
-                    <i class="fa-solid fa-file-lines text-sjamBlue text-2xl"></i>
+<i class="fa-solid fa-file-lines text-sjamBlue text-2xl"></i>
 
-                    <h4 class="text-lg font-bold text-slate-900">
+<h4 class="text-lg font-bold text-slate-900">
 
-                        Maklumat Rujukan
+Maklumat Rujukan
 
-                    </h4>
+</h4>
 
-                </div>
+</div>
 
-                <div class="space-y-3 text-sm text-slate-700">
+<div class="space-y-3 text-sm text-slate-700">
 
-                    <p>
+<p>
 
-                        <strong>Penerbit:</strong>
+<strong>Penerbit:</strong>
 
-                        Muzakarah Majlis Fatwa Negeri Sabah
+Muzakarah Majlis Fatwa Negeri Sabah
 
-                    </p>
+</p>
 
-                    <p>
+<p>
 
-                        <strong>Bilangan:</strong>
+<strong>Bilangan:</strong>
 
-                        Bil. 1/2017
+Bil. 1/2017
 
-                    </p>
+</p>
 
-                    <p>
+<p>
 
-                        <strong>Tarikh Persidangan:</strong>
+<strong>Tarikh Persidangan:</strong>
 
-                        21–23 Februari 2017
+21–23 Februari 2017
 
-                    </p>
+</p>
 
-                    <p>
+<p>
 
-                        <strong>Tarikh Warta:</strong>
+<strong>Tarikh Warta:</strong>
 
-                        7 Disember 2017
+7 Disember 2017
 
-                    </p>
+</p>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-            
 <!-- NOTA RUJUKAN SABAH DAN PAUTAN MIFA -->
 
 <div class="mt-6 border-t border-slate-200 pt-5">
 
-    <p class="text-slate-500 text-xs leading-relaxed text-center">
+<p class="text-slate-500 text-xs leading-relaxed text-center">
 
-        Nota: Dokumen ini dipaparkan sebagai rujukan
+Nota: Dokumen ini dipaparkan sebagai rujukan
         berkaitan keputusan Muzakarah Majlis Fatwa Negeri Sabah.
 
-    </p>
+</p>
 
-    <!-- BUTANG RUJUKAN ASAL MIFA -->
+<!-- BUTANG RUJUKAN ASAL MIFA -->
 
-    <div class="mt-6 text-center">
+<div class="mt-6 text-center">
 
-        <a
+<a
             href="https://mifa.rocketweb.dev/fatwa/penggunaan-logo-st-john-ambulans-bagi-warga-st-john-ambulans-malaysia"
             target="_blank"
             rel="noopener noreferrer"
@@ -1491,34 +1547,33 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
             px-7 py-4 rounded-xl
             shadow-lg transition">
 
-            <i class="fa-solid fa-book-open text-xl"></i>
+<i class="fa-solid fa-book-open text-xl"></i>
 
-            Lihat Rujukan Asal Di MIFA
+Lihat Rujukan Asal Di MIFA
 
-            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+<i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
 
-        </a>
+</a>
 
-    </div>
+</div>
 
-    <!-- TAMAT BUTANG MIFA -->
+<!-- TAMAT BUTANG MIFA -->
 
 </div>
 
 <!-- TAMAT NOTA RUJUKAN SABAH -->
 
-        </div>
+</div>
 
-        <!-- TAMAT KAD RUJUKAN SABAH -->
+<!-- TAMAT KAD RUJUKAN SABAH -->
 
-    </div>
+</div>
 
 </section>
 
 <!-- ==================================================
      TAMAT PENJELASAN STATUS LAMBANG SJAM
 ================================================== -->
-
 
 <!-- PERKHIDMATAN KAMI -->
     <section id="perkhidmatan" class="py-20 bg-slate-100 border-y border-slate-200">
@@ -1553,17 +1608,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <ul class="space-y-2 text-slate-600 text-sm mb-6">
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_community_1">Perkhidmatan ambulans kecemasan</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_community_2">Khidmat komuniti secara percuma</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_community_3">Bantuan kemanusiaan kepada masyarakat</span>
     </li>
@@ -1571,29 +1626,28 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </ul>  
   </div>
 
-
 <!-- SJAM PHOTO ADMIN V2 - KHIDMAT KOMUNITI -->
 <div id="komuniti-slider"
      data-category="komuniti"
      class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-    <div id="komuniti-gallery"
+<div id="komuniti-gallery"
          class="w-full h-64 flex items-center justify-center">
 
-        <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
             Memuatkan gambar Khidmat Komuniti...
         </p>
 
-    </div>
+</div>
 
-    <button type="button"
+<button type="button"
             data-komuniti-prev
             aria-label="Gambar sebelumnya"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-chevron-left"></i>
     </button>
 
-    <button type="button"
+<button type="button"
             data-komuniti-next
             aria-label="Gambar seterusnya"
             class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
@@ -1617,17 +1671,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <ul class="space-y-2 text-slate-600 text-sm mb-6">
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_ambulance_1">Ambulans bukan kecemasan</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_ambulance_2">Pengangkutan pesakit harian</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamRed text-xs"></i>
         <span data-i18n="service_ambulance_3">Rujukan hospital terpilih</span>
     </li>
@@ -1640,23 +1694,23 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
      data-category="ambulans"
      class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-    <div id="ambulans-gallery"
+<div id="ambulans-gallery"
          class="w-full h-64 flex items-center justify-center">
 
-        <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
             Memuatkan gambar Perkhidmatan Ambulans...
         </p>
 
-    </div>
+</div>
 
-    <button type="button"
+<button type="button"
             data-ambulans-prev
             aria-label="Gambar sebelumnya"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-chevron-left"></i>
     </button>
 
-    <button type="button"
+<button type="button"
             data-ambulans-next
             aria-label="Gambar seterusnya"
             class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
@@ -1681,17 +1735,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <ul class="space-y-2 text-slate-600 text-sm mb-6">
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
         <span data-i18n="service_hospital_1">Rumah ke hospital</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
         <span data-i18n="service_hospital_2">Hospital ke rumah pesakit</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-sjamBlue text-xs"></i>
         <span data-i18n="service_hospital_3">Pemindahan pesakit selamat</span>
     </li>
@@ -1703,23 +1757,23 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
      data-category="hospital"
      class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-    <div id="hospital-gallery"
+<div id="hospital-gallery"
          class="w-full h-64 flex items-center justify-center">
 
-        <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
             Memuatkan gambar Hospital Transfer...
         </p>
 
-    </div>
+</div>
 
-    <button type="button"
+<button type="button"
             data-hospital-prev
             aria-label="Gambar sebelumnya"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-chevron-left"></i>
     </button>
 
-    <button type="button"
+<button type="button"
             data-hospital-next
             aria-label="Gambar seterusnya"
             class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
@@ -1746,17 +1800,17 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <ul class="space-y-2 text-slate-600 text-sm mb-6">
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
         <span data-i18n="service_medical_1">Program & majlis komuniti</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
         <span data-i18n="service_medical_2">Acara sukan & keramaian</span>
     </li>
 
-    <li class="flex items-center gap-2">
+<li class="flex items-center gap-2">
         <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
         <span data-i18n="service_medical_3">Aktiviti rasmi organisasi</span>
     </li>
@@ -1768,32 +1822,32 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
      data-category="medical"
      class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-    <div id="medical-gallery"
+<div id="medical-gallery"
          class="w-full h-64 flex items-center justify-center">
 
-        <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
             Memuatkan gambar Medical Standby...
         </p>
 
-    </div>
+</div>
 
-    <button type="button"
+<button type="button"
             data-medical-prev
             aria-label="Gambar sebelumnya"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
 
-        <i class="fa-solid fa-chevron-left"></i>
+<i class="fa-solid fa-chevron-left"></i>
 
-    </button>
+</button>
 
-    <button type="button"
+<button type="button"
             data-medical-next
             aria-label="Gambar seterusnya"
             class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
 
-        <i class="fa-solid fa-chevron-right"></i>
+<i class="fa-solid fa-chevron-right"></i>
 
-    </button>
+</button>
 
 </div>
 <!-- TAMAT SLIDER MEDICAL STANDBY -->                
@@ -1825,32 +1879,32 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
      data-category="latihan"
      class="relative mt-4 rounded-xl overflow-hidden bg-slate-50">
 
-    <div id="latihan-gallery"
+<div id="latihan-gallery"
          class="w-full h-64 flex items-center justify-center">
 
-        <p class="text-slate-500 text-sm">
+<p class="text-slate-500 text-sm">
             Memuatkan gambar Latihan Pertolongan Cemas...
         </p>
 
-    </div>
+</div>
 
-    <button type="button"
+<button type="button"
             data-latihan-prev
             aria-label="Gambar sebelumnya"
             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
 
-        <i class="fa-solid fa-chevron-left"></i>
+<i class="fa-solid fa-chevron-left"></i>
 
-    </button>
+</button>
 
-    <button type="button"
+<button type="button"
             data-latihan-next
             aria-label="Gambar seterusnya"
             class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
 
-        <i class="fa-solid fa-chevron-right"></i>
+<i class="fa-solid fa-chevron-right"></i>
 
-    </button>
+</button>
 
 </div>
 <!-- TAMAT SLIDER LATIHAN PERTOLONGAN CEMAS -->
@@ -1876,68 +1930,68 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <span class="text-red-400 font-bold uppercase tracking-wider text-sm block mb-2">
 
-    <i class="fa-solid fa-award mr-1"></i>
+<i class="fa-solid fa-award mr-1"></i>
 
-    <span data-i18n="why_label">Kepercayaan Masyarakat</span>
+<span data-i18n="why_label">Kepercayaan Masyarakat</span>
 
 </span>
 
 <h2 data-i18n="why_title"
     class="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">
 
-    Kenapa Pilih SJAM Kelantan Utara?
+Kenapa Pilih SJAM Kelantan Utara?
 
 </h2>
 
 <p data-i18n="why_description"
    class="text-slate-300 text-base mb-8 leading-relaxed">
 
-    Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.
+Kami komited memberikan perkhidmatan kemanusiaan berkualiti tinggi dengan piawaian keselamatan yang ketat untuk ketenangan fikiran waris dan pesakit.
 
 </p>
 
 <!-- TAMAT MENGAPA PILIH SJAM -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
 
-        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+<i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
 
-        <span data-i18n="why_point_1" class="font-medium text-sm">
+<span data-i18n="why_point_1" class="font-medium text-sm">
             Pasukan terlatih & bertauliah
         </span>
 
-    </div>
+</div>
 
-    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
 
-        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+<i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
 
-        <span data-i18n="why_point_2" class="font-medium text-sm">
+<span data-i18n="why_point_2" class="font-medium text-sm">
             Fokus keselamatan pesakit
         </span>
 
-    </div>
+</div>
 
-    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
 
-        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+<i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
 
-        <span data-i18n="why_point_3" class="font-medium text-sm">
+<span data-i18n="why_point_3" class="font-medium text-sm">
             Sokongan komuniti prihatin
         </span>
 
-    </div>
+</div>
 
-    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
 
-        <i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
+<i class="fa-solid fa-circle-check text-green-400 text-lg shrink-0"></i>
 
-        <span data-i18n="why_point_4" class="font-medium text-sm">
+<span data-i18n="why_point_4" class="font-medium text-sm">
             Berteraskan kebajikan murni
         </span>
 
-    </div>
+</div>
 
 </div>  
                   </div>
@@ -1953,14 +2007,14 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <p data-i18n="why_stat_description"
    class="text-slate-300 text-sm mb-6 leading-relaxed">
 
-    "Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti."
+"Berkhidmat kepada mereka yang memerlukan bantuan kecemasan dan sokongan kesihatan di Kota Bharu dengan penuh integriti."
 
 </p>
 
 <div data-i18n="why_stat_button"
      class="inline-block bg-sjamRed text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow">
 
-    Sentiasa Bersedia Membantu
+Sentiasa Bersedia Membantu
 
 </div>  
                   </div>
@@ -1977,23 +2031,23 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-    <i class="fa-solid fa-images mr-1"></i>
+<i class="fa-solid fa-images mr-1"></i>
 
-    <span data-i18n="gallery_label">Dokumentasi Aktiviti</span>
+<span data-i18n="gallery_label">Dokumentasi Aktiviti</span>
 
 </span>
 
 <h2 data-i18n="gallery_title"
     class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
 
-    Galeri Aktiviti & Perkhidmatan
+Galeri Aktiviti & Perkhidmatan
 
 </h2>
 
 <p data-i18n="gallery_description"
    class="text-slate-600 text-base">
 
-    Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.
+Paparan visual aktiviti harian, latihan kecemasan, dan kesiagaan pasukan SJAM di lapangan.
 
 </p>
             </div>
@@ -2227,36 +2281,35 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="text-center max-w-2xl mx-auto mb-10">
 
-    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-        <i class="fa-solid fa-hand-holding-heart mr-1"></i>
+<i class="fa-solid fa-hand-holding-heart mr-1"></i>
 
-        <span data-i18n="donation_label">
+<span data-i18n="donation_label">
             Sokong Khidmat Kemanusiaan
         </span>
 
-    </span>
+</span>
 
-    <h2 data-i18n="donation_title"
+<h2 data-i18n="donation_title"
         class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
 
-        Sumbangan Kepada SJAM KKU
+Sumbangan Kepada SJAM KKU
 
-    </h2>
+</h2>
 
-    <p data-i18n="donation_intro"
+<p data-i18n="donation_intro"
        class="text-slate-600 leading-relaxed">
 
-        Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia
+Sumbangan anda amat dihargai bagi membantu St. John Ambulans Malaysia
         (SJAM) Kawasan Kelantan Utara meneruskan perkhidmatan dan aktiviti
         kemanusiaan kepada masyarakat.
 
-    </p>
+</p>
 
 </div>
 
 <!-- TAMAT TAJUK SUMBANGAN -->
-
 
 <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
 
@@ -2266,60 +2319,57 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="p-6 sm:p-10 border-b border-slate-200 bg-white">
 
-    <!-- PENGHARGAAN PENYUMBANG - SISTEM TIGA BAHASA -->
+<!-- PENGHARGAAN PENYUMBANG - SISTEM TIGA BAHASA -->
 
 <div class="text-center max-w-3xl mx-auto mb-10">
 
-    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-3">
 
-        <i class="fa-solid fa-handshake-angle mr-2"></i>
+<i class="fa-solid fa-handshake-angle mr-2"></i>
 
-        <span data-i18n="donor_label">
+<span data-i18n="donor_label">
             JASA DAN SUMBANGAN DIHARGAI
         </span>
 
-    </span>
+</span>
 
-
-    <h3 data-i18n="donor_title"
+<h3 data-i18n="donor_title"
         class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-5">
 
-        Penghargaan Kepada Penyumbang Korporat & Individu Prihatin
+Penghargaan Kepada Penyumbang Korporat & Individu Prihatin
 
-    </h3>
+</h3>
 
-
-    <p data-i18n="donor_description_1"
+<p data-i18n="donor_description_1"
        class="text-slate-600 leading-relaxed mb-4">
 
-        St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara
+St John Ambulans Malaysia (SJAM) Kawasan Kelantan Utara
         Kota Bharu merakamkan setinggi-tinggi penghargaan dan
         ucapan terima kasih kepada pihak korporat, organisasi
         serta para penderma yang prihatin atas sumbangan
         kenderaan operasi pacuan empat roda (4x4) dan ambulans.
 
-    </p>
+</p>
 
-
-    <p data-i18n="donor_description_2"
+<p data-i18n="donor_description_2"
        class="text-slate-600 leading-relaxed">
 
-        Sumbangan yang amat bermakna ini membantu memperkukuh
+Sumbangan yang amat bermakna ini membantu memperkukuh
         kesiapsiagaan pasukan SJAM dalam melaksanakan tugas
         kecemasan, pengangkutan pesakit, bantuan kemanusiaan
         serta perkhidmatan kebajikan kepada masyarakat.
 
-    </p>
+</p>
 
 </div>
 
 <!-- TAMAT PENGHARGAAN PENYUMBANG -->
 
-    <!-- GALERI GAMBAR PENYERAHAN KENDERAAN -->
+<!-- GALERI GAMBAR PENYERAHAN KENDERAAN -->
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <!-- GAMBAR 1 -->
+<!-- GAMBAR 1 -->
         <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <img
                 src="https://drive.google.com/thumbnail?id=1T5X4NH-_zYlGFluLSqzOJGiKLtO8F5HU&sz=w1600"
@@ -2327,7 +2377,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption data-i18n="donor_image_1"
+<figcaption data-i18n="donor_image_1"
             class="p-5 text-sm text-slate-600 leading-relaxed">
     Majlis penyerahan kenderaan operasi hasil
     sumbangan pihak korporat bagi menyokong
@@ -2335,7 +2385,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </figcaption>
         </figure>
 
-        <!-- GAMBAR 2 -->
+<!-- GAMBAR 2 -->
         <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <img
                 src="https://drive.google.com/thumbnail?id=1MPLncRVA8V7yUeb973HdbihN2uhyjRA_&sz=w1600"
@@ -2343,7 +2393,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption data-i18n="donor_image_2"
+<figcaption data-i18n="donor_image_2"
             class="p-5 text-sm text-slate-600 leading-relaxed">
     Sesi pertemuan dan perbincangan bersama
     wakil organisasi bagi memperkukuh kerjasama
@@ -2351,7 +2401,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </figcaption>    
     </figure>
 
-        <!-- GAMBAR 3 -->
+<!-- GAMBAR 3 -->
         <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <img
                 src="https://drive.google.com/thumbnail?id=14SBwDm-Vn4NNImGNRv7_J1z5-HUV4Q5W&sz=w1600"
@@ -2359,7 +2409,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption data-i18n="donor_image_3"
+<figcaption data-i18n="donor_image_3"
             class="p-5 text-sm text-slate-600 leading-relaxed">
     Penyerahan unit ambulans bagi meningkatkan
     keupayaan operasi dan kesiapsiagaan dalam
@@ -2367,7 +2417,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </figcaption>
         </figure>
 
-        <!-- GAMBAR 4 -->
+<!-- GAMBAR 4 -->
         <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <img
                 src="https://drive.google.com/thumbnail?id=1XXe4CV4-3JvIPA2_Mr6gKDjBH7JFjcB4&sz=w1600"
@@ -2375,7 +2425,7 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
                 loading="lazy"
                 class="w-full h-72 object-contain bg-slate-100">
 
-            <figcaption data-i18n="donor_image_4"
+<figcaption data-i18n="donor_image_4"
             class="p-5 text-sm text-slate-600 leading-relaxed">
     Suasana majlis penyerahan ambulans sebagai
     tanda penghargaan kepada penyumbang yang
@@ -2383,29 +2433,29 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 </figcaption>
         </figure>
 
-    </div>
+</div>
 
-    <!-- UCAPAN PENGHARGAAN -->
+<!-- UCAPAN PENGHARGAAN -->
 
-    <!-- PENGHARGAAN PENYUMBANG - TIGA BAHASA -->
+<!-- PENGHARGAAN PENYUMBANG - TIGA BAHASA -->
 
 <div class="mt-10 bg-sjamBlue rounded-2xl p-6 sm:p-8 text-center text-white">
 
-    <i class="fa-solid fa-heart text-red-400 text-3xl mb-4"></i>
+<i class="fa-solid fa-heart text-red-400 text-3xl mb-4"></i>
 
-    <h4 data-i18n="donor_thanks_title"
+<h4 data-i18n="donor_thanks_title"
         class="text-xl sm:text-2xl font-bold mb-3">
         Terima Kasih Atas Keprihatinan Anda
     </h4>
 
-    <p data-i18n="donor_thanks_description"
+<p data-i18n="donor_thanks_description"
        class="text-blue-100 leading-relaxed max-w-2xl mx-auto">
         Setiap sumbangan amat bernilai dalam memastikan
         kesinambungan khidmat kemanusiaan SJAM kepada
         mereka yang memerlukan.
     </p>
 
-    <p data-i18n="donor_thanks_closing"
+<p data-i18n="donor_thanks_closing"
        class="text-red-300 font-semibold mt-5">
         Bersama Berbakti Demi Kesejahteraan Komuniti
     </p>
@@ -2426,36 +2476,36 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 sm:p-8">
 
-    <div class="flex items-start gap-4">
+<div class="flex items-start gap-4">
 
-        <div class="w-12 h-12 bg-sjamBlue text-white rounded-xl flex items-center justify-center shrink-0">
+<div class="w-12 h-12 bg-sjamBlue text-white rounded-xl flex items-center justify-center shrink-0">
             <i class="fa-solid fa-receipt text-xl"></i>
         </div>
 
-        <div>
+<div>
 
-            <h3 data-i18n="tax_title"
+<h3 data-i18n="tax_title"
                 class="text-xl font-bold text-slate-900 mb-3">
 
-                Sumbangan & Pengecualian Cukai
+Sumbangan & Pengecualian Cukai
 
-            </h3>
+</h3>
 
-            <p data-i18n="tax_description"
+<p data-i18n="tax_description"
                class="text-slate-600 text-sm sm:text-base leading-relaxed">
 
-                St. John Ambulans Malaysia (SJAM) merupakan badan berkanun
+St. John Ambulans Malaysia (SJAM) merupakan badan berkanun
                 bukan kerajaan yang menyediakan perkhidmatan tanpa berasaskan
                 keuntungan kepada masyarakat. Berdasarkan maklumat rasmi SJAM,
                 sumbangan kepada SJAM dikecualikan daripada Cukai Pendapatan
                 menurut Warta Kerajaan Persekutuan L.N.334 bertarikh
                 22 Jun 1955.
 
-            </p>
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </div>
 
@@ -2467,85 +2517,79 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <!-- KEGUNAAN SUMBANGAN - SISTEM TIGA BAHASA -->
 <div class="p-6 sm:p-10">
 
-    <h3 class="text-xl font-bold text-slate-900 mb-6">
+<h3 class="text-xl font-bold text-slate-900 mb-6">
 
-        <i class="fa-solid fa-circle-check text-sjamRed mr-2"></i>
+<i class="fa-solid fa-circle-check text-sjamRed mr-2"></i>
 
-        <span data-i18n="donation_usage_title">
+<span data-i18n="donation_usage_title">
             Kegunaan Sumbangan
         </span>
 
-    </h3>
+</h3>
 
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- KEGUNAAN 1 -->
 
+<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
 
-        <!-- KEGUNAAN 1 -->
+<i class="fa-solid fa-truck-medical text-sjamRed mt-1"></i>
 
-        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
-
-            <i class="fa-solid fa-truck-medical text-sjamRed mt-1"></i>
-
-            <span data-i18n="donation_usage_1"
+<span data-i18n="donation_usage_1"
                   class="text-slate-700 text-sm">
 
-                Baik pulih dan penyelenggaraan kenderaan SJAM KKU
+Baik pulih dan penyelenggaraan kenderaan SJAM KKU
 
-            </span>
+</span>
 
-        </div>
+</div>
 
+<!-- KEGUNAAN 2 -->
 
-        <!-- KEGUNAAN 2 -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
 
-        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+<i class="fa-solid fa-building-circle-check text-sjamBlue mt-1"></i>
 
-            <i class="fa-solid fa-building-circle-check text-sjamBlue mt-1"></i>
-
-            <span data-i18n="donation_usage_2"
+<span data-i18n="donation_usage_2"
                   class="text-slate-700 text-sm">
 
-                Menampung kos operasi SJAM KKU
+Menampung kos operasi SJAM KKU
 
-            </span>
+</span>
 
-        </div>
+</div>
 
+<!-- KEGUNAAN 3 -->
 
-        <!-- KEGUNAAN 3 -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
 
-        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+<i class="fa-solid fa-kit-medical text-emerald-600 mt-1"></i>
 
-            <i class="fa-solid fa-kit-medical text-emerald-600 mt-1"></i>
-
-            <span data-i18n="donation_usage_3"
+<span data-i18n="donation_usage_3"
                   class="text-slate-700 text-sm">
 
-                Menampung kos pembelian peralatan dan keperluan operasi
+Menampung kos pembelian peralatan dan keperluan operasi
 
-            </span>
+</span>
 
-        </div>
+</div>
 
+<!-- KEGUNAAN 4 -->
 
-        <!-- KEGUNAAN 4 -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
 
-        <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+<i class="fa-solid fa-people-group text-amber-600 mt-1"></i>
 
-            <i class="fa-solid fa-people-group text-amber-600 mt-1"></i>
-
-            <span data-i18n="donation_usage_4"
+<span data-i18n="donation_usage_4"
                   class="text-slate-700 text-sm">
 
-                Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam
+Menampung pelaksanaan pelbagai program dan khidmat kepada orang awam
 
-            </span>
+</span>
 
-        </div>
+</div>
 
-
-    </div>
+</div>
 
 </div>
 
@@ -2554,103 +2598,94 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="bg-sjamBlue text-white p-6 sm:p-10 text-center">
 
-    <div class="w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
+<div class="w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
         <i class="fa-solid fa-building-columns text-2xl"></i>
     </div>
 
-
-    <h3 data-i18n="bank_title"
+<h3 data-i18n="bank_title"
         class="text-2xl font-bold mb-3">
 
-        Salurkan Sumbangan Anda
+Salurkan Sumbangan Anda
 
-    </h3>
+</h3>
 
-
-    <p data-i18n="bank_description"
+<p data-i18n="bank_description"
        class="text-blue-100 text-sm mb-6">
 
-        Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.
+Sumbangan boleh disalurkan terus ke akaun rasmi SJAM KKU.
 
-    </p>
+</p>
 
+<div class="max-w-md mx-auto bg-white/10 border border-white/20 rounded-2xl p-6">
 
-    <div class="max-w-md mx-auto bg-white/10 border border-white/20 rounded-2xl p-6">
+<!-- NAMA BANK -->
 
-
-        <!-- NAMA BANK -->
-
-        <p data-i18n="bank_name_label"
+<p data-i18n="bank_name_label"
            class="text-blue-200 text-xs uppercase tracking-wider mb-1">
 
-            Nama Bank
+Nama Bank
 
-        </p>
+</p>
 
-        <p class="font-semibold mb-4">
+<p class="font-semibold mb-4">
             BANK MUAMALAT
         </p>
 
+<!-- NAMA AKAUN -->
 
-        <!-- NAMA AKAUN -->
-
-        <p data-i18n="bank_account_label"
+<p data-i18n="bank_account_label"
            class="text-blue-200 text-xs uppercase tracking-wider mb-1">
 
-            Nama Akaun
+Nama Akaun
 
-        </p>
+</p>
 
-        <p class="font-semibold mb-4">
+<p class="font-semibold mb-4">
             ST JOHN AMBULANS MALAYSIA KEL UTARA
         </p>
 
+<!-- NOMBOR AKAUN -->
 
-        <!-- NOMBOR AKAUN -->
-
-        <p data-i18n="bank_number_label"
+<p data-i18n="bank_number_label"
            class="text-blue-200 text-xs uppercase tracking-wider mb-1">
 
-            No. Akaun
+No. Akaun
 
-        </p>
+</p>
 
-        <p id="no-akaun-sjam"
+<p id="no-akaun-sjam"
            class="text-2xl font-bold tracking-wider mb-5">
 
-            03010000234710
+03010000234710
 
-        </p>
+</p>
 
+<!-- BUTANG SALIN AKAUN -->
 
-        <!-- BUTANG SALIN AKAUN -->
-
-        <button
+<button
             type="button"
             onclick="salinAkaunSJAM()"
             class="bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition">
 
-            <i class="fa-regular fa-copy mr-2"></i>
+<i class="fa-regular fa-copy mr-2"></i>
 
-            <span data-i18n="bank_copy_button">
+<span data-i18n="bank_copy_button">
                 Salin No. Akaun
             </span>
 
-        </button>
+</button>
 
+<!-- MESEJ BERJAYA DISALIN -->
 
-        <!-- MESEJ BERJAYA DISALIN -->
-
-        <p id="mesej-salin"
+<p id="mesej-salin"
            data-i18n="bank_copy_success"
            class="text-green-300 text-sm mt-3 hidden">
 
-            ✓ Nombor akaun berjaya disalin
+✓ Nombor akaun berjaya disalin
 
-        </p>
+</p>
 
-
-    </div>
+</div>
 <!-- Selepas Membuat Sumbangan -->
 
 <!-- ===================================== -->
@@ -2659,25 +2694,25 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 
 <div class="max-w-2xl mx-auto mt-8 bg-white/10 border border-white/20 rounded-2xl p-5 sm:p-8">
 
-    <div class="text-center mb-6">
+<div class="text-center mb-6">
 
-        <div class="w-14 h-14 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-4">
+<div class="w-14 h-14 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-4">
             <i class="fa-solid fa-file-invoice text-2xl text-white"></i>
         </div>
 
-        <!-- DOKUMEN SOKONGAN AKAUN BANK - TIGA BAHASA -->
+<!-- DOKUMEN SOKONGAN AKAUN BANK - TIGA BAHASA -->
 
 <h4 data-i18n="bank_document_title"
     class="text-xl sm:text-2xl font-bold text-white mb-3">
 
-    Dokumen Sokongan Akaun Bank
+Dokumen Sokongan Akaun Bank
 
 </h4>
 
 <p data-i18n="bank_document_description"
    class="text-blue-100 text-sm leading-relaxed">
 
-    Paparan dokumen penyata Bank Muamalat
+Paparan dokumen penyata Bank Muamalat
     sebagai rujukan maklumat akaun
     St John Ambulans Malaysia
     Kawasan Kelantan Utara Kota Bharu.
@@ -2687,22 +2722,22 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <!-- TAMAT TAJUK DOKUMEN SOKONGAN -->
     </div>
 
-    <!-- GAMBAR PENYATA BANK -->
+<!-- GAMBAR PENYATA BANK -->
 
-    <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+<div class="bg-white rounded-2xl overflow-hidden shadow-xl border-4 border-white">
 
-        <img
+<img
             src="https://drive.google.com/thumbnail?id=1HF1ZO7HhgjcIHFO0Y4MsZntaobAh_WaL&sz=w1600"
             alt="Dokumen Penyata Bank Muamalat SJAM Kelantan Utara"
             loading="lazy"
             class="w-full h-auto object-contain">
 
-    </div>
+</div>
 
-    <p data-i18n="bank_document_note"
+<p data-i18n="bank_document_note"
    class="text-blue-200 text-xs leading-relaxed mt-5 text-center">
 
-    Dokumen bertarikh Jun 2019 ini dipaparkan
+Dokumen bertarikh Jun 2019 ini dipaparkan
     sebagai rujukan maklumat akaun.
     Sila hubungi pihak SJAM untuk pengesahan
     maklumat akaun terkini.
@@ -2714,159 +2749,149 @@ class="w-full h-auto object-cover transform hover:scale-105 transition duration-
 <!-- TAMAT DOKUMEN SOKONGAN AKAUN BANK -->
 <!-- ===================================== -->
 
-
 <!-- Selepas Membuat Sumbangan -->
 <!-- SELEPAS MEMBUAT SUMBANGAN - SISTEM TIGA BAHASA -->
 
 <div class="max-w-2xl mx-auto mt-8 bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 text-left">
 
+<!-- TAJUK -->
 
-    <!-- TAJUK -->
+<h4 class="text-xl font-bold text-white mb-3">
 
-    <h4 class="text-xl font-bold text-white mb-3">
+<i class="fa-solid fa-envelope-circle-check mr-2 text-red-300"></i>
 
-        <i class="fa-solid fa-envelope-circle-check mr-2 text-red-300"></i>
-
-        <span data-i18n="after_donation_title">
+<span data-i18n="after_donation_title">
             Selepas Membuat Sumbangan
         </span>
 
-    </h4>
+</h4>
 
+<!-- PENERANGAN -->
 
-    <!-- PENERANGAN -->
-
-    <p data-i18n="after_donation_description"
+<p data-i18n="after_donation_description"
        class="text-blue-100 text-sm leading-relaxed mb-5">
 
-        Selepas membuat sumbangan, sila hantarkan slip transaksi bank
+Selepas membuat sumbangan, sila hantarkan slip transaksi bank
         berserta maklumat penyumbang kepada e-mel rasmi SJAM Kawasan
         Kelantan Utara Kota Bharu untuk tujuan rekod dan tindakan lanjut.
 
-    </p>
+</p>
 
+<!-- E-MEL -->
 
-    <!-- E-MEL -->
+<div class="bg-white/10 rounded-xl p-5 mb-5">
 
-    <div class="bg-white/10 rounded-xl p-5 mb-5">
-
-        <p data-i18n="email_label"
+<p data-i18n="email_label"
            class="text-blue-200 text-xs uppercase tracking-wider mb-2">
 
-            E-mel
+E-mel
 
-        </p>
+</p>
 
-        <a href="mailto:sjamkotabharu@gmail.com"
+<a href="mailto:sjamkotabharu@gmail.com"
            class="text-white font-bold text-base sm:text-lg hover:text-red-300 transition break-all">
 
-            <i class="fa-solid fa-envelope mr-2"></i>
+<i class="fa-solid fa-envelope mr-2"></i>
 
-            sjamkotabharu@gmail.com
+sjamkotabharu@gmail.com
 
-        </a>
+</a>
 
-    </div>
+</div>
 
+<!-- MAKLUMAT PENYUMBANG -->
 
-    <!-- MAKLUMAT PENYUMBANG -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<!-- PENYUMBANG INDIVIDU -->
 
+<div class="bg-white/10 rounded-xl p-5">
 
-        <!-- PENYUMBANG INDIVIDU -->
+<h5 class="font-bold text-white mb-3">
 
-        <div class="bg-white/10 rounded-xl p-5">
+<i class="fa-solid fa-user mr-2"></i>
 
-            <h5 class="font-bold text-white mb-3">
-
-                <i class="fa-solid fa-user mr-2"></i>
-
-                <span data-i18n="individual_title">
+<span data-i18n="individual_title">
                     Penyumbang Individu
                 </span>
 
-            </h5>
+</h5>
 
-            <ul class="text-blue-100 text-sm space-y-2">
+<ul class="text-blue-100 text-sm space-y-2">
 
-                <li data-i18n="individual_1">• Nama penuh</li>
+<li data-i18n="individual_1">• Nama penuh</li>
 
-                <li data-i18n="individual_2">• Nombor MyKad</li>
+<li data-i18n="individual_2">• Nombor MyKad</li>
 
-                <li data-i18n="individual_3">• Alamat surat-menyurat</li>
+<li data-i18n="individual_3">• Alamat surat-menyurat</li>
 
-                <li data-i18n="individual_4">• Nombor telefon</li>
+<li data-i18n="individual_4">• Nombor telefon</li>
 
-                <li data-i18n="individual_5">• E-mel</li>
+<li data-i18n="individual_5">• E-mel</li>
 
-            </ul>
+</ul>
 
-        </div>
+</div>
 
+<!-- PENYUMBANG KORPORAT -->
 
-        <!-- PENYUMBANG KORPORAT -->
+<div class="bg-white/10 rounded-xl p-5">
 
-        <div class="bg-white/10 rounded-xl p-5">
+<h5 class="font-bold text-white mb-3">
 
-            <h5 class="font-bold text-white mb-3">
+<i class="fa-solid fa-building mr-2"></i>
 
-                <i class="fa-solid fa-building mr-2"></i>
-
-                <span data-i18n="corporate_title">
+<span data-i18n="corporate_title">
                     Penyumbang Korporat
                 </span>
 
-            </h5>
+</h5>
 
-            <ul class="text-blue-100 text-sm space-y-2">
+<ul class="text-blue-100 text-sm space-y-2">
 
-                <li data-i18n="corporate_1">• Nama syarikat / perniagaan</li>
+<li data-i18n="corporate_1">• Nama syarikat / perniagaan</li>
 
-                <li data-i18n="corporate_2">• Nombor pendaftaran perniagaan</li>
+<li data-i18n="corporate_2">• Nombor pendaftaran perniagaan</li>
 
-                <li data-i18n="corporate_3">• Nama pegawai untuk dihubungi</li>
+<li data-i18n="corporate_3">• Nama pegawai untuk dihubungi</li>
 
-                <li data-i18n="corporate_4">• Nombor telefon</li>
+<li data-i18n="corporate_4">• Nombor telefon</li>
 
-                <li data-i18n="corporate_5">• Alamat syarikat</li>
+<li data-i18n="corporate_5">• Alamat syarikat</li>
 
-            </ul>
+</ul>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
+<!-- BUTANG HANTAR E-MEL -->
 
-    <!-- BUTANG HANTAR E-MEL -->
-
-    <a href="mailto:sjamkotabharu@gmail.com?subject=Maklumat%20Sumbangan%20SJAM%20KKU"
+<a href="mailto:sjamkotabharu@gmail.com?subject=Maklumat%20Sumbangan%20SJAM%20KKU"
        class="w-full bg-sjamRed hover:bg-sjamDarkRed text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition flex items-center justify-center gap-2">
 
-        <i class="fa-solid fa-paper-plane"></i>
+<i class="fa-solid fa-paper-plane"></i>
 
-        <span data-i18n="email_submit">
+<span data-i18n="email_submit">
             Hantar Slip Melalui E-mel
         </span>
 
-    </a>
+</a>
 
+<!-- NOTA KERAHSIAAN -->
 
-    <!-- NOTA KERAHSIAAN -->
+<p class="text-blue-200 text-xs leading-relaxed mt-5">
 
-    <p class="text-blue-200 text-xs leading-relaxed mt-5">
+<i class="fa-solid fa-lock mr-1"></i>
 
-        <i class="fa-solid fa-lock mr-1"></i>
+<span data-i18n="privacy_note">
 
-        <span data-i18n="privacy_note">
-
-            Segala maklumat yang diberikan akan dikendalikan secara sulit
+Segala maklumat yang diberikan akan dikendalikan secara sulit
             dan digunakan bagi urusan berkaitan sumbangan.
 
-        </span>
+</span>
 
-    </p>
-
+</p>
 
 </div>
 
@@ -2902,29 +2927,29 @@ function salinAkaunSJAM() {
 
 <div class="text-center max-w-2xl mx-auto mb-16">
 
-    <span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
+<span class="text-sjamRed font-bold uppercase tracking-wider text-sm block mb-2">
 
-        <i class="fa-solid fa-phone-volume mr-1"></i>
+<i class="fa-solid fa-phone-volume mr-1"></i>
 
-        <span data-i18n="contact_label">
+<span data-i18n="contact_label">
             Saluran Komunikasi
         </span>
 
-    </span>
+</span>
 
-    <h2 data-i18n="contact_title"
+<h2 data-i18n="contact_title"
         class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
 
-        Hubungi Kami
+Hubungi Kami
 
-    </h2>
+</h2>
 
-    <p data-i18n="contact_description"
+<p data-i18n="contact_description"
        class="text-slate-600 text-base">
 
-        Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.
+Sebarang pertanyaan mengenai perkhidmatan ambulans, latihan, atau program komuniti boleh berhubung terus dengan pejabat kami.
 
-    </p>
+</p>
 
 </div>
 
@@ -2934,108 +2959,106 @@ function salinAkaunSJAM() {
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
 
-    <!-- TELEFON PEJABAT -->
+<!-- TELEFON PEJABAT -->
 
-    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+<div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
 
-        <div class="w-14 h-14 bg-red-100 text-sjamRed rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+<div class="w-14 h-14 bg-red-100 text-sjamRed rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
 
-            <i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-phone"></i>
 
-        </div>
+</div>
 
-        <h3 data-i18n="contact_phone_title"
+<h3 data-i18n="contact_phone_title"
             class="font-bold text-slate-900 text-lg mb-2">
 
-            Telefon Pejabat
+Telefon Pejabat
 
-        </h3>
+</h3>
 
-        <p data-i18n="contact_phone_description"
+<p data-i18n="contact_phone_description"
            class="text-slate-600 text-sm mb-4">
 
-            Waktu pejabat rasmi
+Waktu pejabat rasmi
 
-        </p>
+</p>
 
-        <a href="tel:+6011-53649991"
+<a href="tel:+6011-53649991"
            class="text-sjamRed font-bold text-lg hover:underline">
 
-            +6011-53649991
++6011-53649991
 
-        </a>
+</a>
 
-    </div>
+</div>
 
+<!-- WHATSAPP HOTLINE -->
 
-    <!-- WHATSAPP HOTLINE -->
+<div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
 
-    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+<div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
 
-        <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+<i class="fa-brands fa-whatsapp"></i>
 
-            <i class="fa-brands fa-whatsapp"></i>
+</div>
 
-        </div>
-
-        <h3 data-i18n="contact_whatsapp_title"
+<h3 data-i18n="contact_whatsapp_title"
             class="font-bold text-slate-900 text-lg mb-2">
 
-            WhatsApp Hotline
+WhatsApp Hotline
 
-        </h3>
+</h3>
 
-        <p data-i18n="contact_whatsapp_description"
+<p data-i18n="contact_whatsapp_description"
            class="text-slate-600 text-sm mb-4">
 
-            Pertanyaan & Khidmat Waris
+Pertanyaan & Khidmat Waris
 
-        </p>
+</p>
 
-        <a href="https://wa.me/60199327091"
+<a href="https://wa.me/60199327091"
            target="_blank"
            rel="noopener noreferrer"
            class="text-green-600 font-bold text-lg hover:underline">
 
-            +6019-932 7091
++6019-932 7091
 
-        </a>
+</a>
 
-    </div>
+</div>
 
+<!-- E-MEL RASMI -->
 
-    <!-- E-MEL RASMI -->
+<div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
 
-    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+<div class="w-14 h-14 bg-blue-100 text-sjamBlue rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
 
-        <div class="w-14 h-14 bg-blue-100 text-sjamBlue rounded-2xl mx-auto flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-envelope"></i>
 
-            <i class="fa-solid fa-envelope"></i>
+</div>
 
-        </div>
-
-        <h3 data-i18n="contact_email_title"
+<h3 data-i18n="contact_email_title"
             class="font-bold text-slate-900 text-lg mb-2">
 
-            E-mel Rasmi
+E-mel Rasmi
 
-        </h3>
+</h3>
 
-        <p data-i18n="contact_email_description"
+<p data-i18n="contact_email_description"
            class="text-slate-600 text-sm mb-4">
 
-            Urusan rasmi & surat menyurat
+Urusan rasmi & surat menyurat
 
-        </p>
+</p>
 
-        <a href="mailto:sjamkotabharu@gmail.com"
+<a href="mailto:sjamkotabharu@gmail.com"
            class="text-sjamBlue font-bold text-sm sm:text-base hover:underline">
 
-            sjamkotabharu@gmail.com
+sjamkotabharu@gmail.com
 
-        </a>
+</a>
 
-    </div>
+</div>
 
 </div>
 
@@ -3053,45 +3076,44 @@ function salinAkaunSJAM() {
 <h4 data-i18n="map_area"
     class="text-lg font-semibold text-sjamRed mb-4">
 
-    Kawasan Kelantan Utara Kota Bharu
+Kawasan Kelantan Utara Kota Bharu
 
 </h4>
 
 <p data-i18n="map_description"
    class="text-slate-600 mb-6 leading-relaxed">
 
-    Pusat operasi kami terletak di strategik bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.
+Pusat operasi kami terletak di strategik bandar Kota Bharu, Kelantan. Sila rujuk lokasi peta untuk kunjungan atau urusan rasmi berkaitan khidmat kesihatan komuniti.
 
 </p>
 
 <div class="flex flex-wrap gap-4">
 
-    <a href="https://maps.app.goo.gl/nuEe5dvdtUWTSsnt6"
+<a href="https://maps.app.goo.gl/nuEe5dvdtUWTSsnt6"
        target="_blank"
        rel="noopener noreferrer"
        class="bg-sjamRed hover:bg-sjamDarkRed text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
 
-        <i class="fa-solid fa-map-location-dot"></i>
+<i class="fa-solid fa-map-location-dot"></i>
 
-        <span data-i18n="map_button">
+<span data-i18n="map_button">
             Buka Google Maps
         </span>
 
-    </a>
+</a>
 
-
-    <a href="https://wa.me/60199327091"
+<a href="https://wa.me/60199327091"
        target="_blank"
        rel="noopener noreferrer"
        class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
 
-        <i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-whatsapp"></i>
 
-        <span data-i18n="map_contact_button">
+<span data-i18n="map_contact_button">
             Hubungi Kami
         </span>
 
-    </a>
+</a>
 
 </div>
 
@@ -3136,7 +3158,7 @@ function salinAkaunSJAM() {
 <h2 data-i18n="social_title"
     class="text-2xl sm:text-3xl font-extrabold text-white tracking-wider mb-8">
 
-    FOLLOW US ON SOCIAL MEDIA
+FOLLOW US ON SOCIAL MEDIA
 
 </h2>
 <div class="flex flex-wrap justify-center items-center gap-5">
@@ -3148,7 +3170,6 @@ function salinAkaunSJAM() {
                class="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl hover:scale-110 transition shadow-lg">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
-
 
 <!-- Instagram -->
 <a href="https://www.instagram.com/sjamkotabharu_?psln=MXdjNWE5aXQwdGQ1dA=="
@@ -3196,23 +3217,23 @@ class="w-10 h-10 object-contain">
 
 <div class="flex items-center gap-6 text-sm text-slate-300">
 
-    <a href="#home" class="hover:text-red-400 transition">
+<a href="#home" class="hover:text-red-400 transition">
         <span data-i18n="nav_home">Utama</span>
     </a>
 
-    <a href="#tentang" class="hover:text-red-400 transition">
+<a href="#tentang" class="hover:text-red-400 transition">
         <span data-i18n="nav_about">Tentang Kami</span>
     </a>
 
-    <a href="#perkhidmatan" class="hover:text-red-400 transition">
+<a href="#perkhidmatan" class="hover:text-red-400 transition">
         <span data-i18n="nav_services">Perkhidmatan</span>
     </a>
 
-    <a href="#galeri" class="hover:text-red-400 transition">
+<a href="#galeri" class="hover:text-red-400 transition">
         <span data-i18n="nav_gallery">Galeri</span>
     </a>
 
-    <a href="#hubungi" class="hover:text-red-400 transition">
+<a href="#hubungi" class="hover:text-red-400 transition">
         <span data-i18n="nav_contact">Hubungi Kami</span>
     </a>
 
@@ -3222,30 +3243,30 @@ class="w-10 h-10 object-contain">
 
 <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
 
-    <p>
+<p>
         © 2026 St John Ambulans Malaysia (SJAM)
         Kawasan Kelantan Utara Kota Bharu.
         Hak Cipta Terpelihara.
     </p>
 
-    <div class="flex flex-col items-center sm:items-end gap-2">
+<div class="flex flex-col items-center sm:items-end gap-2">
 
-        <p>
+<p>
             Website Rasmi Maklumat Awam & Komuniti
         </p>
 
-        <p class="flex items-center gap-2 text-slate-300">
+<p class="flex items-center gap-2 text-slate-300">
 
-            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+<i class="fa-solid fa-eye" aria-hidden="true"></i>
 
-            <span>Pelawat unik:</span>
+<span>Pelawat unik:</span>
 
-            <span id="visitor-count"
+<span id="visitor-count"
                   class="font-semibold text-white">—</span>
 
-        </p>
+</p>
 
-    </div>
+</div>
 
 </div>
 
@@ -3302,8 +3323,6 @@ class="w-10 h-10 object-contain">
         // Auto advance carousel every 5 seconds
         setInterval(nextSlide, 5000);
        </script>
-
-
 
 <!-- SJAM PHOTO ADMIN V2 - UNIFIED GALLERY SCRIPT -->
 <script>
@@ -3751,8 +3770,8 @@ class="w-10 h-10 object-contain">
             symbol_label: "Identiti Organisasi",
 symbol_title: "Mengenali Lambang dan Simbol SJAM",
 symbol_intro: "Mengenali identiti dan nilai murni yang menjadi asas perkhidmatan kemanusiaan St. John Ambulans Malaysia.",
-symbol_cross_title: "Lambang Lapan Penjuru St. John",
-symbol_cross_desc: "Lambang lapan penjuru St. John melambangkan nilai-nilai murni yang menjadi panduan kepada anggota dalam melaksanakan tugas pertolongan cemas dan perkhidmatan kemanusiaan.",
+symbol_cross_title: "Lapan Penjuru St. John",
+symbol_cross_desc: "Lapan penjuru St. John melambangkan nilai-nilai murni yang menjadi panduan kepada anggota dalam melaksanakan tugas pertolongan cemas dan perkhidmatan kemanusiaan.",
 symbol_cross_desc2: "Nilai-nilai ini mencerminkan kecekapan, disiplin, keprihatinan dan tanggungjawab terhadap masyarakat.",
 symbol_values_title: "Lapan Nilai Murni Pertolongan Cemas",
 symbol_value_1: "Peneliti",
@@ -3771,6 +3790,34 @@ symbol_desc_5: "Supaya dia dapat memberi maklumat dan arahan kepada mangsa dan o
 symbol_desc_6: "Supaya dia dapat membuat keputusan kecederaan yang perlu diberi perhatian dahulu.",
 symbol_desc_7: "Supaya dia dapat meneruskan usaha walaupun gagal pada kali yang pertama.",
 symbol_desc_8: "Supaya dia dapat memberi dorongan kepada mangsa.",
+
+symbol_panel_intro_title: "Pengenalan Emblem SJAM",
+
+symbol_panel_intro: "Emblem SJAM merupakan lambang utama SJAM yang digunakan di bangunan, asset dan pakaian seragam SJAM. Emblem SJAM membawa ciri-ciri lambang St. John Antarabangsa. Lagu SJAM, bendera St. John dan cogan kata St. John juga merupakan sebahagian daripada lambang dan simbol SJAM.",
+
+symbol_panel_history_title: "Lapan Penjuru St. John",
+
+symbol_panel_history_1: "Lambang St. John pada asalnya merupakan lambang Republik Amalfi (Itali) pada Zaman Pertengahan. St. John menggunakan lambang ini sebagai tanda bagi mengenang jasa pendermaan saudagar-saudagar Republik Amalfi atas pembinaan hospital.",
+
+symbol_panel_history_2: "Singa dan binatang unicorn berwarna kuning merupakan lambang DiRaja Britain yang ditambah apabila St. John di Britain dianugerah Piagam DiRaja oleh Ratu Victoria. Lambang ini juga digunakan di Malta dengan latar belakang merah dan dikenali sebagai lapan penjuru Malta.",
+
+symbol_panel_closing: "Lambang ini dikelilingi lapan nilai-nilai murni ahli pertolongan cemas yang membantunya dalam menjalankan tugas harian.",symbol_panel_intro: "Emblem SJAM merupakan lambang utama SJAM yang digunakan di bangunan, asset dan pakaian seragam SJAM. Emblem SJAM membawa ciri-ciri lambang St. John Antarabangsa. Lagu SJAM, bendera St. John dan cogan kata St. John juga merupakan sebahagian daripada lambang dan simbol SJAM.",
+
+symbol_panel_history_title: "Lapan Penjuru St. John",
+
+symbol_panel_history_1: "Lambang St. John pada asalnya merupakan lambang Republik Amalfi (Itali) pada Zaman Pertengahan. St. John menggunakan lambang ini sebagai tanda bagi mengenang jasa pendermaan saudagar-saudagar Republik Amalfi atas pembinaan hospital.",
+
+symbol_panel_history_2: "Singa dan binatang unicorn berwarna kuning merupakan lambang DiRaja Britain yang ditambah apabila St. John di Britain dianugerah Piagam DiRaja oleh Ratu Victoria. Lambang ini juga digunakan di Malta dengan latar belakang merah dan dikenali sebagai lapan penjuru Malta.",
+
+symbol_panel_closing: "Lambang ini dikelilingi lapan nilai-nilai murni ahli pertolongan cemas yang membantunya dalam menjalankan tugas harian.",symbol_panel_intro: "Emblem SJAM merupakan lambang utama SJAM yang digunakan di bangunan, asset dan pakaian seragam SJAM. Emblem SJAM membawa ciri-ciri lambang St. John Antarabangsa. Lagu SJAM, bendera St. John dan cogan kata St. John juga merupakan sebahagian daripada lambang dan simbol SJAM.",
+
+symbol_panel_history_title: "Lapan Penjuru St. John",
+
+symbol_panel_history_1: "Lambang St. John pada asalnya merupakan lambang Republik Amalfi (Itali) pada Zaman Pertengahan. St. John menggunakan lambang ini sebagai tanda bagi mengenang jasa pendermaan saudagar-saudagar Republik Amalfi atas pembinaan hospital.",
+
+symbol_panel_history_2: "Singa dan binatang unicorn berwarna kuning merupakan lambang DiRaja Britain yang ditambah apabila St. John di Britain dianugerah Piagam DiRaja oleh Ratu Victoria. Lambang ini juga digunakan di Malta dengan latar belakang merah dan dikenali sebagai lapan penjuru Malta.",
+
+symbol_panel_closing: "Lambang ini dikelilingi lapan nilai-nilai murni ahli pertolongan cemas yang membantunya dalam menjalankan tugas harian.",
 
 history_title: "Sejarah St John Ambulans Malaysia",
             history_intro: "Menelusuri perjalanan St John Ambulans di Malaysia dalam memberikan perkhidmatan pertolongan cemas, kemanusiaan dan khidmat kepada masyarakat.",
@@ -3942,6 +3989,17 @@ symbol_desc_5: "To provide accurate information and instructions to casualties a
 symbol_desc_6: "To decide which injuries need attention first.",
 symbol_desc_7: "To continue making efforts even when the first attempt fails.",
 symbol_desc_8: "To give encouragement to casualties.",
+symbol_panel_intro: "The SJAM emblem is the principal emblem of SJAM, used on its buildings, assets and uniforms. The SJAM emblem carries the characteristics of the international St. John emblem. The SJAM song, St. John flag and St. John motto are also part of SJAM's emblems and symbols.",
+
+symbol_panel_history_title: "The Eight-Pointed St. John Cross",
+
+symbol_panel_intro_title: "Introduction to the SJAM Emblem",
+
+symbol_panel_history_1: "The St. John emblem originally represented the Republic of Amalfi (Italy) during the Middle Ages. St. John used this emblem as a symbol to commemorate the donations made by merchants of the Republic of Amalfi towards the construction of a hospital.",
+
+symbol_panel_history_2: "The yellow lions and unicorn represent British Royal symbols, which were added when St. John in Britain was granted a Royal Charter by Queen Victoria. This emblem is also used in Malta with a red background and is known as the eight-pointed emblem of Malta.",
+
+symbol_panel_closing: "The emblem is surrounded by eight virtues of first aid members, which guide them in carrying out their daily duties.",
 
 history_title: "History of St John Ambulance Malaysia",
             history_intro: "Explore the journey of St John Ambulance in Malaysia in providing first aid, humanitarian assistance and community services.",
@@ -4113,6 +4171,17 @@ symbol_desc_5: "向伤者和公众提供准确的信息及明确的指示。",
 symbol_desc_6: "判断哪些伤势需要优先处理。",
 symbol_desc_7: "即使第一次尝试失败，也坚持继续努力。",
 symbol_desc_8: "给予伤者鼓励与支持。",
+symbol_panel_intro: "SJAM徽章是SJAM的主要标志，用于SJAM的建筑物、资产及制服。SJAM徽章具有国际圣约翰组织徽章的特色。SJAM队歌、圣约翰旗帜及圣约翰格言也是SJAM徽章与象征的一部分。",
+
+symbol_panel_history_title: "圣约翰八角十字徽章",
+
+symbol_panel_intro_title: "SJAM徽章简介",
+
+symbol_panel_history_1: "圣约翰徽章最初是中世纪意大利阿马尔菲共和国的标志。圣约翰使用此徽章，以纪念阿马尔菲共和国商人为兴建医院所作出的捐献。",
+
+symbol_panel_history_2: "黄色的狮子和独角兽是英国王室的象征，在英国圣约翰组织获维多利亚女王颁发皇家特许状时加入徽章。此徽章也用于马耳他，以红色为背景，并被称为马耳他八角徽章。",
+
+symbol_panel_closing: "徽章周围环绕着急救人员的八项美德，帮助他们履行日常职责。",
 
 history_title: "马来西亚圣约翰救护机构历史",
             history_intro: "了解圣约翰救护机构在马来西亚提供急救、人道援助及社区服务的发展历程。",
