@@ -160,10 +160,178 @@ img, iframe {
     }
 }
 
+
 /* =====================================
    TAMAT CSS RESPONSIVE SJAM KKU
    ===================================== */
+
+/* =====================================
+   SJAM KKU - FIX HEADER TIGA BAHASA
+   ===================================== */
+
+.sjam-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 80px;
+}
+
+/* LOGO DAN NAMA ORGANISASI */
+
+.sjam-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.sjam-brand-text {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: 1.4;
+    color: #1E3A8A;
+}
+
+.sjam-brand-jawi {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sjam-brand-area {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* MENU NAVIGASI DESKTOP */
+
+.sjam-desktop-nav {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sjam-desktop-nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* BUTANG HUBUNGI KAMI */
+
+.sjam-desktop-nav a:last-child {
+    padding: 10px 14px;
+    font-size: 12px;
+}
+
+/* MONITOR KOMPUTER */
+
+@media (min-width: 1280px) {
+
+    .sjam-desktop-nav {
+        display: flex;
+    }
+
+    #menu-btn,
+    #mobile-menu {
+        display: none;
+    }
+}
+
+/* MONITOR BESAR */
+
+@media (min-width: 1440px) {
+
+    .sjam-desktop-nav {
+        gap: 18px;
+        font-size: 13px;
+    }
+}
+
+/* MONITOR KECIL 1024px - 1279px */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .sjam-header-container {
+        gap: 10px;
+    }
+
+    .sjam-desktop-nav {
+        display: flex;
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .sjam-desktop-nav a:last-child {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+    .sjam-brand-jawi {
+        font-size: 13px;
+    }
+
+    .sjam-brand-area {
+        font-size: 11px;
+    }
+
+    .sjam-brand {
+        gap: 6px;
+    }
+
+    #menu-btn,
+    #mobile-menu {
+        display: none;
+    }
+}
+
+/* TELEFON DAN TABLET */
+
+@media (max-width: 1023px) {
+
+    .sjam-brand {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .sjam-brand-text {
+        min-width: 0;
+        white-space: normal;
+    }
+}
+
+/* TELEFON PINTAR */
+
+@media (max-width: 480px) {
+
+    .sjam-header-container {
+        min-height: 70px;
+        gap: 8px;
+    }
+
+    .sjam-brand {
+        gap: 6px;
+    }
+
+    .sjam-brand-jawi {
+        font-size: 13px;
+    }
+
+    .sjam-brand-area {
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   TAMAT FIX HEADER TIGA BAHASA
+   ===================================== */
+
     </style>
+
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sjamRed selection:text-white">
 
@@ -210,27 +378,43 @@ img, iframe {
         </div>
     </div>
 
-<!-- Main Navigation --> 
-   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand / Logo -->
-            <a href="#" class="flex items-center gap-2 min-w-0 flex-1">
-                <img
-src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
-    alt="SJAM Logo"
-    class="w-10 h-10 object-contain shrink-0">
 
-<div class="min-w-0 flex-1">
-    <span class="block font-bold text-xs sm:text-lg leading-tight text-sjamBlue tracking-tight break-words">
-    سن ة جون امبولن س مليسيا
-<br>
-Kawasan Kelantan Utara Kota Bharu
-</span>           
-</div>
-            </a>
+<!-- Main Navigation -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+
+    <div class="sjam-header-container max-w-[1600px] mx-auto px-3 sm:px-4">
+
+            
+<!-- BRAND / LOGO SJAM -->
+
+<a href="#home" class="sjam-brand">
+
+    <img
+        src="https://drive.google.com/thumbnail?id=1-xRmpxN2pWuQ1sx3V2i1PsEQPdeW6RpF&sz=w200"
+        alt="SJAM Logo"
+        class="w-10 h-10 object-contain shrink-0">
+
+    <div class="sjam-brand-text">
+
+        <span class="sjam-brand-jawi" lang="ms-Arab">
+            سن ة جون امبولن س مليسيا
+        </span>
+
+        <span class="sjam-brand-area">
+            Kawasan Kelantan Utara Kota Bharu
+        </span>
+
+    </div>
+
+</a>
+
+<!-- TAMAT BRAND / LOGO SJAM -->
+
+
 
 <!-- Desktop Menu -->
-<nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
+<nav class="sjam-desktop-nav text-slate-700">
+
 
     <a href="#home" class="hover:text-sjamRed transition">
         <span data-i18n="nav_home">Utama</span>
@@ -332,11 +516,19 @@ Kawasan Kelantan Utara Kota Bharu
 
     </div>
 
-</div>  
 
-  </header>
+</div>
+
+<!-- TAMAT MOBILE MENU DROPDOWN -->
+
+</div>
+
+<!-- TAMAT HEADER CONTAINER -->
+
+</header>
 
 <!-- HERO SECTION -->
+
     <section id="home" class="relative bg-sjamDarkBlue text-white overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
         <!-- Background Banner Image with Overlay -->
 
